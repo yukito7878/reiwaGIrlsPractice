@@ -1,0 +1,327 @@
+/* ========== 共通リセット ========== */
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	background: #fff;
+}
+
+/* ========== ロゴ・スプラッシュ関連 ========== */
+.logo {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 2;
+	pointer-events: none;
+}
+
+.splash-container {
+	position: absolute;
+	top: -10%;
+	left: -3%;
+	width: 100vw;
+	height: 100vh;
+	z-index: 1;
+	filter: url(#blurFilter) saturate(1.5) brightness(1.1);
+	pointer-events: none;
+}
+
+text {
+	stroke: url(#grad);
+	stroke-width: 4;
+	fill: none;
+}
+
+@keyframes fadeOutUp {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateY(-80px);
+	}
+}
+
+.fade-out-up {
+	animation: fadeOutUp 0.8s ease-out forwards;
+}
+
+/* ========== スクロールインジケーター ========== */
+.scroll-indicator {
+	position: absolute;
+	top: calc(70% + 80px);
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 20px;
+	color: #333;
+	text-align: center;
+	animation: blink 1.2s ease-in-out infinite;
+	opacity: 0.8;
+	z-index: 10;
+}
+
+.scroll-indicator .arrow {
+	font-size: 25px;
+	font-weight: bold;
+	display: block;
+}
+
+@keyframes blink {
+
+	0%,
+	100% {
+		opacity: 0.8;
+		transform: translateY(0);
+	}
+
+	50% {
+		opacity: 0.2;
+		transform: translateY(5px);
+	}
+}
+
+/* ========== ペンキアニメーション ========== */
+.leaf {
+	background: radial-gradient(color-mix(in srgb, white, transparent 90%),
+			color-mix(in srgb, #ee75d2, hsla(calc(10 * var(--i)), 100%, 50%, 1) 50%));
+	opacity: 0;
+	--size: 20vmin;
+	height: var(--size);
+	aspect-ratio: 1 / 8;
+	border-radius: 50%;
+	position: absolute;
+	animation: move 0.8s var(--delay) ease infinite;
+	--r: calc(var(--move, 0vmin) + 4.2vmin + var(--ri, 0) * var(--size) * 0.44);
+	--angle-per-item: calc(360deg / var(--count));
+	--ai: calc(var(--angle-per-item) * var(--i));
+	transform: translate(calc(cos(var(--ai)) * var(--r)),
+			calc(sin(var(--ai)) * var(--r) * -1)) rotate(calc(90deg - 360deg / var(--count) * var(--i)));
+}
+
+@keyframes move {
+	from {
+		--move: 0vmin;
+		opacity: 0;
+	}
+
+	20%,
+	50%,
+	70% {
+		opacity: 1;
+	}
+
+	to {
+		--move: 22vmin;
+	}
+}
+
+/* ========== トップビュー（first-impact） ========== */
+.first-impact {
+	position: relative;
+	overflow: hidden;
+}
+
+.scroll-gallery {
+	position: absolute;
+	z-index: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	padding: 1rem;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity 1s ease;
+}
+
+.scroll-gallery.fade-in-active {
+	opacity: 1;
+}
+
+.column {
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.inner {
+	display: flex;
+	flex-direction: column;
+}
+
+.column img {
+	width: 370px;
+	margin-bottom: 1rem;
+	border-radius: 8px;
+	opacity: 0.3;
+}
+
+/* ========== テキスト・キャッチコピー ========== */
+.overlay-text {
+	position: relative;
+	z-index: 1;
+	color: #000;
+	text-align: left;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 220px 3rem 0;
+	opacity: 0;
+	transition: opacity 1s ease;
+}
+
+.overlay-text.fade-in-active {
+	opacity: 1;
+}
+
+.catch-main {
+	font-size: 3.5rem;
+	font-weight: 800;
+	letter-spacing: 2px;
+	color: transparent;
+	-webkit-text-stroke: 1px #555;
+	margin: 10px 0;
+}
+
+.catch-sub {
+	display: inline-block;
+	font-size: 5.5rem;
+	font-weight: bold;
+	margin-top: 1.2rem;
+	line-height: 1.4;
+}
+
+/* ========== バッジ（ボタン） ========== */
+.badge-button {
+	display: inline-block;
+	padding: 1.5rem 1.2rem;
+	border: 2px solid #333;
+	border-radius: 9999px;
+	background-color: transparent;
+	font-size: 1.5rem;
+	font-weight: bold;
+	transform: rotate(-10deg);
+	margin-left: -30px;
+	position: relative;
+	white-space: nowrap;
+	cursor: pointer;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.badge-button span {
+	position: relative;
+	left: -6px;
+}
+
+.badge-button:hover {
+	background-color: #333;
+	color: white;
+}
+
+/* ========== サービス一覧 ========== */
+.services {
+	margin-top: 2rem;
+	font-size: 1.3rem;
+	line-height: 1;
+	border-top: 1px solid #333;
+	padding-top: 1rem;
+}
+
+/* ========== 横スクロールテキスト ========== */
+.scrolling-wrapper {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.scrolling-text {
+	display: inline-block;
+	white-space: nowrap;
+	font-size: 5.5rem;
+	font-weight: 800;
+	letter-spacing: 2px;
+	color: transparent;
+	-webkit-text-stroke: 1px #555;
+	animation: scroll-left 40s linear infinite;
+	will-change: transform;
+}
+
+@keyframes scroll-left {
+	0% {
+		transform: translateX(0%);
+	}
+
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+/* ========== スクロールロック用 ========== */
+#scroll-locker {
+	position: fixed;
+	inset: 0;
+	z-index: 99999;
+	background: transparent;
+	pointer-events: all;
+	touch-action: none;
+	display: none;
+}
+
+/* ========== アニメーションユーティリティ ========== */
+.fade-in {
+	opacity: 0;
+	transform: translateY(20px);
+	transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.show {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+.fade-out {
+	animation: fadeOut 0.8s ease-out forwards;
+}
+
+@keyframes fadeOut {
+	to {
+		opacity: 0;
+	}
+}
+
+.outlined-text span {
+	opacity: 0;
+	display: inline-block;
+	transform: translateY(20px);
+	animation: fadeUpLetter 0.6s forwards;
+}
+
+@keyframes fadeUpLetter {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* ========== フェード遅延（intro-section用） ========== */
+.fade-in-delay {
+	opacity: 0;
+	transform: translateY(30px);
+	transition: all 0.8s ease-out;
+}
+
+.fade-in-delay.show {
+	animation: fadeInUp 1s ease-out forwards;
+	animation-delay: 0.5s;
+}

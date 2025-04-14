@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>滑らか3列スクロール</title>
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/function.css">
+	<link rel="stylesheet" href="css/animation.css">
+	<link rel="stylesheet" href="css/intro.css">
+	<link rel="stylesheet" href="css/text.css">
+	<link rel="stylesheet" href="css/service.css">
+	<link rel="stylesheet" href="css/contents.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<script src="js/function.js" defer></script>
+	<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+	<svg class="filter" xmlns="http://www.w3.org/2000/svg" version="1.1">
+		<filter id="blurFilter">
+			<feGaussianBlur stdDeviation="4.5"></feGaussianBlur>
+			<feColorMatrix type="matrix" values="
+	        1 0 0 0 0
+	        0 1 0 0 0
+	        0 0 1 0 0
+	        0 0 0 19 -9" />
+		</filter>
+	</svg>
+
+	<!-- ペンキ背景 -->
+	<div class="splash-container" id="splashContainer"></div>
+
+	<!-- ロゴ -->
+	<svg class="logo" viewBox="0 0 800 200">
+		<defs>
+			<linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+				<stop offset="0%" stop-color="#FF4D6D" />
+				<stop offset="50%" stop-color="#329FFF" />
+				<stop offset="100%" stop-color="#31FFA6" />
+			</linearGradient>
+		</defs>
+		<text id="text-outline" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="64"
+			font-family="sans-serif">令和GIRLS</text>
+	</svg>
+
+	<!-- ヘッダー / ヒーローセクション -->
+
+	<header id="header" class="init">
+		<img id="main-logo" class="logo-reiwachan" src="img/reiwachan.png" alt="Logo" />
+		<!-- ロゴの下にスクロール誘導を追加 -->
+		<div class="scroll-indicator">
+			<span class="arrow">&#x2193;</span>
+			<span class="text">Scroll</span>
+		</div>
+	</header>
+
+	<section class="first-impact">
+		<section class="scroll-gallery">
+			<div class="column" id="col1">
+				<div class="inner">
+					<img src="img/1-1.png">
+					<img src="img/1-2.png">
+					<img src="img/1-3.png">
+					<img src="img/1-1.png">
+					<img src="img/1-2.png">
+					<img src="img/1-3.png">
+				</div>
+			</div>
+			<div class="column" id="col2">
+				<div class="inner">
+					<img src="img/2-1.png">
+					<img src="img/2-2.png">
+					<img src="img/3-3.png">
+					<img src="img/2-1.png">
+					<img src="img/2-2.png">
+					<img src="img/3-3.png">
+				</div>
+			</div>
+			<div class="column" id="col3">
+				<div class="inner">
+					<img src="img/3-1.png">
+					<img src="img/3-2.png">
+					<img src="img/2-3.png">
+					<img src="img/3-4.png">
+					<img src="img/3-1.png">
+					<img src="img/3-2.png">
+					<img src="img/2-3.png">
+					<img src="img/3-4.png">
+				</div>
+			</div>
+		</section>
+
+		<section class="overlay-text">
+			<!-- 横スクロールテキスト -->
+			<h1 class="catch-main">
+				<div class="scrolling-wrapper">
+					<div class="scrolling-text">
+						Fueling the Next Generation of Creators — Fueling the Next Generation of Creators —
+					</div>
+				</div>
+			</h1>
+
+			<div class="catch-copy_container">
+				<h2 class="catch-sub">あなたの “発信” は<br>価値になる</h2>
+				<button class="badge-button"><span>令和ガールズの目指す世界</span></button>
+			</div>
+
+			<div class="services">
+				<p>◇インフルエンサーマーケティング</p>
+				<p>◇モデルキャスティング</p>
+				<p>◇アパレルプロデュース</p>
+			</div>
+			<div class="catch-wrapper">
+				<h1 class="outlined-text animate-text .fade-out-up-smooth">
+					次世代を築くための<br>
+					アイドルプラットフォーム</h1>
+			</div>
+		</section>
+
+	</section>
+
+
+	<section class="intro-section">
+		<div class="intro-content">
+			<div class="video-block scroll-rotate-left">
+				<img src="img/video_reiwa.png" alt="Reiwa Video Thumbnail" class="video-block_img">
+			</div>
+			<div class="text-block">
+				<h2><span class="highlight_dream" data-aos="fade-up">夢</span>で終わらせない</h2>
+				<p data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
+					人気になりたい、夢を叶えたい、<br>
+					楽しいことをしたい...<br>
+					そんな人を一人一人の夢を開花させる<br>
+					女性であれば誰でも登録できる、<br>
+					プラットフォームです。
+				</p>
+			</div>
+		</div>
+		<div class="intro-content">
+			<div class="video-block with-caption">
+				<div class="caption caption-pr">
+					<p data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">PR案件・ライブ配信</p>
+					<p data-aos="fade-right" data-aos-delay="300" data-aos-duration="1000">案件・キャスティング</p>
+				</div>
+			</div>
+			<div class="video-block scroll-rotate-right">
+				<img src="img/reiwa_haru.png" alt="PR Video Thumbnail" class="video-block_img">
+			</div>
+		</div>
+		<div class="intro-content">
+			<div class="video-block scroll-rotate-left">
+				<img src="img/video_reiwa2.png" alt="Reiwa Video Thumbnail" class="video-block_img">
+			</div>
+			<div class="text-block text_like">
+				<h2>生き方も、仕事も</h2>
+				<h2><span class="highlight_like" data-aos="fade-up">「好き」</span>に変わる</h2>
+			</div>
+		</div>
+
+		<section class="culture-message">
+			<h2>
+				<span data-aos="fade-up">WE CREATE A “DREAM STAGE”</span><br>
+				<span data-aos="fade-up" data-aos-delay="100">RATHER THAN JUST CHASING TRENDS.</span><br>
+				<span data-aos="fade-up" data-aos-delay="200">MORE <span class="asobi"
+						data-aos="zoom-in">“INDIVIDUALITY”</span></span><br>
+				<span data-aos="fade-up" data-aos-delay="300">SHOULD BE AMPLIFIED</span><br>
+				<span data-aos="fade-up" data-aos-delay="400">IN THIS GENERATION.</span>
+			</h2>
+
+			<p class="subtext animate-text">
+				誰かの真似じゃなく、自分らしい “夢” を発信する時代へ。<br>
+				一人ひとりの個性と挑戦を、令和ガールズが応援します。
+			</p>
+
+		</section>
+	</section>
+
+	<section class="gallery">
+		<div class="floating-gallery-wrapper" id="floatingBackground">
+			<ul class="floating-gallery">
+				<li style="top: 3%; left: 3%;"><img src="img_backTalent/1.png" /></li>
+				<li style="top: 2.9%; left: 35.5%;"><img src="img_backTalent/2.png" /></li>
+				<li style="top: 4.9%; left: 85.9%;"><img src="img_backTalent/3.png" /></li>
+				<li style="top: 8.8%; left: 65.5%;"><img src="img_backTalent/4.png" /></li>
+				<li style="top: 11.8%; left: 11.6%;"><img src="img_backTalent/5.png" /></li>
+				<li style="top: 14.7%; left: 50.2%;"><img src="img_backTalent/6.png" /></li>
+				<li style="top: 16.6%; left: 86.3%;"><img src="img_backTalent/7.png" /></li>
+				<li style="top: 19.6%; left: 12.7%;"><img src="img_backTalent/8.jpg" /></li>
+				<li style="top: 23.5%; left: 28.6%;"><img src="img_backTalent/9.png" /></li>
+				<li style="top: 24.5%; left: 68.7%;"><img src="img_backTalent/10.png" /></li>
+				<li style="top: 29.4%; left: 79.3%;"><img src="img_backTalent/11.png" /></li>
+				<li style="top: 32.4%; left: 38.2%;"><img src="img_backTalent/12.png" /></li>
+				<li style="top: 35.3%; left: 10.6%;"><img src="img_backTalent/13.png" /></li>
+				<li style="top: 38.2%; left: 67.3%;"><img src="img_backTalent/14.jpg" /></li>
+				<li style="top: 41.2%; left: 17.7%;"><img src="img_backTalent/15.png" /></li>
+				<li style="top: 44.1%; left: 45.2%;"><img src="img_backTalent/16.png" /></li>
+				<li style="top: 47.1%; left: 2.8%;"><img src="img_backTalent/17.png" /></li>
+				<li style="top: 50.0%; left: 41.7%;"><img src="img_backTalent/18.png" /></li>
+				<li style="top: 52.9%; left: 75.6%;"><img src="img_backTalent/19.png" /></li>
+				<li style="top: 55.9%; left: 28.6%;"><img src="img_backTalent/20.png" /></li>
+				<li style="top: 58.8%; left: 4.4%;"><img src="img_backTalent/1.png" /></li>
+				<li style="top: 61.8%; left: 50.9%;"><img src="img_backTalent/2.png" /></li>
+				<li style="top: 64.7%; left: 18.9%;"><img src="img_backTalent/3.png" /></li>
+				<li style="top: 67.6%; left: 60.3%;"><img src="img_backTalent/4.png" /></li>
+				<li style="top: 60.6%; left: 86.3%;"><img src="img_backTalent/5.png" /></li>
+				<li style="top: 73.5%; left: 6.9%;"><img src="img_backTalent/6.png" /></li>
+				<li style="top: 76.5%; left: 33.5%;"><img src="img_backTalent/7.png" /></li>
+				<li style="top: 72.4%; left: 78.4%;"><img src="img_backTalent/8.jpg" /></li>
+				<li style="top: 82.4%; left: 79.3%;"><img src="img_backTalent/9.png" /></li>
+				<li style="top: 85.3%; left: 40.6%;"><img src="img_backTalent/10.png" /></li>
+				<li style="top: 88.2%; left: 3.3%;"><img src="img_backTalent/11.png" /></li>
+				<li style="top: 91.2%; left: 66.5%;"><img src="img_backTalent/12.png" /></li>
+				<li style="top: 94.1%; left: 38.6%;"><img src="img_backTalent/13.png" /></li>
+				<li style="top: 97.1%; left: 81.4%;"><img src="img_backTalent/14.jpg" /></li>
+				<li style="top: 100.0%; left: 7.2%;"><img src="img_backTalent/15.png" /></li>
+				<li style="top: 108.1%; left: 5.2%;"><img src="img_backTalent/16.png" /></li>
+				<li style="top: 109.1%; left: 75.8%;"><img src="img_backTalent/17.png" /></li>
+				<li style="top: 105.0%; left: 41.7%;"><img src="img_backTalent/18.png" /></li>
+				<li style="top: 110.9%; left: 7.6%;"><img src="img_backTalent/19.png" /></li>
+				<li style="top: 122.9%; left: 28.6%;"><img src="img_backTalent/20.png" /></li>
+			</ul>
+		</div>
+
+		<section class="service-hero theme-blue-text" id="section1">
+			<div class="service-inner">
+				<h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+					<span>心を動かすSNSコンテンツ</span><br><span class="service-title">企画・運用代行</span>
+				</h1>
+				<p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="lead">
+					私たちはSNSに特化したノウハウで、<br>クライアントの想いを形にします。</p>
+				<p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="description">
+					アカウント運用・フォロワー獲得・ブランド認知──<br>“バズらせたい”ではなく、“伝わる”コンテンツを。</p>
+				<a data-aos="fade" data-aos-delay="300" data-aos-duration="1000" href="#"
+					class="service-button theme-blue-text">詳しくはこちら</a>
+			</div>
+		</section>
+		<section class="service-hero theme-red-text" id="section2">
+			<div class="service-inner">
+				<h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+					<span>ブランドの“世界観”を設計</span><br>
+					<span class="service-title">クリエイティブ制作</span>
+				</h1>
+				<p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="lead">
+					デザイン・映像・写真などを通じて、<br>一貫した印象とメッセージを届けます。 </p>
+				<p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="description">
+					世界観に共感が生まれる時代。<br>ビジュアルから空気感まで設計します。</p>
+				<a data-aos="fade" data-aos-delay="300" data-aos-duration="1000" href="#"
+					class="service-button theme-red-text">詳しくはこちら</a>
+			</div>
+		</section>
+
+		<section class="service-hero theme-purple-text" id="section3">
+			<div class="service-inner">
+				<h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+					<span>戦略から実行までを伴走</span><br><span class="service-title">マーケティング支援</span>
+				</h1>
+				<p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="lead">
+					目標設定、戦略立案、広告運用、分析──<br>すべてをワンストップで支援します。</p>
+				<p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="description">
+					数字も、ストーリーも、届け方も。<br>全方位からブランドを育てます。</p>
+				<a data-aos="fade" data-aos-delay="300" data-aos-duration="1000" href="#"
+					class="service-button theme-purple-text">詳しくはこちら</a>
+			</div>
+		</section>
+		<section class="service-hero theme-green-text" id="section-model">
+			<div class="service-inner">
+				<h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+					<span>ブランドとモデルをつなぐ</span><br><span class="service-title">モデルキャスティング</span>
+				</h1>
+				<p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="lead">
+					企画・イメージに合う最適なモデルを提案。<br>オーディションからマネジメントまで対応します。</p>
+				<p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="description">
+					撮影・広告・イベントなど、<br>あらゆるシーンにふさわしいキャスティングをご提供。</p>
+				<a data-aos="fade" data-aos-delay="300" data-aos-duration="1000" href="#"
+					class="service-button theme-green-text">詳しくはこちら</a>
+			</div>
+		</section>
+
+		<section class="service-hero theme-yellow-text" id="section-fashion">
+			<div class="service-inner">
+				<h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+					<span>世界観をカタチにする</span><br><span class="service-title">アパレルブランド制作</span>
+				</h1>
+				<p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="lead">
+					コンセプト設計・ロゴ・アイテム展開まで、<br>ブランド立ち上げをトータルで支援します。</p>
+				<p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="description">
+					想いや個性を“着れるデザイン”へ。<br>感性に寄り添ったブランドづくりをお手伝いします。</p>
+				<a data-aos="fade" data-aos-delay="300" data-aos-duration="1000" href="#"
+					class="service-button theme-yellow-text">詳しくはこちら</a>
+			</div>
+		</section>
+
+
+	</section>
+	<!-- 上に表示する文字 -->
+	<section class="footer-section theme-white-text" id="section-footer">
+		<div class="footer-inner">
+			<h2 class="footer-logo">REIWAGIRLS</h2>
+
+			<div class="footer-top-row">
+				<div class="footer-tags">
+					<a href="#company">COMPANY</a>
+					<a href="#service">SERVICE</a>
+					<a href="#vision">VISION</a>
+					<a href="#recruit">RECRUIT</a>
+				</div>
+				<div class="footer-contact">
+					<a href="#contact" class="footer-contact-button">CONTACT</a>
+				</div>
+			</div>
+
+			<div class="scroll-infinity">
+				<div class="scroll-infinity__wrap">
+					<ul class="scroll-infinity__list scroll-infinity__list--left">
+						<li class="scroll-infinity__item"><img src="img_logo/reiwaGirlsLogo.png" alt="NextStars"></li>
+						<li class="scroll-infinity__item"><img src="img_logo/BottlBisuxLogo.png" alt="REIWAGIRLS"></li>
+						<li class="scroll-infinity__item"><img src="img_logo/InfluenceHubLogo.png" alt="インフルエンスハブ"></li>
+						<li class="scroll-infinity__item"><img src="img_logo/CabaTalentLogo.png" alt="キャバタレント"></li>
+						<li class="scroll-infinity__item"><img src="img_logo/MonMaisonLogo.png" alt="モンメゾン"></li>
+					</ul>
+					<ul class="scroll-infinity__list scroll-infinity__list--left">
+						<li class="scroll-infinity__item"><img src="img_logo/reiwaGirlsLogo.png" alt="NextStars"></li>
+						<li class="scroll-infinity__item"><img src="img_logo/BottlBisuxLogo.png" alt="REIWAGIRLS"></li>
+						<li class="scroll-infinity__item"><img src="img_logo/InfluenceHubLogo.png" alt="インフルエンスハブ"></li>
+						<li class="scroll-infinity__item"><img src="img_logo/CabaTalentLogo.png" alt="キャバタレント"></li>
+						<li class="scroll-infinity__item"><img src="img_logo/MonMaisonLogo.png" alt="モンメゾン"></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="footer-bottom-area theme-dark">
+				<div class="footer-nav">
+					<a href="#schedule">SCHEDULE</a>
+					<a href="#about">ABOUT</a>
+					<a href="#company">COMPANY PROFILE</a>
+				</div>
+
+				<div class="footer-address">
+					<p>REIWAGIRLS Inc.<br>3-21-8, AzabuJuban, Minato-ku, Tokyo, 150-0001</p>
+				</div>
+
+				<div class="footer-bottom">
+					<small>© REIWAGIRLS / NEXTSTARS</small>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+	<!--	<script src="js/scrollTrigger.js" defer></script>-->
+	<script>
+		//デバッグ用
+		// ★ デバッグ用：即表示
+		document.querySelector('.logo').style.display = 'none';
+		document.querySelector('.splash-container').style.display = 'none';
+		document.querySelector('.scroll-gallery').classList.add('fade-in-active');
+		document.querySelector('.overlay-text').classList.add('fade-in-active');
+
+	</script>
+
+
+	<!--	<script>-->
+	<!--		// Anime.jsで描きアニメ-->
+	<!--		const text = document.getElementById('text-outline');-->
+	<!--		const length = text.getComputedTextLength();-->
+	<!--		text.setAttribute('stroke-dasharray', length);-->
+	<!--		text.setAttribute('stroke-dashoffset', length);-->
+
+	<!--		anime({-->
+	<!--			targets: text,-->
+	<!--			strokeDashoffset: [length, 0],-->
+	<!--			duration: 3000,-->
+	<!--			delay: 1300,-->
+	<!--			easing: 'easeOutQuad',-->
+	<!--			complete: () => {-->
+	<!--				setTimeout(() => {-->
+	<!--					document.querySelector('.logo').classList.add('fade-out-up');-->
+	<!--					document.querySelector('.splash-container').classList.add('fade-out');-->
+
+	<!--					setTimeout(() => {-->
+	<!--						document.querySelector('.logo').style.display = 'none';-->
+	<!--						document.querySelector('.splash-container').style.display = 'none';-->
+
+	<!--						// ✅ フェードインさせる本体部分を表示-->
+	<!--						document.querySelector('.scroll-gallery').classList.add('fade-in-active');-->
+	<!--						document.querySelector('.overlay-text').classList.add('fade-in-active');-->
+
+	<!--					}, 500);-->
+	<!--				}, 1000);-->
+	<!--			}-->
+
+	<!--		});-->
+
+	<!--		// ペンキスプラッシュ生成-->
+	<!--		const container = document.getElementById('splashContainer');-->
+	<!--		const ringCount = 13;-->
+	<!--		const startCount = 10;-->
+	<!--		let index = 0;-->
+
+	<!--		for (let ri = 0; ri < ringCount; ri++) {-->
+	<!--			const count = startCount - 1 + ri * 11;-->
+	<!--			for (let i = 0; i <= count; i++) {-->
+	<!--				const leaf = document.createElement('div');-->
+	<!--				leaf.className = 'leaf';-->
+	<!--				leaf.style.setProperty('--count', count + 1);-->
+	<!--				leaf.style.setProperty('--ri', ri);-->
+	<!--				leaf.style.setProperty('--i', index);-->
+	<!--				const delay = 0.6 * ri + 0.9 * Math.random();-->
+	<!--				leaf.style.setProperty('--delay', `${delay}s`);-->
+	<!--				leaf.style.position = 'absolute';-->
+	<!--				leaf.style.top = '50%';-->
+	<!--				leaf.style.left = '50%';-->
+	<!--				container.appendChild(leaf);-->
+	<!--				index++;-->
+	<!--			}-->
+	<!--		}-->
+	<!--		// script.js-->
+
+	<!--		function fadeIn(el) {-->
+	<!--			el.classList.remove('fade-out');-->
+	<!--			el.classList.add('fade-in');-->
+	<!--		}-->
+
+	<!--		function fadeOut(el) {-->
+	<!--			el.classList.remove('fade-in');-->
+	<!--			el.classList.add('fade-out');-->
+	<!--		}-->
+
+	</script>
+
+	<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+
+	<script>
+		function setupScrollLoop(columnId, speed = 1) {
+			const column = document.getElementById(columnId);
+			if (!column || column.classList.contains("loop-initialized")) return; // ←これ追加
+
+			const inner = column.querySelector('.inner');
+			const clone = inner.cloneNode(true);
+			column.appendChild(clone);
+
+			let scrollY = 0;
+
+			function loop() {
+				scrollY += speed;
+				if (scrollY >= inner.scrollHeight) {
+					scrollY = 0;
+				}
+				column.scrollTop = scrollY;
+				requestAnimationFrame(loop);
+			}
+
+			column.classList.add("loop-initialized"); // ←1回だけ実行させる目印
+			requestAnimationFrame(loop);
+		}
+
+	</script>
+	<div id="scroll-locker"></div>
+
+</body>
+
+</html>

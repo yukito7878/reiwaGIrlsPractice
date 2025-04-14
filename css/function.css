@@ -1,0 +1,57 @@
+/* ▼ .animate-text 全体を初期状態で非表示にする */
+.animate-text.before-animate {
+	visibility: hidden;
+}
+
+/* ▼ アニメーション発火で表示 */
+.animate-text.animate {
+	visibility: visible;
+}
+
+/* ▼ 各文字に使うスパン（JSで自動生成） */
+.animate-text .char {
+	opacity: 0;
+	display: inline-block;
+}
+
+/* ▼ アニメーション前の状態 */
+.animate-text.before-animate .char {
+	transform: translateY(1em);
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+/* ▼ アニメーション後（1文字ずつ遅延あり） */
+.animate-text.animate .char {
+	animation: fadeInUp 0.4s forwards;
+}
+
+/* ▼ 一文字ずつフェードイン＋スライドアップ */
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(1em);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* ▼ スクロールアウト時に使えるフェードアウト＋スライドアップ */
+.fade-out-up-smooth {
+	opacity: 0;
+	transform: translateY(-100px);
+	transition: all 1s ease;
+}
+
+/* ▼ フェードイン（全体ブロックなどに適用したい時用） */
+.fade-in-smooth {
+	opacity: 1;
+	transition: opacity 1s ease;
+}
+
+/* ▼ アニメーション対象ラッパー（初期非表示）※必要な場合 */
+.wrapper {
+	opacity: 0;
+}

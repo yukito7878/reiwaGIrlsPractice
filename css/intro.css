@@ -1,0 +1,75 @@
+.intro-section {
+
+	/* 完全な白・不透明 */
+	padding: 60px 20px;
+	text-align: center;
+	font-family: "Noto Sans JP", sans-serif;
+	background-color: #fff;
+	position: relative;
+	z-index: 2;
+}
+
+.intro-content {
+	display: flex;
+	align-items: center;
+	margin-bottom: 40px;
+	justify-content: center;
+	max-width: 1000px;
+	margin: auto;
+	gap: 20px;
+}
+
+.video-block {
+	width: 60%;
+	transition: transform 0.6s ease;
+}
+
+.text-block {
+	width: 40%;
+}
+
+.video-block .video-block_img {
+	width: 100%;
+}
+
+.text-block h2 {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.text-block .highlight_dream {
+	color: #f26ca7;
+	font-weight: 900;
+	font-size: 5rem;
+}
+
+.text-block .highlight_like {
+	color: #f26ca7;
+	font-weight: 900;
+	font-size: 4rem;
+}
+
+.image-caption-wrapper {
+	position: relative;
+	width: 60%;
+	/* tilt-rightの役割 */
+}
+
+/*.scroll-rotate-right,*/
+/*.scroll-rotate-left {*/
+/*	transition: transform 0.2s ease-out;*/
+/*	transform-origin: center center;*/
+/*}*/
+
+
+.video-block_img {
+	width: 100%;
+	display: block;
+}
+
+.caption-pr {
+	z-index: 10;
+	font-size: 3rem;
+	font-weight: bold;
+	color: #f26ca7;
+}

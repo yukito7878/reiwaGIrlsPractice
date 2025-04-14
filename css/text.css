@@ -1,0 +1,79 @@
+/* セクション全体 */
+.culture-message {
+	padding: 120px 20px;
+	text-align: center;
+	background-color: #f8f8f8;
+	font-family: 'Helvetica Neue', 'Arial', 'Noto Sans JP', sans-serif;
+}
+
+/* メインコピー */
+.culture-message h2 {
+	font-size: 2.6rem;
+	line-height: 1.6;
+	font-weight: 800;
+	letter-spacing: 0.04em;
+	color: #111;
+	margin-bottom: 3rem;
+}
+
+.culture-message h2 span {
+	display: inline-block;
+}
+
+/* 強調ワード（例："INDIVIDUALITY"） */
+.culture-message .asobi {
+	color: #f26ca7;
+	font-weight: 900;
+	font-size: 2.8rem;
+	letter-spacing: 0.06em;
+}
+
+/* 日本語テキスト */
+.culture-message .subtext {
+	font-size: 1.1rem;
+	line-height: 2;
+	color: #333;
+	font-weight: 500;
+	max-width: 600px;
+	margin: 0 auto;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+@media (max-width: 768px) {
+	.culture-message h2 {
+		font-size: 1.8rem;
+		line-height: 1.4;
+	}
+
+	.culture-message .asobi {
+		font-size: 2rem;
+	}
+
+	.culture-message .subtext {
+		font-size: 1rem;
+		line-height: 1.8;
+	}
+}
+
+
+.animate-text.before-animate .char {
+	opacity: 0;
+	transform: translateY(1em);
+	display: inline-block;
+}
+
+.animate-text.animate .char {
+	animation: fadeUpChar 0.4s ease forwards;
+}
+
+@keyframes fadeUpChar {
+	from {
+		opacity: 0;
+		transform: translateY(1em);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

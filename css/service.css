@@ -1,0 +1,116 @@
+/*body.theme-blue-text {*/
+/*	color: #c6e3f9;*/
+/*}*/
+
+/*body.theme-red-text {*/
+/*	color: #f7c6c6;*/
+/*}*/
+
+/*body.theme-purple-text {*/
+/*	color: #e2ccff;*/
+/*}*/
+
+/*.service-hero {*/
+/*	text-align: center;*/
+/*	padding: 140px 20px;*/
+/*	position: relative;*/
+/*	overflow: hidden;*/
+/*	transition: color 0.8s ease;*/
+/*}*/
+
+/*.service-inner {*/
+/*	max-width: 800px;*/
+/*	margin: 0 auto;*/
+/*}*/
+
+/*.service-inner h1 {*/
+/*	font-size: 4rem;*/
+/*	font-weight: 800;*/
+/*	line-height: 1.5;*/
+/*	margin-bottom: 30px;*/
+/*}*/
+
+/*.service-inner h1 span {*/
+/*	display: inline-block;*/
+/*}*/
+
+/*.theme-blue-text .service-inner h1 span {*/
+/*	background: linear-gradient(90deg, #5fc2f3, #b8d8f7);*/
+/*	-webkit-background-clip: text;*/
+/*	-webkit-text-fill-color: transparent;*/
+/*}*/
+
+/*.theme-red-text .service-inner h1 span {*/
+/*	background: linear-gradient(90deg, #f37c7c, #f1b0b0);*/
+/*	-webkit-background-clip: text;*/
+/*	-webkit-text-fill-color: transparent;*/
+/*}*/
+
+/*.theme-purple-text .service-inner h1 span {*/
+/*	background: linear-gradient(90deg, #a377ff, #dfc8ff);*/
+/*	-webkit-background-clip: text;*/
+/*	-webkit-text-fill-color: transparent;*/
+/*}*/
+
+/*.lead,*/
+/*.description {*/
+/*	color: #1a1a1a;*/
+/*	font-size: 1.7rem;*/
+/*	font-weight: bold;*/
+/*	line-height: 1.7;*/
+/*}*/
+
+/*.service-button {*/
+/*	display: inline-block;*/
+/*	margin-top: 30px;*/
+/*	padding: 1em 2.3em;*/
+/*	border-radius: 9999px;*/
+/*	font-weight: bold;*/
+/*	text-decoration: none;*/
+/*	border: 2px solid currentColor;*/
+/*	color: currentColor;*/
+/*	transition: all 0.3s ease;*/
+/*}*/
+
+/*a.theme-blue-text {*/
+/*	border: solid 1px #b8d8f7;*/
+/*	color: #b8d8f7;*/
+/*}*/
+
+/*a.theme-blue-text:hover {*/
+/*	background-color: #b8d8f7;*/
+/*	color: black;*/
+/*}*/
+
+/*a.theme-red-text {*/
+/*	border: solid 1px #f37c7c;*/
+/*	color: #f37c7c;*/
+/*}*/
+
+/*a.theme-red-text:hover {*/
+/*	background-color: #f37c7c;*/
+/*	color: black;*/
+/*}*/
+
+
+/*a.theme-purple-text {*/
+/*	border: solid 1px #a377ff;*/
+/*	color: #a377ff;*/
+/*}*/
+
+/*a.theme-purple-text:hover {*/
+/*	background-color: #a377ff;*/
+/*	color: #1a1a1a;*/
+/*}*/
+
+
+/*@media (max-width: 768px) {*/
+/*	.service-inner h1 {*/
+/*		font-size: 2rem;*/
+/*	}*/
+
+/*	.lead,*/
+/*	.description {*/
+/*		font-size: 0.95rem;*/
+/*	}*/
+/*}*/
