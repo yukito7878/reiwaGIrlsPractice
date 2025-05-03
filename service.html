@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>サービスカード</title>
+	<link rel="stylesheet" href="css/page-transition.css">
+	<link rel="stylesheet" href="css/service.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="css/header-basic.css">
+	<link rel="stylesheet" href="css/page-transition.css">
+</head>
+
+<body>
+
+	<header class="site-header" id="siteHeader">
+		<a href="index.html" class="logo-link">
+			<img src="img/reiwachan.png" alt="Logo" class="header-logo">
+		</a>
+		<nav class="header-nav">
+			<a href="service.html">Service</a>
+			<a href="company.html">Company</a>
+			<a href="top.html">Vision</a>
+			<a href="recruit.html">Recruit</a>
+			<a href="contact.html">Contact</a>
+		</nav>
+	</header>
+	<div class="video-background">
+		<video autoplay muted loop playsinline>
+			<source src="video/令和ガールズ.mp4" type="video/mp4">
+		</video>
+	</div>
+	<main class="main-content">
+
+		<div class="service-hero">
+			<div class="service-hero-image-wrapper">
+				<img src="img/service.png" alt="Service" class="service-hero-image">
+				<div class="service-hero-overlay">
+					<h1 class="service-hero-title">Service</h1>
+					<p class="service-hero-subtitle">サービス一覧</p>
+				</div>
+			</div>
+		</div>
+
+		<section class="service-intro">
+			<h1 class="catch-main">
+				<div class="scrolling-wrapper">
+					<div class="scrolling-text">
+						Fueling the Next Generation of Creators — Fueling the Next Generation of Creators —
+					</div>
+				</div>
+			</h1>
+			<div class="service-intro__inner">
+				<div class="service-intro__lead">
+					インフルエンサーの可能性を最大化し、<br>
+					新しいつながりをデザインする。
+				</div>
+				<p class="service-intro__desc">
+					令和ガールズは、インフルエンサーと企業を結ぶ架け橋として、<br>
+					タイアップ広告、ライブ配信、D2Cブランド支援など、<br>
+					多角的にプロデュースを展開しています。
+				</p>
+			</div>
+			<h1 class="catch-main">
+				<div class="scrolling-wrapper">
+					<div class="scrolling-text-right">
+						DREAM. CREATE. CHANGE - 夢を見て、創って、変わる - DREAM. CREATE. CHANGE - 夢を見て、創って、変わる
+					</div>
+				</div>
+			</h1>
+		</section>
+
+		<div class="service-list">
+			<h2 class="service-title">事業・サービス一覧</h2>
+			<div class="card-grid">
+				<div class="card">
+					<h3>インフルエンサー支援</h3>
+					<img src="img_logo/InfluenceHubLogo.png" alt="インフルエンスハブ">
+					<p class="card-grid__catchcopy">共感と届く影響力のチカラ</p>
+					<p class="card-grid__text">媒体力と拡散力を活かし、インフルエンサーの影響力を高めるマーケティング・ブランディング支援。</p>
+					<button id="openInfluenceHubModal" class="service-detail__button">詳細を見る</button>
+
+				</div>
+				<div class="card">
+					<h3>ライバー支援</h3>
+					<img src="img_logo/NexrStarsLogo.png" alt="NextStars">
+					<p class="card-grid__catchcopy">個性が光る、ライブ戦略</p>
+					<p class="card-grid__text">“あなた”にしかない個性で、ライブ配信での存在感を育てるプロデュース&マネージメントプログラム。</p>
+					<a class="service-detail__button"
+						href="https://prtimes.jp/main/html/rd/p/000000001.000109231.html">詳細はこちら</a>
+					<a class="service-detail__button"
+						href="https://prtimes.jp/main/html/rd/p/000000001.000109231.html">タレント一覧</a>
+
+				</div>
+				<div class="card">
+					<h3>ラグジュアリーブランド構築</h3>
+					<img src="img_logo/BottlBisuxLogo.png" alt="Bottl Bisux">
+					<p class="card-grid__catchcopy">世界観で魅せる<br>上質ブランディング</p>
+					<p class="card-grid__text">高級感あるコンセプト設計からビジュアル制作までトータル支援するブランド構築サービス。</p>
+					<button id="openVotreBijouModal" class="service-detail__button">詳細を見る</button>
+
+
+				</div>
+				<div class="card">
+					<h3>アパレルブランド支援</h3>
+					<img src="img_logo/MonMaisonLogo.png" alt="Mon Maison">
+					<p class="card-grid__catchcopy">美容識をまとう<br>選ばれるブランドへ</p>
+					<p class="card-grid__text">感性に寄り添った世界観とファッションブランドを軸にトータルプロデュースします。</p>
+					<a class="service-detail__button"
+						href="https://prtimes.jp/main/html/rd/p/000000001.000109231.html">記事はこちら</a>
+					<a id="openModal" class="service-detail__button">詳細はこちら</a>
+
+				</div>
+			</div>
+			<p class="service-last-text">未来を変える一歩を、今ここから。<br>あなたの想いが、世界を動かす力になると、私たちは信じています。</p>
+
+			<!-- ポップアップ(インフルエンスハブ) -->
+			<div id="popupInfluenceHubModal" class="modal-influencehub">
+				<div class="modal-influencehub-content">
+					<span id="closeInfluenceHubModal" class="close-influencehub-button">&times;</span>
+
+					<!-- トップ画像 -->
+					<img src="img_logo/InfluenceHubLogo.png" alt="インフルエンスハブ概要" class="modal-influencehub-image">
+
+					<h2>1万人超の影響力を、ビジネスに。<br>【Influence Hub】</h2>
+
+					<p><strong>株式会社令和ガールズ</strong>｜2022年9月29日</p>
+
+					<p>
+						総フォロワー数1億人を超えるインフルエンサーが所属する、<br>
+						日本最大級のプラットフォーム「<strong>Influence Hub（インフルエンスハブ）</strong>」。<br>
+						広告・マーケティングに必要な影響力を、あなたのビジネスに自由に活用できます。
+					</p>
+
+					<hr>
+
+					<h3>Influence Hubとは？</h3>
+
+					<p>
+						令和ガールズに所属する<strong>10,000名超のインフルエンサー</strong>と連携し、<br>
+						広告・プロモーション・ブランディングを全面的にサポートするプラットフォームです。
+					</p>
+
+					<p>
+						規模、属性、フォロワー数に応じて最適なインフルエンサーをマッチング。<br>
+						<strong>誰でも簡単に、影響力マーケティングを始めることができます。</strong>
+					</p>
+
+					<hr>
+
+					<!-- 統計データ -->
+					<img src="img/hub_statistics.png" alt="インフルエンサー統計データ" class="modal-influencehub-image">
+
+					<p>
+						年齢・地域・フォロワー属性まで幅広くカバー。<br>
+						ターゲットに最適な施策を、高い精度で展開可能です。
+					</p>
+
+					<hr>
+
+					<!--					<h3>実績紹介</h3>-->
+
+					<!--					 実績画像 -->
+					<!--					<img src="img/hub_portfolio.png" alt="インフルエンサー実績" class="modal-influencehub-image">-->
+
+					<!--					<p>-->
+					<!--						有名YouTuber、TikTokerが多数在籍。<br>-->
+					<!--						数百万人単位でリーチ可能な案件実績を誇ります。-->
+					<!--					</p>-->
+
+					<!--					<hr>-->
+
+					<h3>提供サービス・料金プラン</h3>
+					<img src="img/hub_planDetail.png" alt="インフルエンサー実績" class="modal-influencehub-image">
+
+					<p>
+						月額基本料金：<strong>200,000円〜300,000円（税抜）</strong><br>
+						案件内容・規模に応じたプランニングも可能です。
+					</p>
+
+					<ul>
+						<li>インフルエンサーキャスティング</li>
+						<li>ライブ配信・タイアップ広告</li>
+						<li>D2Cブランド立ち上げ支援</li>
+						<li>イベント集客・認知拡大施策</li>
+						<li>PR・ブランディングコンサルティング</li>
+					</ul>
+
+					<hr>
+
+					<h3>お問い合わせ・詳細</h3>
+
+					<p><a href="https://lin.ee/BNNecfR" target="_blank"><strong>公式LINE＠はこちら</strong></a></p>
+					<h3>株式会社令和ガールズ 概要</h3>
+
+					<ul>
+						<li>会社名：株式会社令和ガールズ</li>
+						<li>代表取締役：室井涼介</li>
+						<li>所在地：<br>
+							新宿オフィス：〒160-0022 東京都新宿区西新宿8-14-19 小林第二ビル8階<br>
+							新宿営業所：〒163-0604 東京都新宿区西新宿1丁目25番地 新宿センタービル49階
+						</li>
+						<li>公式サイト：<a href="https://www.reiwagirls.com/" target="_blank">https://www.reiwagirls.com/</a>
+						</li>
+						<li>公式Instagram：<a href="https://www.instagram.com/reiwa_girls_official/"
+								target="_blank">@reiwa_girls_official</a></li>
+						<li>公式LINE＠：<a href="https://lin.ee/BNNecfR" target="_blank">https://lin.ee/BNNecfR</a>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+
+
+			<!-- ポップアップ(ボトルビジュー) -->
+			<div id="popupVotreBijouModal" class="modal-votrebijou">
+				<div class="modal-votrebijou-content">
+					<span id="closeVotreBijouModal" class="close-votrebijou-button">&times;</span>
+
+					<img src="img/votrebijou.png" alt="Votre Bijou" class="modal-votrebijou-image">
+
+					<h2>「Votre Bijou（ボトルビジュー）」リリースのお知らせ</h2>
+
+					<p><strong>株式会社令和ガールズ</strong>｜2022年9月29日</p>
+
+					<p>
+						総フォロワー数1億人超、登録インフルエンサー数7,000名以上を誇るプラットフォーム「令和ガールズ」が、<br>
+						誰もが自分自身のアパレルブランドをプロデュースできる新サービス「<strong>Votre Bijou（ボトルビジュー）</strong>」をスタートしました。
+					</p>
+
+					<hr>
+
+					<h3>Votre Bijou（ボトルビジュー）とは</h3>
+
+					<p>
+						フランス語で「あなたの宝物」を意味するVotre Bijou。<br>
+						理想のファッションブランドを、個人でも手軽に立ち上げられるプロデュース支援サービスです。
+					</p>
+					<img src="img/votreBijouFlow.png" class="votrebijou-service-flow">
+
+					<p>
+						ブランドコンセプト・ロゴ制作から、ECサイト制作・販売、プロモーションまで<br>
+						トータルで支援し、<strong>未経験からでも安心してブランドオーナーになれる</strong>体制を整えています。
+					</p>
+
+					<hr>
+
+					<h3>いま、自分ブランドを持つべき理由</h3>
+
+					<p>
+						コロナ禍以降、ネットショッピング市場は48%以上成長。<br>
+						今、自らのブランドを持つことは<strong>最大のビジネスチャンス</strong>となっています。
+					</p>
+
+					<p>
+						自由な働き方、副業・複業としてのブランド経営にも最適な環境を整備しています。
+					</p>
+
+					<hr>
+
+					<h3>インフルエンサーによるPR支援</h3>
+
+					<img src="img/votreBijouMerit.png" class="votrebijou-service-merit">
+
+					<p>
+						立ち上げたブランドは、<strong>約7,000名のインフルエンサーが無償でPRサポート</strong>。<br>
+						あなたのブランドに最適なターゲットへダイレクトにアプローチできます。
+					</p>
+
+					<p>
+						加えて、マーケティング施策のノウハウも共有。<br>
+						ブランド拡大を多方面からサポートします。
+					</p>
+
+					<hr>
+
+					<h3>詳細・お申し込み</h3>
+
+					<p><a href="https://lin.ee/BNNecfR" target="_blank"><strong>株式会社令和ガールズ公式LINE＠はこちら</strong></a></p>
+
+					<hr>
+
+					<h3>今後の展開</h3>
+
+					<ul>
+						<li>2022年12月：東京都内で1,000人規模のPOPUPイベント開催予定</li>
+						<li>2023年夏：札幌・東京・名古屋・大阪・福岡、5大都市で展開予定</li>
+					</ul>
+
+					<p>
+						オンライン＋リアル両軸で、ブランド拡大の場を提供します。
+					</p>
+
+					<hr>
+
+					<h3>株式会社令和ガールズ 概要</h3>
+
+					<ul>
+						<li>会社名：株式会社令和ガールズ</li>
+						<li>代表取締役：室井涼介</li>
+						<li>所在地：<br>
+							新宿オフィス：〒160-0022 東京都新宿区西新宿8-14-19 小林第二ビル8階<br>
+							新宿営業所：〒163-0604 東京都新宿区西新宿1丁目25番地 新宿センタービル49階
+						</li>
+						<li>公式サイト：<a href="https://www.reiwagirls.com/" target="_blank">https://www.reiwagirls.com/</a>
+						</li>
+						<li>公式Instagram：<a href="https://www.instagram.com/reiwa_girls_official/"
+								target="_blank">@reiwa_girls_official</a></li>
+						<li>公式LINE＠：<a href="https://lin.ee/BNNecfR" target="_blank">https://lin.ee/BNNecfR</a>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+			<!-- ポップアップ(ボトルビジュー) -->
+			<div id="popupModal" class="modal">
+				<div class="modal-content">
+					<span id="closeModal" class="close-button">&times;</span>
+
+					<img src="img/monmaisonTop.png" alt="Mon maison" class="modal-image">
+
+					<h2>「Mon maison（モンメゾン）」リリースのお知らせ</h2>
+
+					<p><strong>株式会社令和ガールズ</strong>｜2022年9月29日 14時45分</p>
+
+					<p>総フォロワー8,400万人、登録インフルエンサー数7,000名を誇る業界No.1プラットフォーム「令和ガールズ」が、誰でもアパレルブランドをプロデュースし、インフルエンサーマーケティングで販売できる新サービス「<strong>Mon
+							maison（モンメゾン）</strong>」をリリースしました。</p>
+
+					<hr>
+
+					<h3>Mon maison（モンメゾン）とは</h3>
+
+					<p>フランス語で「私の店」を意味するMon maison。<br>
+						夢の出発点として、自分だけの理想のファッションブランドを立ち上げるサポートを行います。</p>
+					<img src="img/votreBijouFlow.png" class="votrebijou-service-flow">
+
+					<p>ブランドコンセプト・ロゴ・イメージカラーなど、すべて専門スタッフと共に形にしていき、<strong>ECサイト制作から発注・発送まですべて弊社がサポート</strong>。経験ゼロでもブランド立ち上げが可能です。
+					</p>
+
+					<hr>
+
+					<h3>いま、アパレルブランド立ち上げに<br>絶好のチャンス</h3>
+
+					<p>コロナ禍によりネットショッピング市場は48%成長。<br>
+						需要が高まる今だからこそ、<strong>自分のブランドをオンラインで展開することがビジネスチャンス</strong>となります。</p>
+
+					<p>さらに、副業としてアパレルオーナーを目指す方にも最適な環境をご用意しています。</p>
+
+					<hr>
+
+					<h3>提供サービス・料金プラン</h3>
+
+					<img src="img/monmaisonPriceList.png" class="monmaisonPriceList">
+
+					<p>立ち上げたブランドは、<strong>約7,000名のインフルエンサーが無償PRサポート</strong>。<br>
+						ブランドイメージに最適なインフルエンサー選定も可能です。</p>
+
+					<p>また、<strong>マーケティングノウハウの提供</strong>も含まれた、業界屈指のフルサポート体制となっています。</p>
+
+					<hr>
+
+					<h3>詳細・お申し込み</h3>
+
+					<p><a href="https://lin.ee/BNNecfR" target="_blank"><strong>株式会社令和ガールズ公式LINE＠はこちら</strong></a></p>
+
+					<hr>
+
+					<h3>今後の展開</h3>
+
+					<ul>
+						<li>2022年12月：東京都内で1,000人規模のPOP UPイベント開催予定</li>
+						<li>2023年夏：札幌・東京・名古屋・大阪・福岡、5大都市にて大規模POP UP展開予定</li>
+					</ul>
+
+					<p>オンラインだけでなく、<strong>リアルな場でもブランド展開が可能</strong>になります。</p>
+
+					<hr>
+
+					<h3>株式会社令和ガールズ 概要</h3>
+
+					<ul>
+						<li>会社名：株式会社令和ガールズ</li>
+						<li>代表取締役：室井涼介</li>
+						<li>所在地：<br>
+							新宿オフィス：〒160-0022 東京都新宿区西新宿8-14-19 小林第二ビル8階<br>
+							新宿営業所：〒163-0604 東京都新宿区西新宿1丁目25番地 新宿センタービル49階
+						</li>
+						<li>公式サイト：<a href="https://www.reiwagirls.com/" target="_blank">https://www.reiwagirls.com/</a>
+						</li>
+						<li>公式Instagram：<a href="https://www.instagram.com/reiwa_girls_official/"
+								target="_blank">@reiwa_girls_official</a></li>
+						<li>公式LINE＠：<a href="https://lin.ee/BNNecfR" target="_blank">https://lin.ee/BNNecfR</a>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+
+		</div>
+
+	</main>
+
+	<footer class="footer-section theme-white-text" id="section-footer">
+		<div class="footer-inner">
+			<h2 class="footer-logo">REIWAGIRLS</h2>
+
+			<div class="footer-top-row">
+				<div class="footer-tags">
+					<a href="company.html">COMPANY</a>
+					<a href="service.html">SERVICE</a>
+					<a href="vision.html">VISION</a>
+					<a href="recruit.html">RECRUIT</a>
+				</div>
+				<div class="footer-contact">
+					<a href="contact.html" class="footer-contact-button">CONTACT</a>
+				</div>
+			</div>
+
+			<div class="scroll-infinity">
+				<div class="scroll-infinity__wrap">
+					<ul class="scroll-infinity__list scroll-infinity__list--left">
+						<li class="scroll-infinity__item"><img src="img_logo/reiwaGirlsLogo.png" alt="NextStars">
+						</li>
+						<li class="scroll-infinity__item"><img src="img_logo/BottlBisuxLogo.png" alt="REIWAGIRLS">
+						</li>
+						<li class="scroll-infinity__item"><img src="img_logo/InfluenceHubLogo.png" alt="インフルエンスハブ">
+						</li>
+						<li class="scroll-infinity__item"><img src="img_logo/CabaTalentLogo.png" alt="キャバタレント"></li>
+						<li class="scroll-infinity__item"><img src="img_logo/MonMaisonLogo.png" alt="モンメゾン"></li>
+					</ul>
+					<ul class="scroll-infinity__list scroll-infinity__list--left">
+						<li class="scroll-infinity__item"><img src="img_logo/reiwaGirlsLogo.png" alt="NextStars">
+						</li>
+						<li class="scroll-infinity__item"><img src="img_logo/BottlBisuxLogo.png" alt="REIWAGIRLS">
+						</li>
+						<li class="scroll-infinity__item"><img src="img_logo/InfluenceHubLogo.png" alt="インフルエンスハブ">
+						</li>
+						<li class="scroll-infinity__item"><img src="img_logo/CabaTalentLogo.png" alt="キャバタレント"></li>
+						<li class="scroll-infinity__item"><img src="img_logo/MonMaisonLogo.png" alt="モンメゾン"></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="footer-bottom-area theme-dark">
+				<div class="footer-nav">
+					<a href="#schedule">Company</a>
+					<a href="#about">Contact</a>
+					<a href="#company">Line</a>
+					<a href="#company">Instagram</a>
+				</div>
+
+				<div class="footer-address">
+					<p>REIWAGIRLS Inc.<br>3-21-8, AzabuJuban, Minato-ku, Tokyo, 150-0001</p>
+				</div>
+
+				<div class="footer-bottom">
+					<small>© REIWAGIRLS / NEXTSTARS</small>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!--	<div class="logo-transition-overlay" id="logoTransition">-->
+	<!--		<img src="img/reiwachan.png" alt="Logo" class="logo-transition-logo">-->
+	<!--	</div>-->
+
+	<!-- ページの最後、</body>の直前に入れるのがベスト -->
+	<div class="page-entry-mask" id="pageEntryMask"></div>
+	<div class="page-exit-mask" id="pageExitMask"></div>
+	<!-- JSの読み込み（bodyの閉じタグ直前）-->
+	<script src="js/page-transition.js"></script>
+	<script src="js/header-basic.js"></script>
+	<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+	<script>
+		AOS.init({
+			duration: 1000,
+			once: true
+		});
+	</script>
+	<!-- JavaScript -->
+	<script>
+		// Influence Hubポップアップ制御
+		const openInfluenceHubModal = document.getElementById('openInfluenceHubModal');
+		const popupInfluenceHubModal = document.getElementById('popupInfluenceHubModal');
+		const closeInfluenceHubModal = document.getElementById('closeInfluenceHubModal');
+
+		openInfluenceHubModal.addEventListener('click', () => {
+			popupInfluenceHubModal.style.display = 'flex';
+		});
+
+		closeInfluenceHubModal.addEventListener('click', () => {
+			popupInfluenceHubModal.style.display = 'none';
+		});
+
+		popupInfluenceHubModal.addEventListener('click', (e) => {
+			if (e.target === popupInfluenceHubModal) {
+				popupInfluenceHubModal.style.display = 'none';
+			}
+		});
+
+		// --- Mon maisonのポップアップ制御
+		const openModal = document.getElementById('openModal');
+		const popupModal = document.getElementById('popupModal');
+		const closeModal = document.getElementById('closeModal');
+
+		openModal.addEventListener('click', () => {
+			popupModal.style.display = 'flex';
+		});
+
+		closeModal.addEventListener('click', () => {
+			popupModal.style.display = 'none';
+		});
+
+		popupModal.addEventListener('click', (e) => {
+			if (e.target === popupModal) {
+				popupModal.style.display = 'none';
+			}
+		});
+
+		// --- Votre Bijouのポップアップ制御
+		const openVotreBijouModal = document.getElementById('openVotreBijouModal'); // ボタンのID
+		const popupVotreBijouModal = document.getElementById('popupVotreBijouModal');
+		const closeVotreBijouModal = document.getElementById('closeVotreBijouModal');
+
+		openVotreBijouModal.addEventListener('click', () => {
+			popupVotreBijouModal.style.display = 'flex';
+		});
+
+		closeVotreBijouModal.addEventListener('click', () => {
+			popupVotreBijouModal.style.display = 'none';
+		});
+
+		popupVotreBijouModal.addEventListener('click', (e) => {
+			if (e.target === popupVotreBijouModal) {
+				popupVotreBijouModal.style.display = 'none';
+			}
+		});
+
+
+	</script>
+
+
+</body>
+
+</html>

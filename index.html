@@ -9,14 +9,12 @@
 	<link rel="stylesheet" href="css/animation.css">
 	<link rel="stylesheet" href="css/intro.css">
 	<link rel="stylesheet" href="css/text.css">
-	<link rel="stylesheet" href="css/service.css">
 	<link rel="stylesheet" href="css/contents.css">
 	<link rel="stylesheet" href="css/footer.css">
+	<link rel="stylesheet" href="css/page-transition.css">
 	<script src="js/function.js" defer></script>
 	<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
-
-
 </head>
 
 <body>
@@ -52,7 +50,13 @@
 
 	<header id="header" class="init">
 		<img id="main-logo" class="logo-reiwachan" src="img/reiwachan.png" alt="Logo" />
-		<!-- ロゴの下にスクロール誘導を追加 -->
+		<nav class="nav-links">
+			<a href="service.html">Service</a>
+			<a href="company.html">Company</a>
+			<a href="top.html">Vision</a>
+			<a href="recruit.html">Recruit</a>
+			<a href="contact.html">Contact</a>
+		</nav>
 		<div class="scroll-indicator">
 			<span class="arrow">&#x2193;</span>
 			<span class="text">Scroll</span>
@@ -62,7 +66,7 @@
 	<section class="first-impact">
 		<section class="scroll-gallery">
 			<div class="column" id="col1">
-				<div class="inner">
+				<div class="inner inner1">
 					<img src="img/1-1.png">
 					<img src="img/1-2.png">
 					<img src="img/1-3.png">
@@ -72,7 +76,7 @@
 				</div>
 			</div>
 			<div class="column" id="col2">
-				<div class="inner">
+				<div class="inner inner2">
 					<img src="img/2-1.png">
 					<img src="img/2-2.png">
 					<img src="img/3-3.png">
@@ -82,7 +86,7 @@
 				</div>
 			</div>
 			<div class="column" id="col3">
-				<div class="inner">
+				<div class="inner inner3">
 					<img src="img/3-1.png">
 					<img src="img/3-2.png">
 					<img src="img/2-3.png">
@@ -128,8 +132,14 @@
 	<section class="intro-section">
 		<div class="intro-content">
 			<div class="video-block scroll-rotate-left">
-				<img src="img/video_reiwa.png" alt="Reiwa Video Thumbnail" class="video-block_img">
+				<video class="video-block_video" autoplay muted loop playsinline>
+					<source
+						src="https://video.wixstatic.com/video/e769ce_280eeb91977c41b3be01ea5cbe00fd25/480p/mp4/file.mp4"
+						type="video/mp4">
+					お使いのブラウザは動画に対応していません。
+				</video>
 			</div>
+
 			<div class="text-block">
 				<h2><span class="highlight_dream" data-aos="fade-up">夢</span>で終わらせない</h2>
 				<p data-aos="fade-left" data-aos-delay="300" data-aos-duration="1000">
@@ -149,13 +159,21 @@
 				</div>
 			</div>
 			<div class="video-block scroll-rotate-right">
-				<img src="img/reiwa_haru.png" alt="PR Video Thumbnail" class="video-block_img">
+				<video class="video-block_video" autoplay muted loop playsinline>
+					<source src="video/liver.mp4" type="video/mp4">
+					お使いのブラウザは動画に対応していません。
+				</video>
 			</div>
+
 		</div>
 		<div class="intro-content">
 			<div class="video-block scroll-rotate-left">
-				<img src="img/video_reiwa2.png" alt="Reiwa Video Thumbnail" class="video-block_img">
+				<video class="video-block_video" autoplay muted loop playsinline>
+					<source src="video/anken.mp4" type="video/mp4">
+					お使いのブラウザは動画に対応していません。
+				</video>
 			</div>
+
 			<div class="text-block text_like">
 				<h2>生き方も、仕事も</h2>
 				<h2><span class="highlight_like" data-aos="fade-up">「好き」</span>に変わる</h2>
@@ -183,46 +201,34 @@
 	<section class="gallery">
 		<div class="floating-gallery-wrapper" id="floatingBackground">
 			<ul class="floating-gallery">
-				<li style="top: 3%; left: 3%;"><img src="img_backTalent/1.png" /></li>
-				<li style="top: 2.9%; left: 35.5%;"><img src="img_backTalent/2.png" /></li>
-				<li style="top: 4.9%; left: 85.9%;"><img src="img_backTalent/3.png" /></li>
-				<li style="top: 8.8%; left: 65.5%;"><img src="img_backTalent/4.png" /></li>
-				<li style="top: 11.8%; left: 11.6%;"><img src="img_backTalent/5.png" /></li>
-				<li style="top: 14.7%; left: 50.2%;"><img src="img_backTalent/6.png" /></li>
-				<li style="top: 16.6%; left: 86.3%;"><img src="img_backTalent/7.png" /></li>
-				<li style="top: 19.6%; left: 12.7%;"><img src="img_backTalent/8.jpg" /></li>
-				<li style="top: 23.5%; left: 28.6%;"><img src="img_backTalent/9.png" /></li>
-				<li style="top: 24.5%; left: 68.7%;"><img src="img_backTalent/10.png" /></li>
-				<li style="top: 29.4%; left: 79.3%;"><img src="img_backTalent/11.png" /></li>
-				<li style="top: 32.4%; left: 38.2%;"><img src="img_backTalent/12.png" /></li>
-				<li style="top: 35.3%; left: 10.6%;"><img src="img_backTalent/13.png" /></li>
-				<li style="top: 38.2%; left: 67.3%;"><img src="img_backTalent/14.jpg" /></li>
-				<li style="top: 41.2%; left: 17.7%;"><img src="img_backTalent/15.png" /></li>
-				<li style="top: 44.1%; left: 45.2%;"><img src="img_backTalent/16.png" /></li>
-				<li style="top: 47.1%; left: 2.8%;"><img src="img_backTalent/17.png" /></li>
-				<li style="top: 50.0%; left: 41.7%;"><img src="img_backTalent/18.png" /></li>
-				<li style="top: 52.9%; left: 75.6%;"><img src="img_backTalent/19.png" /></li>
-				<li style="top: 55.9%; left: 28.6%;"><img src="img_backTalent/20.png" /></li>
-				<li style="top: 58.8%; left: 4.4%;"><img src="img_backTalent/1.png" /></li>
-				<li style="top: 61.8%; left: 50.9%;"><img src="img_backTalent/2.png" /></li>
-				<li style="top: 64.7%; left: 18.9%;"><img src="img_backTalent/3.png" /></li>
-				<li style="top: 67.6%; left: 60.3%;"><img src="img_backTalent/4.png" /></li>
-				<li style="top: 60.6%; left: 86.3%;"><img src="img_backTalent/5.png" /></li>
-				<li style="top: 73.5%; left: 6.9%;"><img src="img_backTalent/6.png" /></li>
-				<li style="top: 76.5%; left: 33.5%;"><img src="img_backTalent/7.png" /></li>
-				<li style="top: 72.4%; left: 78.4%;"><img src="img_backTalent/8.jpg" /></li>
-				<li style="top: 82.4%; left: 79.3%;"><img src="img_backTalent/9.png" /></li>
-				<li style="top: 85.3%; left: 40.6%;"><img src="img_backTalent/10.png" /></li>
-				<li style="top: 88.2%; left: 3.3%;"><img src="img_backTalent/11.png" /></li>
-				<li style="top: 91.2%; left: 66.5%;"><img src="img_backTalent/12.png" /></li>
-				<li style="top: 94.1%; left: 38.6%;"><img src="img_backTalent/13.png" /></li>
-				<li style="top: 97.1%; left: 81.4%;"><img src="img_backTalent/14.jpg" /></li>
-				<li style="top: 100.0%; left: 7.2%;"><img src="img_backTalent/15.png" /></li>
-				<li style="top: 108.1%; left: 5.2%;"><img src="img_backTalent/16.png" /></li>
-				<li style="top: 109.1%; left: 75.8%;"><img src="img_backTalent/17.png" /></li>
-				<li style="top: 105.0%; left: 41.7%;"><img src="img_backTalent/18.png" /></li>
-				<li style="top: 110.9%; left: 7.6%;"><img src="img_backTalent/19.png" /></li>
-				<li style="top: 122.9%; left: 28.6%;"><img src="img_backTalent/20.png" /></li>
+				<li style="top: 3%; left: 16%;"><img src="img_backTalent/1.jpg" /></li>
+				<li style="top: 6.9%; left: 70.5%;"><img src="img_backTalent/2.png" /></li>
+				<li style="top: 12%; left: 3.5%;"><img src="img_backTalent/3.png" /></li>
+				<li style="top: 15%; left: 53.5%;"><img src="img_backTalent/4.png" /></li>
+				<li style="top: 8.0%; left: 31.6%;"><img src="img_backTalent/5.png" /></li>
+				<li style="top: 20%; left: 6.2%;"><img src="img_backTalent/6.png" /></li>
+				<li style="top: 23.2%; left: 76.3%;"><img src="img_backTalent/7.png" /></li>
+				<li style="top: 27.1%; left: 40.7%;"><img src="img_backTalent/8.png" /></li>
+				<li style="top: 30%; left: 5.6%;"><img src="img_backTalent/9.png" /></li>
+				<li style="top: 33%; left: 70.7%;"><img src="img_backTalent/10.png" /></li>
+				<li style="top: 39%; left: 8.3%;"><img src="img_backTalent/11.png" /></li>
+				<li style="top: 45.4%; left: 39.2%;"><img src="img_backTalent/12.png" /></li>
+				<li style="top: 48.8%; left: 70.6%;"><img src="img_backTalent/13.png" /></li>
+				<li style="top: 50.2%; left: 5.3%;"><img src="img_backTalent/14.png" /></li>
+				<li style="top: 57.2%; left: 60.7%;"><img src="img_backTalent/15.png" /></li>
+				<li style="top: 65.1%; left: 4.2%;"><img src="img_backTalent/16.png" /></li>
+				<li style="top: 64.6%; left: 35.2%;"><img src="img_backTalent/28.png" /></li>
+				<li style="top: 67.1%; left: 70.8%;"><img src="img_backTalent/17.png" /></li>
+				<li style="top: 72.5%; left: 24.7%;"><img src="img_backTalent/18.png" /></li>
+				<li style="top: 78.9%; left: 75.6%;"><img src="img_backTalent/19.png" /></li>
+				<li style="top: 83.5%; left: 25.0%;"><img src="img_backTalent/20.png" /></li>
+				<li style="top: 87.8%; left: 4.4%;"><img src="img_backTalent/21.jpg" /></li>
+				<li style="top: 91.8%; left: 64.9%;"><img src="img_backTalent/22.png" /></li>
+				<li style="top: 95.7%; left: 23.9%;"><img src="img_backTalent/23.png" /></li>
+				<li style="top: 107.7%; left: 70.9%;"><img src="img_backTalent/24.png" /></li>
+				<li style="top: 102.7%; left: 1%;"><img src="img_backTalent/25.png" /></li>
+				<li style="top: 112.7%; left: 48.9%;"><img src="img_backTalent/26.png" /></li>
+				<li style="top: 103.7%; left: 23.9%;"><img src="img_backTalent/27.png" /></li>
 			</ul>
 		</div>
 
@@ -231,8 +237,8 @@
 				<h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
 					<span>心を動かすSNSコンテンツ</span><br><span class="service-title">企画・運用代行</span>
 				</h1>
-				<p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="lead">
-					私たちはSNSに特化したノウハウで、<br>クライアントの想いを形にします。</p>
+<!--				<p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="lead">-->
+<!--					私たちはSNSに特化したノウハウで、<br>クライアントの想いを形にします。</p>-->
 				<p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="description">
 					アカウント運用・フォロワー獲得・ブランド認知──<br>“バズらせたい”ではなく、“伝わる”コンテンツを。</p>
 				<a data-aos="fade" data-aos-delay="300" data-aos-duration="1000" href="#"
@@ -245,8 +251,8 @@
 					<span>ブランドの“世界観”を設計</span><br>
 					<span class="service-title">クリエイティブ制作</span>
 				</h1>
-				<p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="lead">
-					デザイン・映像・写真などを通じて、<br>一貫した印象とメッセージを届けます。 </p>
+<!--				<p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="lead">-->
+<!--					デザイン・映像・写真などを通じて、<br>一貫した印象とメッセージを届けます。 </p>-->
 				<p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="description">
 					世界観に共感が生まれる時代。<br>ビジュアルから空気感まで設計します。</p>
 				<a data-aos="fade" data-aos-delay="300" data-aos-duration="1000" href="#"
@@ -259,8 +265,8 @@
 				<h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
 					<span>戦略から実行までを伴走</span><br><span class="service-title">マーケティング支援</span>
 				</h1>
-				<p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="lead">
-					目標設定、戦略立案、広告運用、分析──<br>すべてをワンストップで支援します。</p>
+<!--				<p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="lead">-->
+<!--					目標設定、戦略立案、広告運用、分析──<br>すべてをワンストップで支援します。</p>-->
 				<p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="description">
 					数字も、ストーリーも、届け方も。<br>全方位からブランドを育てます。</p>
 				<a data-aos="fade" data-aos-delay="300" data-aos-duration="1000" href="#"
@@ -272,12 +278,30 @@
 				<h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
 					<span>ブランドとモデルをつなぐ</span><br><span class="service-title">モデルキャスティング</span>
 				</h1>
-				<p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="lead">
-					企画・イメージに合う最適なモデルを提案。<br>オーディションからマネジメントまで対応します。</p>
+<!--				<p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="lead">-->
+<!--					企画・イメージに合う最適なモデルを提案。<br>オーディションからマネジメントまで対応します。</p>-->
 				<p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="description">
 					撮影・広告・イベントなど、<br>あらゆるシーンにふさわしいキャスティングをご提供。</p>
 				<a data-aos="fade" data-aos-delay="300" data-aos-duration="1000" href="#"
 					class="service-button theme-green-text">詳しくはこちら</a>
+			</div>
+		</section>
+
+		<section class="service-hero theme-gold-text" id="section-bottle">
+			<div class="service-inner">
+				<h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+					<span>美を纏う世界観を</span><br><span class="service-title">ボトルビジュー制作</span>
+				</h1>
+<!--				<p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="lead">-->
+<!--					デザイン設計からプロダクト開発、SNS展開まで。<br>-->
+<!--					唯一無二のラグジュアリーブランドをプロデュースします。-->
+<!--				</p>-->
+				<p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="description">
+					“売れる”よりも、“選ばれる”存在へ。<br>
+					夜の世界に映える、ブランドジュエルを形にします。
+				</p>
+				<a data-aos="fade" data-aos-delay="300" data-aos-duration="1000" href="#"
+					class="service-button theme-gold-text">詳しくはこちら</a>
 			</div>
 		</section>
 
@@ -286,15 +310,14 @@
 				<h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
 					<span>世界観をカタチにする</span><br><span class="service-title">アパレルブランド制作</span>
 				</h1>
-				<p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="lead">
-					コンセプト設計・ロゴ・アイテム展開まで、<br>ブランド立ち上げをトータルで支援します。</p>
+<!--				<p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="lead">-->
+<!--					コンセプト設計・ロゴ・アイテム展開まで、<br>ブランド立ち上げをトータルで支援します。</p>-->
 				<p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="description">
 					想いや個性を“着れるデザイン”へ。<br>感性に寄り添ったブランドづくりをお手伝いします。</p>
 				<a data-aos="fade" data-aos-delay="300" data-aos-duration="1000" href="#"
 					class="service-button theme-yellow-text">詳しくはこちら</a>
 			</div>
 		</section>
-
 
 	</section>
 	<!-- 上に表示する文字 -->
@@ -304,13 +327,13 @@
 
 			<div class="footer-top-row">
 				<div class="footer-tags">
-					<a href="#company">COMPANY</a>
-					<a href="#service">SERVICE</a>
-					<a href="#vision">VISION</a>
-					<a href="#recruit">RECRUIT</a>
+					<a href="company.html">COMPANY</a>
+					<a href="service.html">SERVICE</a>
+					<a href="vision.html">VISION</a>
+					<a href="recruit.html">RECRUIT</a>
 				</div>
 				<div class="footer-contact">
-					<a href="#contact" class="footer-contact-button">CONTACT</a>
+					<a href="contact.html" class="footer-contact-button">CONTACT</a>
 				</div>
 			</div>
 
@@ -335,9 +358,10 @@
 
 			<div class="footer-bottom-area theme-dark">
 				<div class="footer-nav">
-					<a href="#schedule">SCHEDULE</a>
-					<a href="#about">ABOUT</a>
-					<a href="#company">COMPANY PROFILE</a>
+					<a href="#schedule">Company</a>
+					<a href="#about">Contact</a>
+					<a href="#company">Line</a>
+					<a href="#company">Instagram</a>
 				</div>
 
 				<div class="footer-address">
@@ -350,6 +374,13 @@
 			</div>
 		</div>
 	</section>
+
+	<!-- ページの最後、</body>の直前に入れるのがベスト -->
+	<div class="page-entry-mask" id="pageEntryMask"></div>
+	<div class="page-exit-mask" id="pageExitMask"></div>
+
+	<!-- JSの読み込み（bodyの閉じタグ直前）-->
+	<script src="js/page-transition.js"></script>
 
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>

@@ -28,7 +28,7 @@
 	width: 40%;
 }
 
-.video-block .video-block_img {
+.video-block .video-block_video {
 	width: 100%;
 }
 
@@ -62,7 +62,7 @@
 /*}*/
 
 
-.video-block_img {
+.video-video {
 	width: 100%;
 	display: block;
 }

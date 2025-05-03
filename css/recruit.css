@@ -1,0 +1,219 @@
+body{
+	padding: 0;
+	margin: 0;
+}
+
+/*mainセクションバックグラウンド*/
+.video-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	/* コンテンツより奥 */
+	pointer-events: none;
+	/* 動画の上でも操作できる */
+}
+
+.video-background video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+
+/*Heroセクション*/
+.recruit-hero {
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 40px;
+}
+
+.recruit-hero-image-wrapper {
+	position: relative;
+	width: 100%;
+	clip-path: ellipse(100% 100% at 50% 0%);
+}
+
+.recruit-hero-image {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	display: block;
+}
+
+.recruit-hero-overlay {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	color: white;
+}
+
+.recruit-hero-title {
+	font-size: 5.2rem;
+	margin: 0;
+	font-weight: 800;
+	text-shadow: 0 0 6px rgba(255, 255, 255, 0.8), 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.recruit-hero-subtitle {
+	font-size: 3.6rem;
+	margin: 0;
+	font-weight: 600;
+	text-shadow: 0 0 4px rgba(255, 255, 255, 0.7), 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/*以下、第二タイトルセクション*/
+.recruit-second-title {
+	text-align: center;
+	margin: 60px 0 40px;
+}
+
+.recruit-second-title-title {
+	font-size: 4.2rem;
+	font-weight: 800;
+	color: white;
+	-webkit-text-stroke: 1.2px #222;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+.recruit-second-title-text {
+	font-size: 2.2rem;
+	font-weight: 600;
+	color: #333;
+}
+
+/*以下、tabセクション*/
+.recruit-tab-buttons {
+	display: flex;
+	gap: 10px;
+	margin: 40px auto 20px;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.recruit-tab-button {
+	padding: 10px 20px;
+	background-color: #eee;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 1rem;
+	transition: all 0.3s ease;
+}
+
+.recruit-tab-button.active {
+	background-color: #111;
+	color: white;
+	border-color: #111;
+}
+
+.recruit-tab-content {
+	display: none;
+	border: 2px solid black;
+	border-radius: 20px;
+	padding: 30px;
+	margin: 0 auto 60px;
+	max-width: 700px;
+	background-color: white;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.recruit-tab-content.active {
+	display: block;
+}
+
+.recruit-tab-content p {
+	font-size: 1rem;
+	line-height: 1.8;
+	margin-bottom: 1.2em;
+}
+
+/*以下、選考フローセクション*/
+.recruit-process {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 40px;
+	padding: 40px 20px;
+}
+
+.recruit-step {
+	text-align: center;
+	max-width: 160px;
+}
+
+.recruit-step-icon {
+	width: 100px;
+	height: 100px;
+	background-color: #f89cbf;
+	color: white;
+	font-size: 40px;
+	line-height: 100px;
+	border-radius: 50%;
+	margin: 0 auto 10px;
+}
+
+.recruit-step-title {
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: #c84e8d;
+	margin-bottom: 8px;
+}
+
+.recruit-step-desc {
+	font-size: 0.85rem;
+	color: #555;
+	line-height: 1.4;
+}
+
+/*オフィス環境セクション*/
+.scroll-infinity {
+	overflow: hidden;
+	width: 100%;
+	margin: 60px 0;
+}
+
+.scroll-infinity__wrap {
+	display: flex;
+}
+
+.scroll-infinity__list {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.scroll-infinity__list--right {
+	animation: infinity-scroll-right 50s linear infinite;
+}
+
+.scroll-infinity__item {
+	width: calc(100vw / 6);
+	flex-shrink: 0;
+}
+
+.scroll-infinity__item img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	border-radius: 8px;
+}
+
+@keyframes infinity-scroll-right {
+	from {
+		transform: translateX(-100%);
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+/*以下、フッターセクション*/

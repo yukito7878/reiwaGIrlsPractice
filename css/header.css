@@ -10,6 +10,12 @@ header {
 	transition: all 0.5s ease;
 }
 
+#header.shrink .nav-links {
+	visibility: visible;
+	opacity: 1;
+}
+
+
 /* 共通ロゴスタイル */
 .logo-reiwachan {
 	position: absolute;
@@ -17,6 +23,48 @@ header {
 	max-width: 600px;
 	transition: all 0.5s ease;
 }
+
+.nav-links {
+	visibility: hidden;
+	/* ← 表示空間を確保したまま非表示 */
+	opacity: 0;
+	/* ← フェードのための透明度 */
+	display: flex;
+	/* ← 常にレイアウトを確保してカクつき防止 */
+	justify-content: flex-end;
+	align-items: center;
+	gap: 20px;
+	height: 100%;
+	transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.nav-links a {
+	text-decoration: none;
+	color: #333;
+	font-weight: bold;
+	transition: color 0.3s;
+	line-height: 1;
+}
+
+.scroll-indicator {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	font-size: 0.9rem;
+	color: #888;
+}
+
+.scroll-indicator .arrow {
+	display: block;
+	font-size: 1.5rem;
+}
+
+.nav-links a:hover {
+	color: #ff4081;
+}
+
 
 /* 初期状態：中央配置（top: 50%） */
 header.init .logo-reiwachan {

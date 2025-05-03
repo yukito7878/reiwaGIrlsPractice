@@ -1,0 +1,194 @@
+body {
+	font-family: 'Noto Sans JP', sans-serif;
+	margin: 0;
+	background-color: #f7f7f7;
+	color: #333;
+}
+
+/*mainセクションバックグラウンド*/
+.video-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	/* コンテンツより奥 */
+	pointer-events: none;
+	/* 動画の上でも操作できる */
+}
+
+.video-background video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/*Heroセクション*/
+.contact-hero {
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 40px;
+}
+
+.contact-hero-image-wrapper {
+	position: relative;
+	width: 100%;
+	clip-path: ellipse(100% 100% at 50% 0%);
+	background: rgba(0, 0, 0, 0.4);
+
+}
+
+.contact-hero-image {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	display: block;
+}
+
+.contact-hero-overlay {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	color: white;
+}
+
+.contact-hero-title {
+	font-size: 5.2rem;
+	margin: 0;
+	font-weight: 800;
+	text-shadow: 0 0 6px rgba(255, 255, 255, 0.8), 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.contact-hero-subtitle {
+	font-size: 3.6rem;
+	margin: 0;
+	font-weight: 600;
+	text-shadow: 0 0 4px rgba(255, 255, 255, 0.7), 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/*会社概要*/
+.company-overview-section {
+	position: relative;
+	padding: 100px 20px;
+	padding-top: 0;
+	overflow: hidden;
+}
+
+.company-overview-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: 50% 100%, 50% 100%;
+	background-position: left, right;
+	opacity: 0.1;
+	z-index: 0;
+}
+
+.company-overview-inner {
+	position: relative;
+	max-width: 500px;
+	margin: 0 auto;
+	z-index: 1;
+}
+
+.company-overview-title {
+	text-align: center;
+	font-size: 36px;
+	font-weight: bold;
+	margin-bottom: 60px;
+	position: relative;
+}
+
+.company-overview-table {
+	display: grid;
+	gap: 20px;
+}
+
+.company-overview-row {
+	display: flex;
+	flex-wrap: wrap;
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 10px;
+	gap: 10%;
+	justify-content: right;
+}
+
+.company-overview-label {
+	flex: 0 0 20%;
+	font-weight: bold;
+	color: #e94279;
+}
+
+.company-overview-content {
+	flex: 0 0 60%;
+	font-size: 16px;
+	line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+	.contact-hero-title {
+		font-size: 3.2rem;
+	}
+
+	.contact-hero-subtitle {
+		font-size: 2rem;
+	}
+
+	.contact-hero-overlay {
+		padding: 0 20px;
+		text-align: center;
+	}
+
+	.company-overview-inner {
+		padding: 0 20px;
+	}
+
+	.company-overview-title {
+		font-size: 28px;
+		margin-bottom: 40px;
+	}
+
+	.company-overview-label,
+	.company-overview-content {
+		flex: 0 0 100%;
+		text-align: left;
+	}
+
+	.company-overview-label {
+		margin-bottom: 5px;
+		color: #e94279;
+	}
+
+	.company-overview-content {
+		margin-bottom: 15px;
+		font-size: 15px;
+	}
+
+	.company-overview-row {
+		flex-direction: column;
+		padding-bottom: 20px;
+	}
+}
+
+@media (max-width: 480px) {
+	.contact-hero-title {
+		font-size: 2.4rem;
+	}
+
+	.contact-hero-subtitle {
+		font-size: 1.6rem;
+	}
+
+	.company-overview-title {
+		font-size: 24px;
+	}
+
+	.company-overview-content {
+		font-size: 14px;
+	}
+}

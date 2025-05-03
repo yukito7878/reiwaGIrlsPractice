@@ -7,7 +7,6 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-	background: #fff;
 }
 
 /* ========== ロゴ・スプラッシュ関連 ========== */
@@ -155,17 +154,40 @@ text {
 	position: relative;
 }
 
-.inner {
-	display: flex;
-	flex-direction: column;
-}
-
 .column img {
 	width: 370px;
 	margin-bottom: 1rem;
 	border-radius: 8px;
 	opacity: 0.3;
 }
+
+.inner {
+	display: flex;
+	flex-direction: column;
+}
+
+.inner1 {
+	animation: scrollVertical 23s linear infinite;
+}
+
+.inner2 {
+	animation: scrollVertical 19s linear infinite;
+}
+
+.inner3 {
+	animation: scrollVertical 26s linear infinite;
+}
+
+@keyframes scrollVertical {
+	0% {
+		transform: translateY(0%);
+	}
+
+	100% {
+		transform: translateY(-50%);
+	}
+}
+
 
 /* ========== テキスト・キャッチコピー ========== */
 .overlay-text {
@@ -238,34 +260,6 @@ text {
 	padding-top: 1rem;
 }
 
-/* ========== 横スクロールテキスト ========== */
-.scrolling-wrapper {
-	width: 100%;
-	overflow: hidden;
-	position: relative;
-}
-
-.scrolling-text {
-	display: inline-block;
-	white-space: nowrap;
-	font-size: 5.5rem;
-	font-weight: 800;
-	letter-spacing: 2px;
-	color: transparent;
-	-webkit-text-stroke: 1px #555;
-	animation: scroll-left 40s linear infinite;
-	will-change: transform;
-}
-
-@keyframes scroll-left {
-	0% {
-		transform: translateX(0%);
-	}
-
-	100% {
-		transform: translateX(-50%);
-	}
-}
 
 /* ========== スクロールロック用 ========== */
 #scroll-locker {
@@ -324,4 +318,142 @@ text {
 .fade-in-delay.show {
 	animation: fadeInUp 1s ease-out forwards;
 	animation-delay: 0.5s;
+}
+
+
+
+/* ========== 横スクロール文字列 ==========  */
+.catch-main {
+	font-weight: 800;
+	letter-spacing: 2px;
+	color: transparent;
+	-webkit-text-stroke: 1px #555;
+	margin: 10px 0;
+}
+
+.scrolling-wrapper {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+.scrolling-text {
+	display: inline-block;
+	white-space: nowrap;
+	font-size: 6.5rem;
+	font-weight: 800;
+	letter-spacing: 2px;
+	color: transparent;
+	-webkit-text-stroke: 1px #555;
+	animation: scroll-left 40s linear infinite;
+	will-change: transform;
+	padding-bottom: 40px;
+}
+
+.scrolling-text-right {
+	display: inline-block;
+	white-space: nowrap;
+	font-size: 6.5rem;
+	font-weight: 800;
+	letter-spacing: 2px;
+	color: transparent;
+	-webkit-text-stroke: 1px #555;
+	animation: scroll-right 40s linear infinite;
+	will-change: transform;
+	padding-top: 40px;
+}
+
+@keyframes scroll-left {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(-50%);
+	}
+}
+
+@keyframes scroll-right {
+	0% {
+		transform: translateX(-50%);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+
+@media (max-width: 1024px) {
+	.creator-recruit-lead {
+		font-size: 3rem;
+	}
+
+	.scrolling-text,
+	.scrolling-text-right {
+		font-size: 4rem;
+	}
+
+	.catch-sub {
+		font-size: 4rem;
+		line-height: 1.2;
+	}
+
+	.badge-button {
+		font-size: 1.2rem;
+		padding: 1rem 1rem;
+	}
+
+	.services {
+		font-size: 1.1rem;
+	}
+
+	.creator-recruit-inner {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.creator-recruit-content {
+		flex: 1 1 100%;
+	}
+
+	.creator-recruit-image {
+		margin-top: 20px;
+	}
+
+	.creator-recruit-image img {
+		max-width: 180px;
+	}
+}
+
+@media (max-width: 600px) {
+	.catch-sub {
+		font-size: 3rem;
+	}
+
+	.scrolling-text,
+	.scrolling-text-right {
+		font-size: 3.5rem;
+	}
+
+	.creator-recruit-lead {
+		font-size: 2.2rem;
+	}
+
+	.line-apply-button {
+		font-size: 14px;
+		padding: 12px 30px;
+	}
+
+	.footer-section h2 {
+		font-size: 1.6rem;
+	}
+
+	.service-hero .service-title {
+		font-size: 2rem;
+	}
+
+	.overlay-text {
+		padding: 100px 1.5rem 0;
+	}
 }

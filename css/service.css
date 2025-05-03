@@ -1,116 +1,527 @@
-/*body.theme-blue-text {*/
-/*	color: #c6e3f9;*/
-/*}*/
+body {
+	background-color: #fff;
+	font-family: "Noto Sans JP", sans-serif;
+	padding: 0;
+	margin: 0;
+}
 
-/*body.theme-red-text {*/
-/*	color: #f7c6c6;*/
-/*}*/
+/* ========== 横スクロール文字列 ==========  */
+.catch-main {
+	font-weight: 800;
+	letter-spacing: 2px;
+	color: transparent;
+	-webkit-text-stroke: 1px #555;
+	margin: 10px 0;
+}
 
-/*body.theme-purple-text {*/
-/*	color: #e2ccff;*/
-/*}*/
+.scrolling-wrapper {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
 
-/*.service-hero {*/
-/*	text-align: center;*/
-/*	padding: 140px 20px;*/
-/*	position: relative;*/
-/*	overflow: hidden;*/
-/*	transition: color 0.8s ease;*/
-/*}*/
+.scrolling-text {
+	display: inline-block;
+	white-space: nowrap;
+	font-size: 6.5rem;
+	font-weight: 800;
+	letter-spacing: 2px;
+	color: transparent;
+	-webkit-text-stroke: 1px #555;
+	animation: scroll-left 40s linear infinite;
+	will-change: transform;
+	padding-bottom: 40px;
+}
 
-/*.service-inner {*/
-/*	max-width: 800px;*/
-/*	margin: 0 auto;*/
-/*}*/
+.scrolling-text-right {
+	display: inline-block;
+	white-space: nowrap;
+	font-size: 6.5rem;
+	font-weight: 800;
+	letter-spacing: 2px;
+	color: transparent;
+	-webkit-text-stroke: 1px #555;
+	animation: scroll-right 40s linear infinite;
+	will-change: transform;
+	padding-top: 40px;
+}
 
-/*.service-inner h1 {*/
-/*	font-size: 4rem;*/
-/*	font-weight: 800;*/
-/*	line-height: 1.5;*/
-/*	margin-bottom: 30px;*/
-/*}*/
+@keyframes scroll-left {
+	0% {
+		transform: translateX(0);
+	}
 
-/*.service-inner h1 span {*/
-/*	display: inline-block;*/
-/*}*/
+	100% {
+		transform: translateX(-50%);
+	}
+}
 
-/*.theme-blue-text .service-inner h1 span {*/
-/*	background: linear-gradient(90deg, #5fc2f3, #b8d8f7);*/
-/*	-webkit-background-clip: text;*/
-/*	-webkit-text-fill-color: transparent;*/
-/*}*/
+@keyframes scroll-right {
+	0% {
+		transform: translateX(-50%);
+	}
 
-/*.theme-red-text .service-inner h1 span {*/
-/*	background: linear-gradient(90deg, #f37c7c, #f1b0b0);*/
-/*	-webkit-background-clip: text;*/
-/*	-webkit-text-fill-color: transparent;*/
-/*}*/
+	100% {
+		transform: translateX(0);
+	}
+}
 
-/*.theme-purple-text .service-inner h1 span {*/
-/*	background: linear-gradient(90deg, #a377ff, #dfc8ff);*/
-/*	-webkit-background-clip: text;*/
-/*	-webkit-text-fill-color: transparent;*/
-/*}*/
+/*mainセクションバックグラウンド*/
+.video-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	/* コンテンツより奥 */
+	pointer-events: none;
+	/* 動画の上でも操作できる */
+}
 
-/*.lead,*/
-/*.description {*/
-/*	color: #1a1a1a;*/
-/*	font-size: 1.7rem;*/
-/*	font-weight: bold;*/
-/*	line-height: 1.7;*/
-/*}*/
+.video-background video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
 
-/*.service-button {*/
-/*	display: inline-block;*/
-/*	margin-top: 30px;*/
-/*	padding: 1em 2.3em;*/
-/*	border-radius: 9999px;*/
-/*	font-weight: bold;*/
-/*	text-decoration: none;*/
-/*	border: 2px solid currentColor;*/
-/*	color: currentColor;*/
-/*	transition: all 0.3s ease;*/
-/*}*/
+.main-content {
+	position: relative;
+	z-index: 1;
+}
 
-/*a.theme-blue-text {*/
-/*	border: solid 1px #b8d8f7;*/
-/*	color: #b8d8f7;*/
-/*}*/
-
-/*a.theme-blue-text:hover {*/
-/*	background-color: #b8d8f7;*/
-/*	color: black;*/
-/*}*/
-
-/*a.theme-red-text {*/
-/*	border: solid 1px #f37c7c;*/
-/*	color: #f37c7c;*/
-/*}*/
-
-/*a.theme-red-text:hover {*/
-/*	background-color: #f37c7c;*/
-/*	color: black;*/
-/*}*/
-
-
-/*a.theme-purple-text {*/
-/*	border: solid 1px #a377ff;*/
-/*	color: #a377ff;*/
-/*}*/
-
-/*a.theme-purple-text:hover {*/
-/*	background-color: #a377ff;*/
-/*	color: #1a1a1a;*/
-/*}*/
+.content {
+	padding: 100px 20px;
+	/* 余白つけて見やすく */
+	color: white;
+	/* 必要ならテキスト色変更 */
+}
 
 
-/*@media (max-width: 768px) {*/
-/*	.service-inner h1 {*/
-/*		font-size: 2rem;*/
-/*	}*/
+/*Heroセクション*/
+.service-hero {
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
 
-/*	.lead,*/
-/*	.description {*/
-/*		font-size: 0.95rem;*/
-/*	}*/
-/*}*/
+.service-hero-image-wrapper {
+	position: relative;
+	width: 100%;
+	clip-path: ellipse(100% 100% at 50% 0%);
+	background: rgba(0, 0, 0, 0.4);
+}
+
+.service-hero-image {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	display: block;
+}
+
+.service-hero-overlay {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	color: white;
+}
+
+.service-hero-title {
+	font-size: 5.2rem;
+	margin: 0;
+	font-weight: 800;
+	text-shadow: 0 0 6px rgba(255, 255, 255, 0.8), 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.service-hero-subtitle {
+	font-size: 3.6rem;
+	margin: 0;
+	font-weight: 600;
+	text-shadow: 0 0 4px rgba(255, 255, 255, 0.7), 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/*introセクション*/
+.service-intro {
+	padding: 60px 20px;
+	padding-top: 0px;
+	text-align: center;
+}
+
+.service-intro__inner {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.service-intro__title {
+	font-size: 3.5rem;
+	font-weight: 900;
+	letter-spacing: 0.1em;
+	color: #111;
+	margin-bottom: 10px;
+}
+
+.service-intro__subtitle {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: #555;
+	margin-bottom: 50px;
+}
+
+.service-intro__lead {
+	font-size: 3.7rem;
+	font-weight: bold;
+	line-height: 1.6;
+	color: #111;
+	margin-bottom: 40px;
+}
+
+.service-intro__desc {
+	font-size: 1.5rem;
+	line-height: 2;
+	color: #444;
+}
+
+/*サービスタイトル*/
+.service-list {
+	padding-bottom: 100px;
+}
+
+.service-title {
+	font-size: 4rem;
+	text-align: center;
+}
+
+.card-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.card p.card-grid__catchcopy {
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+.card p.card-grid__text {
+	font-size: 1.1rem;
+	width: 85%;
+	margin: auto;
+	margin-bottom: 40px;
+	margin-top: 40px;
+}
+
+.card {
+	background-color: white;
+	border-radius: 10px;
+	padding: 20px;
+	text-align: center;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+	border: 3px black solid;
+	padding-bottom: 50px;
+}
+
+.card img {
+	max-width: 100%;
+	height: 200px;
+	margin-bottom: 16px;
+}
+
+.card h3 {
+	font-size: 2rem;
+	margin-bottom: 10px;
+}
+
+.card p {
+	font-size: 0.95rem;
+	color: #333;
+	line-height: 1.6;
+	margin-bottom: 20px;
+}
+
+.card .service-detail__button {
+	background-color: white;
+	border: 2px solid #111;
+	border-radius: 50px;
+	padding: 8px 20px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.3s;
+	font-size: 1.3rem;
+	color: inherit;
+	/* 親要素の文字色を引き継ぐ */
+	text-decoration: none;
+	/* 下線を消す */
+}
+
+.card .service-detail__button:hover {
+	background-color: #111;
+	color: white;
+}
+
+.service-last-text {
+	display: block;
+	font-size: 2rem;
+	font-weight: bold;
+	padding-top: 100px;
+	text-align: center;
+	margin: auto
+}
+
+/*インフルエンスハブ用ポップアップ*/
+/* モーダル背景 */
+.modal-influencehub {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 1000;
+	justify-content: center;
+	align-items: center;
+}
+
+/* モーダルコンテンツ */
+.modal-influencehub-content {
+	background: white;
+	padding: 30px;
+	border-radius: 12px;
+	width: 90%;
+	max-width: 700px;
+	position: relative;
+	animation: fadeInInfluenceHub 0.5s ease;
+	overflow-y: auto;
+	max-height: 80vh;
+}
+
+/* モーダル内の画像 */
+#popupInfluenceHubModal .modal-influencehub-image {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	margin-bottom: 20px;
+}
+
+/* 閉じるボタン */
+.close-influencehub-button {
+	position: absolute;
+	top: 15px;
+	right: 20px;
+	font-size: 32px;
+	color: #555;
+	cursor: pointer;
+}
+
+/* テキスト設定 */
+.modal-influencehub-content h2 {
+	font-size: 2rem;
+	margin-bottom: 15px;
+	text-align: center;
+	color: #222;
+}
+
+.modal-influencehub-content p {
+	font-size: 1rem;
+	margin-bottom: 15px;
+	color: #444;
+	line-height: 1.6;
+}
+
+.modal-influencehub-content h3 {
+	font-size: 1.4rem;
+	margin: 30px 0 10px;
+	color: #333;
+}
+
+.modal-influencehub-content ul {
+	padding-left: 20px;
+	margin-bottom: 20px;
+}
+
+.modal-influencehub-content ul li {
+	list-style: disc;
+	margin-bottom: 8px;
+	color: #555;
+}
+
+/* フェードインアニメーション */
+@keyframes fadeInInfluenceHub {
+	from {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+
+/* ボトルビジュー用オープンボタン */
+.open-votrebijou-button {
+	padding: 12px 24px;
+	font-size: 18px;
+	background-color: #ff69b4;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background 0.3s;
+}
+
+.open-votrebijou-button:hover {
+	background-color: #ff85c1;
+}
+
+/* ボトルビジュー用モーダル本体 */
+.modal-votrebijou {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 1000;
+	justify-content: center;
+	align-items: center;
+}
+
+/* ボトルビジュー用モーダルコンテンツ */
+.modal-votrebijou-content {
+	background: white;
+	padding: 30px;
+	border-radius: 12px;
+	width: 90%;
+	max-width: 700px;
+	position: relative;
+	animation: fadeInVotreBijou 0.5s ease;
+	overflow-y: auto;
+	max-height: 80vh;
+}
+
+/* モーダル内画像 */
+#popupVotreBijouModal .modal-votrebijou-image {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	margin-bottom: 20px;
+}
+
+/* サービスフロー画像 */
+.votrebijou-service-flow {
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+.votrebijou-service-merit {
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+
+/* クローズボタン */
+.close-votrebijou-button {
+	position: absolute;
+	top: 15px;
+	right: 20px;
+	font-size: 32px;
+	color: #555;
+	cursor: pointer;
+}
+
+/* アニメーション（fadeInのビジュー専用版） */
+@keyframes fadeInVotreBijou {
+	from {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+/*以下、モンメゾン用ポップアップセクション*/
+.open-button {
+	padding: 12px 24px;
+	font-size: 18px;
+	background-color: #ff69b4;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background 0.3s;
+}
+
+.open-button:hover {
+	background-color: #ff85c1;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 1000;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-content {
+	background: white;
+	padding: 30px;
+	border-radius: 12px;
+	width: 90%;
+	max-width: 700px;
+	position: relative;
+	animation: fadeIn 0.5s ease;
+	overflow-y: auto;
+	max-height: 80vh;
+}
+
+#popupModal .modal-image {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	margin-bottom: 20px;
+}
+
+.monmaisonPriceList {
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+.close-button {
+	position: absolute;
+	top: 15px;
+	right: 20px;
+	font-size: 32px;
+	color: #555;
+	cursor: pointer;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}

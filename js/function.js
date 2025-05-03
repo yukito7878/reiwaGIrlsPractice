@@ -24,16 +24,19 @@
 //   }, 2500);
 // });
 
-
-// ==================== ヘッダースナップ処理 ==================== //
 const header = document.getElementById('header');
+const navLinks = document.querySelector('.nav-links');
 let isSnapping = false;
 let isShrinking = false;
+let isAtBottom = false; // 最下部にいるかどうか
 
 window.addEventListener('scroll', () => {
 	const scrollY = window.scrollY;
+	const viewportBottom = scrollY + window.innerHeight;
+	const pageBottom = document.body.scrollHeight;
 
-	if (scrollY > 100 && !isShrinking && !isSnapping && scrollY < 150) {
+	// ===== ヘッダー縮小処理 =====
+	if (scrollY > 100 && !isShrinking && !isSnapping) {
 		isShrinking = true;
 		isSnapping = true;
 		header.classList.remove('init');
@@ -43,25 +46,61 @@ window.addEventListener('scroll', () => {
 			window.scrollTo(0, 200);
 			header.classList.remove('moving');
 			header.classList.add('shrink');
-			lockUserInteraction(2000);
-			setTimeout(() => isSnapping = false, 600);
+			setTimeout(() => {
+				navLinks.style.display = 'flex';
+			}, 100);
+			setTimeout(() => {
+				isSnapping = false;
+			}, 600);
 		}, 300);
 	}
 
-	if (scrollY <= 50 && isShrinking) {
+	if (scrollY <= 80 && isShrinking) {
 		header.classList.remove('shrink', 'moving');
 		header.classList.add('init');
+		navLinks.style.display = 'none';
 		isShrinking = false;
+	}
+
+	// ===== 一番下に到達したら nav-links を非表示 =====
+	if (viewportBottom >= pageBottom - 5) {
+		if (!isAtBottom) {
+			navLinks.style.display = 'none';
+			isAtBottom = true;
+		}
+	} else {
+		if (isAtBottom) {
+			navLinks.style.display = 'flex';
+			isAtBottom = false;
+		}
 	}
 });
 
+// 操作ロック
 function lockUserInteraction(duration = 2000) {
 	const locker = document.getElementById('scroll-locker');
 	if (!locker) return;
 	locker.style.display = 'block';
-	setTimeout(() => locker.style.display = 'none', duration);
+	setTimeout(() => {
+		locker.style.display = 'none';
+	}, duration);
 }
 
+//
+//const header = document.getElementById('header');
+//let isShrinking = false;
+//
+//header.addEventListener('click', () => {
+//	if (!isShrinking) {
+//		header.classList.remove('init');
+//		header.classList.add('shrink');
+//		isShrinking = true;
+//	} else {
+//		header.classList.remove('shrink');
+//		header.classList.add('init');
+//		isShrinking = false;
+//	}
+//});
 
 // ==================== スクロールインジケーター制御 ==================== //
 const scrollIndicator = document.querySelector('.scroll-indicator');
