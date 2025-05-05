@@ -401,7 +401,7 @@ section.service-hero {
 
 /* 色テーマ別ボタン */
 a.theme-blue-text {
-	border: solid 5px #337aa6;
+	border: solid 3px #337aa6;
 	color: #337aa6;
 }
 
@@ -411,7 +411,7 @@ a.theme-blue-text:hover {
 }
 
 a.theme-red-text {
-	border: solid 5px #b34343;
+	border: solid 3px #b34343;
 	color: #b34343;
 }
 
@@ -421,7 +421,7 @@ a.theme-red-text:hover {
 }
 
 a.theme-purple-text {
-	border: solid 5px #6a39a2;
+	border: solid 3px #6a39a2;
 	color: #6a39a2;
 }
 
@@ -431,7 +431,7 @@ a.theme-purple-text:hover {
 }
 
 a.theme-green-text {
-	border: solid 5px #3a8154;
+	border: solid 3px #3a8154;
 	color: #3a8154;
 }
 
@@ -441,7 +441,7 @@ a.theme-green-text:hover {
 }
 
 a.theme-yellow-text {
-	border: solid 5px #b28e29;
+	border: solid 3px #b28e29;
 	color: #b28e29;
 }
 
@@ -451,7 +451,7 @@ a.theme-yellow-text:hover {
 }
 
 a.theme-gold-text {
-	border: solid 5px #d4af37;
+	border: solid 3px #d4af37;
 	color: #d4af37;
 }
 
@@ -501,27 +501,60 @@ a.theme-gold-text:hover {
    レスポンシブ対応
 ================================ */
 @media (max-width: 1024px) {
-	.service-inner{
-		max-width: 1000px;
-	}
-	
-	.service-inner h1 {
-		font-size: 4.5rem;
-		max-width: 1000px;
+	.floating-gallery img {
+		width: 70% !important;
+		max-width: 200px;
 	}
 
-	.service-button {
-		padding: 0.7em 1.8em;
-		font-size: 3rem;
-		margin-top: 60px;
+	.floating-gallery li {
+		transform: scale(0.9);
+	}
+
+	.service-inner h1 {
+		font-size: 2.5rem;
+	}
+
+	.service-inner h1 span.service-title {
+		font-size: 1.3rem;
+	}
+
+	.description {
+		font-size: 1.1rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.floating-gallery img {
+		width: 65% !important;
+	}
+
+	.floating-gallery li {
+		transform: scale(0.8);
 	}
 
 	section.service-hero {
-		min-height: 50vh;
+		padding: 0 3px !important;
+		min-height: 60vh;
 	}
 
-	.lead,
+	.service-inner {
+		padding: 0 10px;
+	}
+
+	.service-inner h1 {
+		font-size: 1.8rem;
+	}
+
+	.service-inner h1 span.service-title {
+		font-size: 1.1rem;
+	}
+
 	.description {
-		font-size: 0.95rem;
+		font-size: 0.8rem;
+	}
+
+	.service-button {
+		font-size: 1rem;
+		padding: 0.6em 1.5em;
 	}
 }

@@ -13,6 +13,8 @@ body {
 	font-family: 'Noto Sans JP', sans-serif;
 	line-height: 1.6;
 	color: #111;
+	margin: 0;
+	padding: 0;
 }
 
 
@@ -392,26 +394,36 @@ text {
 
 
 @media (max-width: 1024px) {
+
+	.scroll-gallery {
+		gap: 0.5rem;
+		padding: 0;
+	}
+
+	.column img {
+		width: 125px;
+	}
+
 	.overlay-text {
 		text-align: center;
-		padding: 300px 0 100px;
+		padding: 100px 0 50px;
 	}
 
 	.scrolling-text,
 	.scrolling-text-right {
-		font-size: 7.5rem;
+		font-size: 4.5rem;
 	}
 
 	.catch-sub {
-		font-size: 5.5rem;
+		font-size: 2.5rem;
 		text-align: center;
 		line-height: 1.2;
 	}
 
 	.badge-button {
-		font-size: 3rem;
-		padding: 2rem 2rem;
-		margin: 30px auto 60px;
+		font-size: 1.5rem;
+		padding: 0.5rem 1rem;
+		margin: 30px auto 30px;
 		transform: rotate(0deg);
 	}
 
@@ -421,9 +433,35 @@ text {
 
 	.services {
 		display: inline-block;
-		margin: 30px auto 60px;
-		font-size: 2.5rem;
+		margin: 30px auto 30px;
+		font-size: 1.2rem;
 		text-align: left;
+	}
+
+	.outlined-text {
+		font-size: 1.8rem;
+	}
+	
+	.intro-section{
+		padding: 5px !important;
+	}
+	
+	.text-block h2{
+		font-size: 1rem !important;
+	}
+	.text-block .highlight_dream{
+		font-size: 1.2rem !important;
+	}
+	.intro-text__description{
+		font-size: 0.6rem;
+	}
+	
+	.caption-pr{
+		font-size: 1.1rem !important;
+	}
+	
+	.text-block .highlight_like{
+		font-size: 1.2rem !important;
 	}
 
 	.creator-recruit-inner {
@@ -445,8 +483,8 @@ text {
 
 	.scroll-indicator {
 		position: absolute;
-		top: calc(60% + 80px);
-		left: 40%;
+		top: calc(50% + 80px);
+		left: 33%;
 		transform: translateX(-50%);
 		font-size: 50px;
 		color: #333;
@@ -461,6 +499,11 @@ text {
 		font-weight: bold;
 		display: block;
 	}
+	
+	.culture-message{
+		padding: 60px 10px !important;
+	}
+
 }
 
 

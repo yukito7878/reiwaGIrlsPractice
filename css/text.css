@@ -41,7 +41,7 @@
 
 @media (max-width: 768px) {
 	.culture-message h2 {
-		font-size: 1.8rem;
+		font-size: 1.5rem;
 		line-height: 1.4;
 	}
 
@@ -50,7 +50,7 @@
 	}
 
 	.culture-message .subtext {
-		font-size: 1rem;
+		font-size: 0.8rem;
 		line-height: 1.8;
 	}
 }
