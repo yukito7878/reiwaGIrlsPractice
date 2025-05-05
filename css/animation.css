@@ -3,11 +3,18 @@
 	box-sizing: border-box;
 }
 
-html,
-body {
-	margin: 0;
-	padding: 0;
+/* base.css：全ページ共通で読み込む */
+html {
+	font-size: 16px;
+	/* 1rem = 16px固定にしたい場合 */
 }
+
+body {
+	font-family: 'Noto Sans JP', sans-serif;
+	line-height: 1.6;
+	color: #111;
+}
+
 
 /* ========== ロゴ・スプラッシュ関連 ========== */
 .logo {
@@ -385,27 +392,38 @@ text {
 
 
 @media (max-width: 1024px) {
-	.creator-recruit-lead {
-		font-size: 3rem;
+	.overlay-text {
+		text-align: center;
+		padding: 300px 0 100px;
 	}
 
 	.scrolling-text,
 	.scrolling-text-right {
-		font-size: 4rem;
+		font-size: 7.5rem;
 	}
 
 	.catch-sub {
-		font-size: 4rem;
+		font-size: 5.5rem;
+		text-align: center;
 		line-height: 1.2;
 	}
 
 	.badge-button {
-		font-size: 1.2rem;
-		padding: 1rem 1rem;
+		font-size: 3rem;
+		padding: 2rem 2rem;
+		margin: 30px auto 60px;
+		transform: rotate(0deg);
+	}
+
+	.catch-wrapper {
+		height: auto;
 	}
 
 	.services {
-		font-size: 1.1rem;
+		display: inline-block;
+		margin: 30px auto 60px;
+		font-size: 2.5rem;
+		text-align: left;
 	}
 
 	.creator-recruit-inner {
@@ -424,36 +442,61 @@ text {
 	.creator-recruit-image img {
 		max-width: 180px;
 	}
-}
 
-@media (max-width: 600px) {
-	.catch-sub {
-		font-size: 3rem;
+	.scroll-indicator {
+		position: absolute;
+		top: calc(60% + 80px);
+		left: 40%;
+		transform: translateX(-50%);
+		font-size: 50px;
+		color: #333;
+		text-align: center;
+		animation: blink 1.2s ease-in-out infinite;
+		opacity: 0.8;
+		z-index: 10;
 	}
 
-	.scrolling-text,
-	.scrolling-text-right {
-		font-size: 3.5rem;
-	}
-
-	.creator-recruit-lead {
-		font-size: 2.2rem;
-	}
-
-	.line-apply-button {
-		font-size: 14px;
-		padding: 12px 30px;
-	}
-
-	.footer-section h2 {
-		font-size: 1.6rem;
-	}
-
-	.service-hero .service-title {
-		font-size: 2rem;
-	}
-
-	.overlay-text {
-		padding: 100px 1.5rem 0;
+	.scroll-indicator .arrow {
+		font-size: 50px;
+		font-weight: bold;
+		display: block;
 	}
 }
+
+
+
+/*@media (max-width: 600px) {*/
+/*	.catch-sub {*/
+/*		text-align: center;*/
+/*	}*/
+
+/*	.scrolling-text,*/
+/*	.scrolling-text-right {*/
+/*		font-size: 6rem;*/
+/*	}*/
+
+/*	.creator-recruit-lead {*/
+/*		font-size: 2.2rem;*/
+/*	}*/
+
+/*	.column img {*/
+/*		width: 300px;*/
+/*	}*/
+
+/*	.line-apply-button {*/
+/*		font-size: 14px;*/
+/*		padding: 12px 30px;*/
+/*	}*/
+
+/*	.footer-section h2 {*/
+/*		font-size: 1.6rem;*/
+/*	}*/
+
+/*	.service-hero .service-title {*/
+/*		font-size: 2rem;*/
+/*	}*/
+
+/*	.overlay-text {*/
+/*		padding: 100px 1.5rem 0;*/
+/*	}*/
+/*}*/

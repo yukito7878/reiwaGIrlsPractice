@@ -26,6 +26,13 @@
 			<a href="contact.html">Contact</a>
 		</nav>
 	</header>
+
+	<!-- モバイル専用ハンバーガーメニュー -->
+	<div class="mobile-menu-button" id="mobileMenuButton">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
 	<div class="video-background">
 		<video autoplay muted loop playsinline>
 			<source src="video/令和ガールズ.mp4" type="video/mp4">
@@ -79,7 +86,9 @@
 					<img src="img_logo/InfluenceHubLogo.png" alt="インフルエンスハブ">
 					<p class="card-grid__catchcopy">共感と届く影響力のチカラ</p>
 					<p class="card-grid__text">媒体力と拡散力を活かし、インフルエンサーの影響力を高めるマーケティング・ブランディング支援。</p>
-					<button id="openInfluenceHubModal" class="service-detail__button">詳細を見る</button>
+					<div class="detail-button__container">
+						<button id="openInfluenceHubModal" class="service-detail__button">詳細を見る</button>
+					</div>
 
 				</div>
 				<div class="card">
@@ -87,19 +96,21 @@
 					<img src="img_logo/NexrStarsLogo.png" alt="NextStars">
 					<p class="card-grid__catchcopy">個性が光る、ライブ戦略</p>
 					<p class="card-grid__text">“あなた”にしかない個性で、ライブ配信での存在感を育てるプロデュース&マネージメントプログラム。</p>
-					<a class="service-detail__button"
-						href="https://prtimes.jp/main/html/rd/p/000000001.000109231.html">詳細はこちら</a>
-					<a class="service-detail__button"
-						href="https://prtimes.jp/main/html/rd/p/000000001.000109231.html">タレント一覧</a>
-
+					<div class="detail-button__container">
+						<a class="service-detail__button"
+							href="https://prtimes.jp/main/html/rd/p/000000001.000109231.html">詳細はこちら</a>
+						<a class="service-detail__button"
+							href="https://prtimes.jp/main/html/rd/p/000000001.000109231.html">タレント一覧</a>
+					</div>
 				</div>
 				<div class="card">
-					<h3>ラグジュアリーブランド構築</h3>
+					<h3 class="card-title__luxuary">ラグジュアリーブランド構築</h3>
 					<img src="img_logo/BottlBisuxLogo.png" alt="Bottl Bisux">
 					<p class="card-grid__catchcopy">世界観で魅せる<br>上質ブランディング</p>
 					<p class="card-grid__text">高級感あるコンセプト設計からビジュアル制作までトータル支援するブランド構築サービス。</p>
-					<button id="openVotreBijouModal" class="service-detail__button">詳細を見る</button>
-
+					<div class="detail-button__container">
+						<button id="openVotreBijouModal" class="service-detail__button">詳細を見る</button>
+					</div>
 
 				</div>
 				<div class="card">
@@ -107,9 +118,10 @@
 					<img src="img_logo/MonMaisonLogo.png" alt="Mon Maison">
 					<p class="card-grid__catchcopy">美容識をまとう<br>選ばれるブランドへ</p>
 					<p class="card-grid__text">感性に寄り添った世界観とファッションブランドを軸にトータルプロデュースします。</p>
-					<a class="service-detail__button"
-						href="https://prtimes.jp/main/html/rd/p/000000001.000109231.html">記事はこちら</a>
-					<a id="openModal" class="service-detail__button">詳細はこちら</a>
+					<div class="detail-button__container">
+						<a class="service-detail__button" href="https://prtimes.jp/main/html/rd/p/000000001.000109231.html">記事はこちら</a>
+						<a id="openModal" class="service-detail__button">詳細はこちら</a>
+					</div>
 
 				</div>
 			</div>
@@ -211,7 +223,6 @@
 
 				</div>
 			</div>
-
 
 			<!-- ポップアップ(ボトルビジュー) -->
 			<div id="popupVotreBijouModal" class="modal-votrebijou">
@@ -472,6 +483,7 @@
 	<script src="js/page-transition.js"></script>
 	<script src="js/header-basic.js"></script>
 	<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+	<script src="js/header-mobile.js"></script>
 	<script>
 		AOS.init({
 			duration: 1000,

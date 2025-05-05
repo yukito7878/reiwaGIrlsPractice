@@ -24,6 +24,13 @@
 			<a href="contact.html">Contact</a>
 		</nav>
 	</header>
+
+	<!-- モバイル専用ハンバーガーメニュー -->
+	<div class="mobile-menu-button" id="mobileMenuButton">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
 	<div class="video-background">
 		<video autoplay muted loop playsinline>
 			<source src="video/令和ガールズ.mp4" type="video/mp4">
@@ -39,7 +46,8 @@
 		</div>
 	</div>
 
-	<div class="responsive-iframe-wrapper" style="position:relative;width:100%;height:0;padding-bottom:100%;padding-top: 30px;">
+	<div class="responsive-iframe-wrapper"
+		style="position:relative;width:100%;height:0;padding-bottom:100%;padding-top: 30px;">
 		<iframe
 			src="https://docs.google.com/forms/d/e/1FAIpQLSchXVcBjvr59hTq_hpooAqD8HILsXswWbOSO85htzO1OTrVgA/viewform?embedded=true"
 			width="640" height="541" frameborder="0" marginheight="0" marginwidth="0"
@@ -176,6 +184,7 @@
 	<div class="page-entry-mask" id="pageEntryMask"></div>
 	<div class="page-exit-mask" id="pageExitMask"></div>
 
+	<script src="js/header-mobile.js"></script>
 
 	<!-- JSの読み込み（bodyの閉じタグ直前）-->
 	<script src="js/page-transition.js"></script>

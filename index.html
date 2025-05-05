@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>滑らか3列スクロール</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/header.css">
 	<link rel="stylesheet" href="css/function.css">
 	<link rel="stylesheet" href="css/animation.css">
@@ -62,6 +63,23 @@
 			<span class="text">Scroll</span>
 		</div>
 	</header>
+
+	<!-- モバイル専用ハンバーガーメニュー -->
+	<div class="mobile-menu-button" id="mobileMenuButton">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+
+	<div class="mobile-menu-overlay" id="mobileMenuOverlay">
+		<nav class="mobile-menu-nav">
+			<a href="service.html">Service</a>
+			<a href="company.html">Company</a>
+			<a href="top.html">Vision</a>
+			<a href="recruit.html">Recruit</a>
+			<a href="contact.html">Contact</a>
+		</nav>
+	</div>
 
 	<section class="first-impact">
 		<section class="scroll-gallery">
@@ -125,9 +143,7 @@
 					アイドルプラットフォーム</h1>
 			</div>
 		</section>
-
 	</section>
-
 
 	<section class="intro-section">
 		<div class="intro-content">
@@ -237,8 +253,8 @@
 				<h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
 					<span>心を動かすSNSコンテンツ</span><br><span class="service-title">企画・運用代行</span>
 				</h1>
-<!--				<p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="lead">-->
-<!--					私たちはSNSに特化したノウハウで、<br>クライアントの想いを形にします。</p>-->
+				<!--				<p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="lead">-->
+				<!--					私たちはSNSに特化したノウハウで、<br>クライアントの想いを形にします。</p>-->
 				<p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="description">
 					アカウント運用・フォロワー獲得・ブランド認知──<br>“バズらせたい”ではなく、“伝わる”コンテンツを。</p>
 				<a data-aos="fade" data-aos-delay="300" data-aos-duration="1000" href="#"
@@ -251,8 +267,8 @@
 					<span>ブランドの“世界観”を設計</span><br>
 					<span class="service-title">クリエイティブ制作</span>
 				</h1>
-<!--				<p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="lead">-->
-<!--					デザイン・映像・写真などを通じて、<br>一貫した印象とメッセージを届けます。 </p>-->
+				<!--				<p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="lead">-->
+				<!--					デザイン・映像・写真などを通じて、<br>一貫した印象とメッセージを届けます。 </p>-->
 				<p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="description">
 					世界観に共感が生まれる時代。<br>ビジュアルから空気感まで設計します。</p>
 				<a data-aos="fade" data-aos-delay="300" data-aos-duration="1000" href="#"
@@ -265,8 +281,8 @@
 				<h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
 					<span>戦略から実行までを伴走</span><br><span class="service-title">マーケティング支援</span>
 				</h1>
-<!--				<p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="lead">-->
-<!--					目標設定、戦略立案、広告運用、分析──<br>すべてをワンストップで支援します。</p>-->
+				<!--				<p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="lead">-->
+				<!--					目標設定、戦略立案、広告運用、分析──<br>すべてをワンストップで支援します。</p>-->
 				<p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="description">
 					数字も、ストーリーも、届け方も。<br>全方位からブランドを育てます。</p>
 				<a data-aos="fade" data-aos-delay="300" data-aos-duration="1000" href="#"
@@ -278,8 +294,8 @@
 				<h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
 					<span>ブランドとモデルをつなぐ</span><br><span class="service-title">モデルキャスティング</span>
 				</h1>
-<!--				<p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="lead">-->
-<!--					企画・イメージに合う最適なモデルを提案。<br>オーディションからマネジメントまで対応します。</p>-->
+				<!--				<p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="lead">-->
+				<!--					企画・イメージに合う最適なモデルを提案。<br>オーディションからマネジメントまで対応します。</p>-->
 				<p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="description">
 					撮影・広告・イベントなど、<br>あらゆるシーンにふさわしいキャスティングをご提供。</p>
 				<a data-aos="fade" data-aos-delay="300" data-aos-duration="1000" href="#"
@@ -292,10 +308,10 @@
 				<h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
 					<span>美を纏う世界観を</span><br><span class="service-title">ボトルビジュー制作</span>
 				</h1>
-<!--				<p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="lead">-->
-<!--					デザイン設計からプロダクト開発、SNS展開まで。<br>-->
-<!--					唯一無二のラグジュアリーブランドをプロデュースします。-->
-<!--				</p>-->
+				<!--				<p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="lead">-->
+				<!--					デザイン設計からプロダクト開発、SNS展開まで。<br>-->
+				<!--					唯一無二のラグジュアリーブランドをプロデュースします。-->
+				<!--				</p>-->
 				<p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="description">
 					“売れる”よりも、“選ばれる”存在へ。<br>
 					夜の世界に映える、ブランドジュエルを形にします。
@@ -310,8 +326,8 @@
 				<h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
 					<span>世界観をカタチにする</span><br><span class="service-title">アパレルブランド制作</span>
 				</h1>
-<!--				<p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="lead">-->
-<!--					コンセプト設計・ロゴ・アイテム展開まで、<br>ブランド立ち上げをトータルで支援します。</p>-->
+				<!--				<p data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000" class="lead">-->
+				<!--					コンセプト設計・ロゴ・アイテム展開まで、<br>ブランド立ち上げをトータルで支援します。</p>-->
 				<p data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000" class="description">
 					想いや個性を“着れるデザイン”へ。<br>感性に寄り添ったブランドづくりをお手伝いします。</p>
 				<a data-aos="fade" data-aos-delay="300" data-aos-duration="1000" href="#"
@@ -321,7 +337,8 @@
 
 	</section>
 	<!-- 上に表示する文字 -->
-	<section class="footer-section theme-white-text" id="section-footer">
+
+	<footer class="footer-section theme-white-text" id="section-footer">
 		<div class="footer-inner">
 			<h2 class="footer-logo">REIWAGIRLS</h2>
 
@@ -340,16 +357,22 @@
 			<div class="scroll-infinity">
 				<div class="scroll-infinity__wrap">
 					<ul class="scroll-infinity__list scroll-infinity__list--left">
-						<li class="scroll-infinity__item"><img src="img_logo/reiwaGirlsLogo.png" alt="NextStars"></li>
-						<li class="scroll-infinity__item"><img src="img_logo/BottlBisuxLogo.png" alt="REIWAGIRLS"></li>
-						<li class="scroll-infinity__item"><img src="img_logo/InfluenceHubLogo.png" alt="インフルエンスハブ"></li>
+						<li class="scroll-infinity__item"><img src="img_logo/reiwaGirlsLogo.png" alt="NextStars">
+						</li>
+						<li class="scroll-infinity__item"><img src="img_logo/BottlBisuxLogo.png" alt="REIWAGIRLS">
+						</li>
+						<li class="scroll-infinity__item"><img src="img_logo/InfluenceHubLogo.png" alt="インフルエンスハブ">
+						</li>
 						<li class="scroll-infinity__item"><img src="img_logo/CabaTalentLogo.png" alt="キャバタレント"></li>
 						<li class="scroll-infinity__item"><img src="img_logo/MonMaisonLogo.png" alt="モンメゾン"></li>
 					</ul>
 					<ul class="scroll-infinity__list scroll-infinity__list--left">
-						<li class="scroll-infinity__item"><img src="img_logo/reiwaGirlsLogo.png" alt="NextStars"></li>
-						<li class="scroll-infinity__item"><img src="img_logo/BottlBisuxLogo.png" alt="REIWAGIRLS"></li>
-						<li class="scroll-infinity__item"><img src="img_logo/InfluenceHubLogo.png" alt="インフルエンスハブ"></li>
+						<li class="scroll-infinity__item"><img src="img_logo/reiwaGirlsLogo.png" alt="NextStars">
+						</li>
+						<li class="scroll-infinity__item"><img src="img_logo/BottlBisuxLogo.png" alt="REIWAGIRLS">
+						</li>
+						<li class="scroll-infinity__item"><img src="img_logo/InfluenceHubLogo.png" alt="インフルエンスハブ">
+						</li>
 						<li class="scroll-infinity__item"><img src="img_logo/CabaTalentLogo.png" alt="キャバタレント"></li>
 						<li class="scroll-infinity__item"><img src="img_logo/MonMaisonLogo.png" alt="モンメゾン"></li>
 					</ul>
@@ -373,8 +396,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
-
+	</footer>
 	<!-- ページの最後、</body>の直前に入れるのがベスト -->
 	<div class="page-entry-mask" id="pageEntryMask"></div>
 	<div class="page-exit-mask" id="pageExitMask"></div>
@@ -464,11 +486,20 @@
 	<!--		}-->
 
 	</script>
-
+	<script src="js/header-mobile.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+	<!-- AOSの読み込みのあと、以下を一つだけ -->
 	<script>
-		AOS.init();
+		AOS.init({
+			disable: function () {
+				return window.innerWidth < 768;
+			},
+			once: true, // 1回だけ実行（オプションだけど効果的）
+			duration: 800
+		});
 	</script>
+
+
 
 	<script>
 		function setupScrollLoop(columnId, speed = 1) {
@@ -496,6 +527,7 @@
 
 	</script>
 	<div id="scroll-locker"></div>
+
 
 </body>
 

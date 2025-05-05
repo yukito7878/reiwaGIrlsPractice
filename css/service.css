@@ -525,3 +525,91 @@ body {
 		transform: scale(1);
 	}
 }
+
+@media (max-width: 1024px) {
+	.service-hero-image-wrapper {
+		margin-top: 80px;
+	}
+
+	.service-hero-title {
+		font-size: 3.2rem;
+	}
+
+	.service-hero-subtitle {
+		font-size: 1.6rem;
+	}
+
+	.scrolling-text,
+	.scrolling-text-right {
+		font-size: 3.5rem;
+	}
+	
+	.service-intro{
+		padding: 0;
+	}
+
+	.service-intro__lead {
+		font-size: 1.2rem;
+	}
+
+	.service-intro__desc {
+		font-size: 0.8rem;
+	}
+
+	.service-title {
+		font-size: 2rem;
+	}
+	
+	.card img{
+		margin-bottom: 0;
+	}
+	
+	.card h3.card-title__luxuary{
+		font-size: 1.5rem;
+	}
+
+	.detail-button__container {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		margin-bottom: 15px;
+	}
+
+	.card-grid {
+		grid-template-columns: repeat(1, 1fr);
+		width: 95%;
+	}
+	
+	.card p.card-grid__text{
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.card {
+		padding: 10px;
+	}
+
+	.card .service-detail__button {
+		width: 60%;
+		margin: auto;
+	}
+	
+	.card p.card-grid__catchcopy{
+		font-size: 1.6rem;
+	}
+	
+	.card p.card-grid__text{
+		width: 95%;
+	}
+	
+	.service-list{
+		padding-bottom: 60px;
+	}
+	
+	.service-last-text{
+		font-size: 1.3rem;
+		width: 90%;
+		padding-top: 60px;
+	}
+
+}
