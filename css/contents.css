@@ -490,6 +490,12 @@ a.theme-gold-text:hover {
 }
 
 .theme-yellow-text .service-inner h1 span {
+	background: linear-gradient(90deg, #977219, #b28e29);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.theme-gold-text .service-inner h1 span {
 	background: linear-gradient(90deg, #977219, #e4c164);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
