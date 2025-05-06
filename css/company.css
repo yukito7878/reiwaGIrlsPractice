@@ -242,10 +242,10 @@
 	font-size: 15px;
 	opacity: 0.8;
 	text-shadow:
-		0px 0px 0 ,
-		0px 0px 0 ,
-		0px 0px 0 ,
-		0px 0px 0 ;
+		0px 0px 0,
+		0px 0px 0,
+		0px 0px 0,
+		0px 0px 0;
 	color: #e94279;
 }
 
@@ -342,4 +342,87 @@
 	flex: 0 0 60%;
 	font-size: 16px;
 	line-height: 1.8;
+}
+
+/* ==============================
+   レスポンシブ対応 CSS
+================================ */
+
+@media (max-width: 768px) {
+	.company-hero {
+		margin-top: 80px;
+	}
+
+	.company-hero-title {
+		font-size: 3.2rem;
+	}
+
+	.company-hero-subtitle {
+		font-size: 1.6rem;
+	}
+
+	.company-service-section {
+		padding: 10px 5px;
+	}
+
+	.company-service-item {
+		flex-direction: column;
+		gap: 0;
+		margin-bottom: 40px;
+	}
+
+	.company-service-item.reverse {
+		flex-direction: column;
+	}
+
+
+	.company-service-heading {
+		font-size: 1.8rem;
+		margin-bottom: 0;
+	}
+	
+	.creator-recruit-section{
+		padding-bottom: 0;
+	}
+	
+	.creator-recruit-inner{
+		margin-left: 5%;
+	}
+
+	.creator-recruit-content,
+	.creator-recruit-image {
+		flex: 1 1 30%;
+		font-size: 0.8rem;
+	}
+
+	.creator-recruit-lead {
+		font-size: 1.3rem;
+		text-shadow:
+			-1px -1px 0 #e94279,
+			1px -1px 0 #e94279,
+			-1px 1px 0 #e94279,
+			1px 1px 0 #e94279;
+		margin: 0 0;
+	}
+	
+	.creator-recruit-image img {
+		max-width: 150px;
+	}
+	
+	.line-apply-button{
+		font-size: 1rem;
+		padding: 7px 10px;
+	}
+	
+	.creator-recruit-features{
+		margin-bottom: 0;
+	}
+
+	.company-overview-inner {
+		padding: 0 10px;
+	}
+	
+	.company-overview-label{
+		flex: 0 0 25%;
+	}
 }

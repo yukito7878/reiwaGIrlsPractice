@@ -64,7 +64,7 @@
 		</div>
 	</header>
 
-	<!-- モバイル専用ハンバーガーメニュー -->
+	<!-- モバイルメニューボタンとオーバーレイはここ！ -->
 	<div class="mobile-menu-button" id="mobileMenuButton">
 		<span></span>
 		<span></span>
@@ -403,6 +403,14 @@
 
 	<!-- JSの読み込み（bodyの閉じタグ直前）-->
 	<script src="js/page-transition.js"></script>
+	<script>
+		const menuButton = document.getElementById('mobileMenuButton');
+		const menuOverlay = document.getElementById('mobileMenuOverlay');
+
+		menuButton.addEventListener('click', () => {
+			menuOverlay.classList.toggle('show');
+		});
+	</script>
 
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>

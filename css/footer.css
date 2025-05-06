@@ -171,6 +171,10 @@
 }
 
 @media (max-width: 1024px) {
+	.footer-section{
+		padding-top: 0;
+	}
+	
 	.footer-logo {
 		font-size: 3.5rem;
 		margin-bottom: 24px;
@@ -178,24 +182,24 @@
 
 	.footer-top-row {
 		flex-direction: column;
-		gap: 16px;
+		gap: 30px;
 		margin-bottom: 40px;
 	}
 
 	.footer-tags {
 		flex-direction: row;
-		gap: 12px;
+		gap: 8px;
 	}
 
 	.footer-tags a {
-		font-size: 1.3rem;
-		padding: 12px 18px;
-		border-radius: 16px;
+		font-size: 1.1rem;
+		padding: 6px 6px;
+		border-radius: 6px;
 	}
 
 	.footer-contact-button {
-		font-size: 1.4rem;
-		padding: 0.6em 1em;
+		font-size: 1.1rem;
+		padding: 0.6em 0.6em;
 		border-radius: 40px;
 		transform: rotate(0deg);
 	}
