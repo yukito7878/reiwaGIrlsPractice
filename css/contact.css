@@ -131,64 +131,51 @@ body {
 }
 
 @media (max-width: 768px) {
+
+	.contact-hero-image-wrapper {
+		margin-top: 80px;
+	}
+
 	.contact-hero-title {
 		font-size: 3.2rem;
-	}
-
-	.contact-hero-subtitle {
-		font-size: 2rem;
-	}
-
-	.contact-hero-overlay {
-		padding: 0 20px;
-		text-align: center;
-	}
-
-	.company-overview-inner {
-		padding: 0 20px;
-	}
-
-	.company-overview-title {
-		font-size: 28px;
-		margin-bottom: 40px;
-	}
-
-	.company-overview-label,
-	.company-overview-content {
-		flex: 0 0 100%;
-		text-align: left;
-	}
-
-	.company-overview-label {
-		margin-bottom: 5px;
-		color: #e94279;
-	}
-
-	.company-overview-content {
-		margin-bottom: 15px;
-		font-size: 15px;
-	}
-
-	.company-overview-row {
-		flex-direction: column;
-		padding-bottom: 20px;
-	}
-}
-
-@media (max-width: 480px) {
-	.contact-hero-title {
-		font-size: 2.4rem;
 	}
 
 	.contact-hero-subtitle {
 		font-size: 1.6rem;
 	}
 
-	.company-overview-title {
-		font-size: 24px;
+	.contact-hero-overlay {
+		padding: 0 20px;
+		text-align: center;
+	}
+	
+	.company-overview-section{
+		padding: 50px 0px 100px;
 	}
 
-	.company-overview-content {
-		font-size: 14px;
+	.company-overview-section .company-overview-inner {
+		padding: 0 10px;
+	}
+
+	.company-overview-label {
+		flex: 0 0 25%;
 	}
 }
+
+/*@media (max-width: 480px) {*/
+/*	.contact-hero-title {*/
+/*		font-size: 2.4rem;*/
+/*	}*/
+
+/*	.contact-hero-subtitle {*/
+/*		font-size: 1.6rem;*/
+/*	}*/
+
+/*	.company-overview-title {*/
+/*		font-size: 24px;*/
+/*	}*/
+
+/*	.company-overview-content {*/
+/*		font-size: 14px;*/
+/*	}*/
+/*}*/

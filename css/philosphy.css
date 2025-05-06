@@ -597,7 +597,7 @@ main {
 	
 	.scrolling-text{
 		font-size: 3.5rem;
-		padding-bottom: 0;
+		padding-bottom: 0 !important;
 	}
 	
 	.angled-label{

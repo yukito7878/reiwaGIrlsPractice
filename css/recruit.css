@@ -216,4 +216,31 @@ body{
 	}
 }
 
-/*以下、フッターセクション*/
+@media (max-width: 768px) {
+	.recruit-hero-image-wrapper {
+		margin-top: 80px;
+	}
+
+	.recruit-hero-title {
+		font-size: 3.2rem;
+	}
+
+	.recruit-hero-subtitle {
+		font-size: 1.6rem;
+	}
+	
+	.recruit-second-title-title{
+		font-size: 3rem;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	
+	.recruit-step{
+		width: 150px;
+		max-width: 150px;
+	}
+	
+	.recruit-second-title{
+		margin: 30px 0 10px;
+	}
+}

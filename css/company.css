@@ -349,6 +349,12 @@
 ================================ */
 
 @media (max-width: 768px) {
+	.company-service-title {
+		font-size: 3rem;
+		margin-bottom: 0;
+		margin-top: 0;
+	}
+
 	.company-hero {
 		margin-top: 80px;
 	}
@@ -380,12 +386,12 @@
 		font-size: 1.8rem;
 		margin-bottom: 0;
 	}
-	
-	.creator-recruit-section{
+
+	.creator-recruit-section {
 		padding-bottom: 0;
 	}
-	
-	.creator-recruit-inner{
+
+	.creator-recruit-inner {
 		margin-left: 5%;
 	}
 
@@ -404,25 +410,25 @@
 			1px 1px 0 #e94279;
 		margin: 0 0;
 	}
-	
+
 	.creator-recruit-image img {
 		max-width: 150px;
 	}
-	
-	.line-apply-button{
+
+	.line-apply-button {
 		font-size: 1rem;
 		padding: 7px 10px;
 	}
-	
-	.creator-recruit-features{
+
+	.creator-recruit-features {
 		margin-bottom: 0;
 	}
 
 	.company-overview-inner {
 		padding: 0 10px;
 	}
-	
-	.company-overview-label{
+
+	.company-overview-label {
 		flex: 0 0 25%;
 	}
 }
