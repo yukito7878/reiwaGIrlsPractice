@@ -515,26 +515,105 @@ main {
 	padding-top: 20px;
 }
 
+/* ==============================
+   レスポンシブ対応 CSS（philosophy.html 用）
+================================ */
+
+/* 共通：ヘッダーにスペース確保 */
+
+
 @media (max-width: 768px) {
+	.philosophy-hero-image-wrapper {
+		margin-top: 80px;
+	}
+
+	.philosophy-hero-title {
+		font-size: 3.2rem;
+	}
+
+	.philosophy-hero-subtitle {
+		font-size: 1.6rem;
+	}
+	
+	.purpose-parent, .mission-parent{
+		margin-top: 0;
+	}
+	
+	.purpose-section, .mission-section{
+		width: 100%;
+	}
+
+	.purpose-inner,
 	.mission-inner {
 		flex-direction: column;
 		text-align: center;
 	}
 
+	.purpose-left,
+	.purpose-right,
 	.mission-left,
 	.mission-right {
 		flex: 1 1 100%;
+		text-align: left;
+		font-size: 0.8rem;
+		width: 100%;
 	}
 
+	.purpose-en,
 	.mission-en {
-		font-size: 2.2rem;
+		font-size: 1.5rem;
 	}
 
+	.purpose-ja,
 	.mission-ja {
-		font-size: 1.2rem;
+		font-size: 1rem;
 	}
 
-	.mission-right {
-		font-size: 0.95rem;
+	.value-section__title {
+		font-size: 2.5rem;
+	}
+
+	.value-card {
+		width: 90%;
+		height: auto;
+	}
+
+	.value-card__main {
+		font-size: 3rem;
+	}
+
+	.value-card__number {
+		font-size: 3rem;
+	}
+
+	.value-card__sub {
+		font-size: 1rem;
+	}
+
+	.value-message p {
+		font-size: 2rem;
+		line-height: 2;
+	}
+	
+	.scrolling-text{
+		font-size: 3.5rem;
+		padding-bottom: 0;
+	}
+	
+	.angled-label{
+		font-size: 1.8rem;
+		padding: 0;
+	}
+	
+	.value-section{
+		padding: 20px 5px;
+	}
+	
+	.angled-label::after{
+		top: 55%;
+	}
+	
+	.value-message p{
+		font-size: 1.5rem;
 	}
 }
