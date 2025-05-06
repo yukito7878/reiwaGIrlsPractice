@@ -530,8 +530,17 @@ a.theme-gold-text:hover {
 }
 
 @media (max-width: 768px) {
+	.floating-gallery li:nth-child(15) img {
+		width: 400px;
+	}
+
+	.floating-gallery li:nth-child(7) img {
+		width: 700px;
+	}
+
 	.floating-gallery img {
 		width: 65% !important;
+		border-radius: 3px !important;
 	}
 
 	.floating-gallery li {
@@ -563,4 +572,6 @@ a.theme-gold-text:hover {
 		font-size: 1rem;
 		padding: 0.6em 1.5em;
 	}
+
+
 }
