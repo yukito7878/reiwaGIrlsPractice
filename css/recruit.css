@@ -1,4 +1,6 @@
-body{
+body {
+	background-color: #fff;
+	font-family: "Noto Sans JP", sans-serif;
 	padding: 0;
 	margin: 0;
 }
@@ -228,19 +230,19 @@ body{
 	.recruit-hero-subtitle {
 		font-size: 1.6rem;
 	}
-	
-	.recruit-second-title-title{
+
+	.recruit-second-title-title {
 		font-size: 3rem;
 		margin-top: 0;
 		margin-bottom: 0;
 	}
-	
-	.recruit-step{
+
+	.recruit-step {
 		width: 150px;
 		max-width: 150px;
 	}
-	
-	.recruit-second-title{
+
+	.recruit-second-title {
 		margin: 30px 0 10px;
 	}
 }

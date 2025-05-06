@@ -170,11 +170,26 @@
 	color: #999;
 }
 
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:visited {
+	color: inherit;
+}
+
+a:hover,
+a:active {
+	color: inherit;
+}
+
+
 @media (max-width: 1024px) {
-	.footer-section{
+	.footer-section {
 		padding-top: 0;
 	}
-	
+
 	.footer-logo {
 		font-size: 3.5rem;
 		margin-bottom: 24px;
