@@ -146,6 +146,12 @@
 	transition-delay: 0.5s;
 }
 
+/* ロゴが見えてしまう問題をピンポイントで修正 */
+header:not(.init):not(.moving):not(.shrink) .logo-reiwachan {
+	display: none;
+}
+
+
 
 @media (max-width: 1024px) {
 
