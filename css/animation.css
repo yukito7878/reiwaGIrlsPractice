@@ -247,6 +247,8 @@ text {
 	position: relative;
 	white-space: nowrap;
 	cursor: pointer;
+	text-decoration: none;
+	color: inherit;
 	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -441,26 +443,28 @@ text {
 	.outlined-text {
 		font-size: 1.8rem;
 	}
-	
-	.intro-section{
+
+	.intro-section {
 		padding: 5px !important;
 	}
-	
-	.text-block h2{
+
+	.text-block h2 {
 		font-size: 1rem !important;
 	}
-	.text-block .highlight_dream{
+
+	.text-block .highlight_dream {
 		font-size: 1.2rem !important;
 	}
-	.intro-text__description{
+
+	.intro-text__description {
 		font-size: 0.6rem;
 	}
-	
-	.caption-pr{
+
+	.caption-pr {
 		font-size: 1.1rem !important;
 	}
-	
-	.text-block .highlight_like{
+
+	.text-block .highlight_like {
 		font-size: 1.2rem !important;
 	}
 
@@ -482,8 +486,8 @@ text {
 		font-weight: bold;
 		display: block;
 	}
-	
-	.culture-message{
+
+	.culture-message {
 		padding: 60px 10px !important;
 	}
 

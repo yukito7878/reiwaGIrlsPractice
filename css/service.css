@@ -271,7 +271,9 @@ body {
 	margin: auto
 }
 
-/*インフルエンスハブ用ポップアップ*/
+/****************************************/
+/****インフルエンスハブ用ポップアップ****/
+/****************************************/
 /* モーダル背景 */
 .modal-influencehub {
 	display: none;
@@ -363,7 +365,9 @@ body {
 }
 
 
+/****************************************/
 /* ボトルビジュー用オープンボタン */
+/****************************************/
 .open-votrebijou-button {
 	padding: 12px 24px;
 	font-size: 18px;
@@ -451,7 +455,9 @@ body {
 	}
 }
 
+/****************************************/
 /*以下、モンメゾン用ポップアップセクション*/
+/****************************************/
 .open-button {
 	padding: 12px 24px;
 	font-size: 18px;
@@ -526,8 +532,271 @@ body {
 	}
 }
 
+/****************************************/
+/* ボトルビジュー用オープンボタン */
+/****************************************/
+.open-SNS-button {
+	padding: 12px 24px;
+	font-size: 18px;
+	background-color: #ff69b4;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background 0.3s;
+}
+
+.open-SNS-button:hover {
+	background-color: #ff85c1;
+}
+
+/* ボトルビジュー用モーダル本体 */
+.modal-SNS {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 1000;
+	justify-content: center;
+	align-items: center;
+}
+
+/* ボトルビジュー用モーダルコンテンツ */
+.modal-SNS-content {
+	background: white;
+	padding: 30px;
+	border-radius: 12px;
+	width: 90%;
+	max-width: 700px;
+	position: relative;
+	animation: fadeInVotreBijou 0.5s ease;
+	overflow-y: auto;
+	max-height: 80vh;
+}
+
+/* モーダル内画像 */
+#popupSNSModal .modal-SNS-image {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	margin-bottom: 20px;
+}
+
+/* サービスフロー画像 */
+.SNS-service-flow {
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+.SNS-service-merit {
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+
+/* クローズボタン */
+.close-SNS-button {
+	position: absolute;
+	top: 15px;
+	right: 20px;
+	font-size: 32px;
+	color: #555;
+	cursor: pointer;
+}
+
+/* アニメーション（fadeInのSNS専用版） */
+@keyframes fadeSNS {
+	from {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+/****************************************/
+/* NextStars用オープンボタン */
+/****************************************/
+.open-NextStars-button {
+	padding: 12px 24px;
+	font-size: 18px;
+	background-color: #ff69b4;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background 0.3s;
+}
+
+.open-NextStars-button:hover {
+	background-color: #ff85c1;
+}
+
+.modal-NextStars {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 1000;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-NextStars-content {
+	background: white;
+	padding: 30px;
+	border-radius: 12px;
+	width: 90%;
+	max-width: 700px;
+	position: relative;
+	animation: fadeInVotreBijou 0.5s ease;
+	overflow-y: auto;
+	max-height: 80vh;
+}
+
+#popupNextStarsModal .modal-NextStars-image {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	margin-bottom: 20px;
+}
+
+.NextStars-service-flow {
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+.NextStars-service-merit {
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+
+.close-NextStars-button {
+	position: absolute;
+	top: 15px;
+	right: 20px;
+	font-size: 32px;
+	color: #555;
+	cursor: pointer;
+}
+
+@keyframes fadeNextStars {
+	from {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+/****************************************/
+/* モデルプロデュース用オープンボタン */
+/****************************************/
+.open-ModelProduce-button {
+	padding: 12px 24px;
+	font-size: 18px;
+	background-color: #ff69b4;
+	color: white;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background 0.3s;
+}
+
+.open-ModelProduce-button:hover {
+	background-color: #ff85c1;
+}
+
+.modal-ModelProduce {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 1000;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-ModelProduce-content {
+	background: white;
+	padding: 30px;
+	border-radius: 12px;
+	width: 90%;
+	max-width: 700px;
+	position: relative;
+	animation: fadeInVotreBijou 0.5s ease;
+	overflow-y: auto;
+	max-height: 80vh;
+}
+
+#popupModelProducesModal .modal-ModelProduce-image {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	margin-bottom: 20px;
+}
+
+.ModelProduce-service-flow {
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+.ModelProduce-service-merit {
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+}
+
+
+.close-ModelProduce-button {
+	position: absolute;
+	top: 15px;
+	right: 20px;
+	font-size: 32px;
+	color: #555;
+	cursor: pointer;
+}
+
+@keyframes fadeModelProduce {
+	from {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+
+
+/****************************************/
+/***********レスポンシブ対応*************/
+/****************************************/
 @media (max-width: 768px) {
-	
+
 	.service-hero-image-wrapper {
 		margin-top: 80px;
 	}
@@ -544,8 +813,8 @@ body {
 	.scrolling-text-right {
 		font-size: 3.5rem;
 	}
-	
-	.service-intro{
+
+	.service-intro {
 		padding: 0;
 	}
 
@@ -560,12 +829,12 @@ body {
 	.service-title {
 		font-size: 2rem;
 	}
-	
-	.card img{
+
+	.card img {
 		margin-bottom: 0;
 	}
-	
-	.card h3.card-title__luxuary{
+
+	.card h3.card-title__luxuary {
 		font-size: 1.5rem;
 	}
 
@@ -580,8 +849,8 @@ body {
 		grid-template-columns: repeat(1, 1fr);
 		width: 95%;
 	}
-	
-	.card p.card-grid__text{
+
+	.card p.card-grid__text {
 		margin-top: 20px;
 		margin-bottom: 20px;
 	}
@@ -594,20 +863,20 @@ body {
 		width: 60%;
 		margin: auto;
 	}
-	
-	.card p.card-grid__catchcopy{
+
+	.card p.card-grid__catchcopy {
 		font-size: 1.6rem;
 	}
-	
-	.card p.card-grid__text{
+
+	.card p.card-grid__text {
 		width: 95%;
 	}
-	
-	.service-list{
+
+	.service-list {
 		padding-bottom: 60px;
 	}
-	
-	.service-last-text{
+
+	.service-last-text {
 		font-size: 1.3rem;
 		width: 90%;
 		padding-top: 60px;

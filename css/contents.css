@@ -1,3 +1,6 @@
+.reiwaGirls-serviceContent-title{
+	font-size: 3rem;
+}
 /* ===============================
    ギャラリー背景（セクション1用）
 ================================ */
@@ -530,6 +533,9 @@ a.theme-gold-text:hover {
 }
 
 @media (max-width: 768px) {
+	.reiwaGirls-serviceContent-title{
+		font-size: 2rem;
+	}
 	.floating-gallery li:nth-child(15) img {
 		width: 400px;
 	}
