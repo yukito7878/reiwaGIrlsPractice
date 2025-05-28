@@ -19,71 +19,32 @@
 	border-radius: 2px;
 }
 
+
+/* ===== ヘッダー全体スタイル ===== */
 header {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100vh;
-	background: white;
+	background-color: #fff;
 	z-index: 1000;
+	transition: all 0.4s ease;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 	overflow: hidden;
-	transition: all 0.5s ease;
+	/* ←中のロゴがはみ出るのを防ぐ */
 }
 
-#header.shrink .nav-links {
-	visibility: visible;
-	opacity: 1;
+header.init {
+	height: 100vh;
+	overflow: hidden;
 }
 
-
-/* 共通ロゴスタイル */
-.logo-reiwachan {
-	position: absolute;
-	width: 80%;
-	max-width: 600px;
-	transition: all 0.5s ease;
+header.moving {
+	height: 80px;
 }
 
-.nav-links {
-	visibility: hidden;
-	/* ← 表示空間を確保したまま非表示 */
-	opacity: 0;
-	/* ← フェードのための透明度 */
-	display: flex;
-	/* ← 常にレイアウトを確保してカクつき防止 */
-	justify-content: flex-end;
-	align-items: center;
-	gap: 20px;
-	height: 100%;
-	transition: opacity 0.4s ease, visibility 0.4s ease;
-}
-
-.nav-links a {
-	text-decoration: none;
-	color: #333;
-	font-weight: bold;
-	transition: color 0.3s;
-	line-height: 1;
-}
-
-.scroll-indicator {
-	position: absolute;
-	bottom: 20px;
-	left: 50%;
-	transform: translateX(-50%);
-	text-align: center;
-	font-size: 0.9rem;
-	color: #888;
-}
-
-.scroll-indicator .arrow {
-	display: block;
-	font-size: 1.5rem;
-}
-
-.nav-links a:hover {
-	color: #ff4081;
+header.shrink {
+	height: 80px;
 }
 
 
@@ -91,26 +52,150 @@ header {
 header.init .logo-reiwachan {
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
 }
 
 /* 移動中：左上にスムーズに移動（top: 50px） */
 header.moving .logo-reiwachan {
 	top: 0px;
 	left: 50px;
-	width: 150px;
+	width: 250px;
 	transform: translate(0, 0);
 }
 
-/* 最終状態：top: 50% は外れる、完全に左上 */
-header.shrink {
-	height: 80px;
+/* ===== ロゴとメッセージコンテナ ===== */
+.header-logo-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	transition: top 0.5s ease, left 0.5s ease;
+}
+
+header.moving .header-logo-container,
+header.shrink .header-logo-container {
+	transform: none;
+}
+
+/* ←★追加部分 */
+header.moving .header-logo-container {
+	top: 30px;
+	left: 100px;
+	transform: translate(0, 0);
+}
+
+header.shrink .header-logo-container {
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	transform: translate(0, 0);
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+
+.logo-reiwachan {
+	width: 600px;
+	max-width: 80vw;
+	transition: all 0.4s ease;
 }
 
 header.shrink .logo-reiwachan {
-	left: 50px;
-	width: 150px;
-	transform: translate(0, 0);
+	width: 120px;
+}
+
+.site-header-msg h2 {
+	font-size: 2rem;
+	font-weight: 600;
+	color: #555;
+	margin: 0;
+	opacity: 1;
+	transition: opacity 1.5s ease;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+
+header.moving .site-header-msg h2 {
+	transition: none;
+	opacity: 0;
+}
+
+header.shrink .site-header-msg h2 {
+	opacity: 1;
+	font-weight: 0;
+	font-size: 1.3rem;
+}
+
+/* ===== ナビゲーション ===== */
+.nav-links {
+	position: absolute;
+	right: 40px;
+	top: 50%;
+	transform: translateY(-50%);
+	display: flex;
+	gap: 28px;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+header.shrink .nav-links {
+	visibility: visible;
+	opacity: 1;
+}
+
+#header.shrink .nav-links {
+	visibility: visible;
+	opacity: 1;
+}
+
+.nav-links a {
+	text-decoration: none;
+	color: #222;
+	font-weight: 600;
+	font-size: 1rem;
+	transition: color 0.3s ease;
+	position: relative;
+}
+
+.nav-links a::after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 2px;
+	background-color: #ff4081;
+	bottom: -4px;
+	left: 0;
+	transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+	width: 100%;
+}
+
+.nav-links a:hover {
+	color: #ff4081;
+}
+
+/* ===== スクロールインジケータ ===== */
+.scroll-indicator {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	font-size: 0.85rem;
+	color: #666;
+}
+
+.scroll-indicator .arrow {
+	font-size: 1.5rem;
+	display: block;
+}
+
+
+.nav-links a:hover {
+	color: #ff4081;
 }
 
 /* メインビュー */
@@ -130,7 +215,7 @@ main {
 }
 
 .outlined-text {
-	font-size: 4.6rem;
+	font-size: 4rem;
 	font-weight: bold;
 	line-height: 1.6;
 	color: white;

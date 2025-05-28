@@ -88,9 +88,14 @@
 
 <body>
 	<header class="site-header" id="siteHeader">
-		<a href="/" class="logo-link">
-			<img src="img/reiwachan.png" alt="Logo" class="header-logo">
-		</a>
+		<div class="header-logo-container">
+			<a href="/" class="logo-link">
+				<img src="img/reiwachan.png" alt="Logo" class="header-logo">
+			</a>
+			<div class="site-header-msg">
+				<h2>SNSを通じて、人々の便利を作る</h2>
+			</div>
+		</div>
 		<nav class="header-nav">
 			<a href="service.html">Service</a>
 			<a href="company.html">Company</a>
@@ -139,6 +144,22 @@
 
 				<!-- 1個目 -->
 				<div class="company-service-item">
+					<div class="company-service-image" data-aos="zoom-in" data-aos="zoom-in" data-aos-duration="600">
+						<img src="img/luxuaryProduce.jpg" alt="ラグジュアリープロデュースイメージ">
+					</div>
+					<div class="company-service-text">
+						<h4 class="company-service-category" data-aos="fade-right" data-aos-delay="100">Marketing -</h4>
+						<h3 class="company-service-heading heading-luxuary" data-aos="fade-right" data-aos-delay="200">
+							インフルエンサー<br>マーケティング</h3>
+						<p class="company-service-description" data-aos="fade-right" data-aos-delay="300">
+							企業様の商品やサービス。店舗やイベント集客まで。
+							SNSとインフルエンサーを活用したマーケティングで数字の向上にコミットします。
+						</p>
+					</div>
+				</div>
+
+				<!-- 2個目 -->
+				<div class="company-service-item reverse">
 					<div class="company-service-image" data-aos="zoom-in" data-aos-duration="600">
 						<img src="img/creator.jpg" alt="SNS運用代行イメージ">
 					</div>
@@ -151,8 +172,8 @@
 					</div>
 				</div>
 
-				<!-- 2個目 -->
-				<div class="company-service-item reverse">
+				<!-- 3個目 -->
+				<div class="company-service-item">
 					<div class="company-service-image" data-aos="zoom-in" data-aos-duration="600">
 						<img src="img/livers.jpg" alt="ライバー育成">
 					</div>
@@ -165,8 +186,8 @@
 					</div>
 				</div>
 
-				<!-- 3個目 -->
-				<div class="company-service-item">
+				<!-- 4個目 -->
+				<div class="company-service-item reverse">
 					<div class="company-service-image" data-aos="zoom-in" data-aos="zoom-in" data-aos-duration="600">
 						<img src="img/apparelProduce.jpg" alt="アパレルプロデュースイメージ">
 					</div>
@@ -179,21 +200,6 @@
 					</div>
 				</div>
 
-				<!-- 4個目 -->
-				<div class="company-service-item reverse">
-					<div class="company-service-image" data-aos="zoom-in" data-aos="zoom-in" data-aos-duration="600">
-						<img src="img/luxuaryProduce.jpg" alt="ラグジュアリープロデュースイメージ">
-					</div>
-					<div class="company-service-text">
-						<h4 class="company-service-category" data-aos="fade-right" data-aos-delay="100">Marketing -</h4>
-						<h3 class="company-service-heading heading-luxuary" data-aos="fade-right" data-aos-delay="200">
-							ラグジュアリー<br>プロデュース</h3>
-						<p class="company-service-description" data-aos="fade-right" data-aos-delay="300">
-							ハイエンド市場に向けたブランド立ち上げ、マーケティング、プロモーション施策をワンストップで支援。最高級の価値創造をサポートします。
-						</p>
-					</div>
-				</div>
-
 				<!-- 5個目 -->
 				<div class="company-service-item">
 					<div class="company-service-image" data-aos="zoom-in" data-aos="zoom-in" data-aos-duration="600">
@@ -201,9 +207,11 @@
 					</div>
 					<div class="company-service-text">
 						<h4 class="company-service-category" data-aos="fade-left" data-aos-delay="100">- Creative</h4>
-						<h3 class="company-service-heading" data-aos="fade-left" data-aos-delay="200">企業案件</h3>
+						<h3 class="company-service-heading" data-aos="fade-left" data-aos-delay="200">インフルエンサー<br>FCサービス
+						</h3>
 						<p class="company-service-description" data-aos="fade-left" data-aos-delay="300">
-							インフルエンサータイアップ、広告出稿、イベントコラボなど幅広い企業案件に対応可能。ご要望に合わせた柔軟な提案を行います。
+							フォロワーと築いたブランド価値を、事業として形に。<br>
+							自身の店舗・ブランド・プロジェクトを持ち、収益を最大化する仕組みをご提供します。
 						</p>
 					</div>
 				</div>
@@ -259,11 +267,6 @@
 					<div class="company-overview-row">
 						<div class="company-overview-label">電話番号</div>
 						<div class="company-overview-content">03-6824-2081</div>
-					</div>
-
-					<div class="company-overview-row">
-						<div class="company-overview-label">顧問社労士事務所</div>
-						<div class="company-overview-content">行政書士法人フラット法務事務所</div>
 					</div>
 
 					<div class="company-overview-row">
@@ -351,13 +354,8 @@
 					<a href="https://page.line.me/fhy3551i?openQrModal=true">Line</a>
 					<a href="https://www.instagram.com/reiwa_girls_official_/">Instagram</a>
 				</div>
-
-				<div class="footer-address">
-					<p>REIWAGIRLS Inc.<br>〒108-0073<br>東京都港区三田1-11-22 SSTビル1階</p>
-				</div>
-
 				<div class="footer-bottom">
-					<small>© REIWAGIRLS</small>
+					<small>ReiwaGirls Co., Ltd.｜SNS運用・インフルエンサー支援・アパレル制作</small>
 				</div>
 			</div>
 

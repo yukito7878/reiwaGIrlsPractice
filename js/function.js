@@ -24,57 +24,72 @@
 //   }, 2500);
 // });
 
+
+/* ===== JavaScript：スクロール連動 ===== */
+/* ===== JavaScript：スクロール連動 ===== */
 const header = document.getElementById('header');
 const navLinks = document.querySelector('.nav-links');
+const headerMsg = document.querySelector('.site-header-msg h2');
 let isSnapping = false;
 let isShrinking = false;
-let isAtBottom = false; // 最下部にいるかどうか
+let isAtBottom = false;
 
 window.addEventListener('scroll', () => {
-	const scrollY = window.scrollY;
-	const viewportBottom = scrollY + window.innerHeight;
-	const pageBottom = document.body.scrollHeight;
+  const scrollY = window.scrollY;
+  const viewportBottom = scrollY + window.innerHeight;
+  const pageBottom = document.body.scrollHeight;
 
-	// ===== ヘッダー縮小処理 =====
-	if (scrollY > 100 && !isShrinking && !isSnapping) {
-		isShrinking = true;
-		isSnapping = true;
-		header.classList.remove('init');
-		header.classList.add('moving');
+  if (scrollY > 100 && !isShrinking && !isSnapping) {
+    isShrinking = true;
+    isSnapping = true;
+    header.classList.remove('init');
+    header.classList.add('moving');
 
-		setTimeout(() => {
-			window.scrollTo(0, 200);
-			header.classList.remove('moving');
-			header.classList.add('shrink');
-			setTimeout(() => {
-				navLinks.style.display = 'flex';
-			}, 100);
-			setTimeout(() => {
-				isSnapping = false;
-			}, 600);
-		}, 300);
-	}
+    headerMsg.style.transition = 'none';
+    headerMsg.style.opacity = '0';
 
-	if (scrollY <= 80 && isShrinking) {
-		header.classList.remove('shrink', 'moving');
-		header.classList.add('init');
-		navLinks.style.display = 'none';
-		isShrinking = false;
-	}
+    setTimeout(() => {
+      window.scrollTo(0, 200);
+      header.classList.remove('moving');
+      header.classList.add('shrink');
 
-	// ===== 一番下に到達したら nav-links を非表示 =====
-	if (viewportBottom >= pageBottom - 5) {
-		if (!isAtBottom) {
-			navLinks.style.display = 'none';
-			isAtBottom = true;
-		}
-	} else {
-		if (isAtBottom) {
-			navLinks.style.display = 'flex';
-			isAtBottom = false;
-		}
-	}
+      setTimeout(() => {
+        headerMsg.style.transition = 'opacity 3.5s ease';
+        headerMsg.style.opacity = '1';
+      }, 300);
+
+      setTimeout(() => {
+        navLinks.style.display = 'flex';
+      }, 100);
+
+      setTimeout(() => {
+        isSnapping = false;
+      }, 600);
+    }, 300);
+  }
+
+  if (scrollY <= 80 && isShrinking) {
+    header.classList.remove('shrink', 'moving');
+    header.classList.add('init');
+    navLinks.style.display = 'none';
+    headerMsg.style.transition = 'none';
+    headerMsg.style.opacity = '0';
+    isShrinking = false;
+  }
+
+  if (viewportBottom >= pageBottom - 5) {
+    if (!isAtBottom) {
+      navLinks.style.display = 'none';
+      isAtBottom = true;
+    }
+  } else {
+    if (isAtBottom) {
+      navLinks.style.display = 'flex';
+      isAtBottom = false;
+    }
+  }
 });
+
 
 // 操作ロック
 function lockUserInteraction(duration = 2000) {

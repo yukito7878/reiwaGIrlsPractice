@@ -79,15 +79,20 @@
 	<link rel="stylesheet" href="css/service.css">
 	<link rel="stylesheet" href="css/footer.css">
 	<link rel="stylesheet" href="css/header-basic.css">
-	<link rel="stylesheet" href="css/page-transition.css">
+	<link rel="stylesheet" href="css/animation.css">
 </head>
 
 <body>
 
 	<header class="site-header" id="siteHeader">
-		<a href="/" class="logo-link">
-			<img src="img/reiwachan.png" alt="Logo" class="header-logo">
-		</a>
+		<div class="header-logo-container">
+			<a href="/" class="logo-link">
+				<img src="img/reiwachan.png" alt="Logo" class="header-logo">
+			</a>
+			<div class="site-header-msg">
+				<h2>SNSを通じて、人々の便利を作る</h2>
+			</div>
+		</div>
 		<nav class="header-nav">
 			<a href="service.html">Service</a>
 			<a href="company.html">Company</a>
@@ -96,6 +101,7 @@
 			<a href="contact.html">Contact</a>
 		</nav>
 	</header>
+
 
 	<!-- モバイルメニューボタンとオーバーレイはここ！ -->
 	<div class="mobile-menu-button" id="mobileMenuButton">
@@ -142,7 +148,7 @@
 			<div class="service-intro__inner">
 				<div class="service-intro__lead">
 					インフルエンサーの可能性を最大化し、<br>
-					新しいつながりをデザインする。
+					"新しい" をデザインする。
 				</div>
 				<p class="service-intro__desc">
 					令和ガールズは、インフルエンサーと企業を結ぶ架け橋として、<br>
@@ -215,17 +221,18 @@
 				</div>
 				<!-- サービスカード(モデルプロデュース) -->
 				<div class="card">
-					<h3>モデルプロデュース</h3>
-					<img src="img_backTalent/28.png" alt="Model Produce">
-					<p class="card-grid__catchcopy">"なりたい"を叶える<br>本格プロデュース支援</p>
+					<h3>インフルエンサーマーケティング</h3>
+					<img src="img_backTalent/influencer-marketing.png" alt="Influencer Marketing">
+					<p class="card-grid__catchcopy">“届けたい”を届ける<br>最強SNSプロモーション</p>
 					<p class="card-grid__text">
-						撮影・ブランディング・SNS連携まで、<br>
-						モデルとして輝くためのトータルサポート。
+						インフルエンサー10,000名超が登録。<br>
+						商品・ブランドを的確に広める支援を提供。
 					</p>
 					<div class="detail-button__container">
 						<a id="openModelProduceModal" class="service-detail__button">詳細はこちら</a>
 					</div>
 				</div>
+
 
 
 			</div>
@@ -241,11 +248,9 @@
 
 					<h2>1万人超の影響力を、ビジネスに。<br>【Influence Hub】</h2>
 
-					<p><strong>株式会社令和ガールズ</strong>｜2022年9月29日</p>
-
 					<p>
 						総フォロワー数1億人を超えるインフルエンサーが所属する、<br>
-						日本最大級のプラットフォーム「<strong>Influence Hub（インフルエンスハブ）</strong>」。<br>
+						日本最大級のプラットフォームを自由に活用し、1万人以上のインフルエンサーを協業できるサービス「<strong>Influence Hub（インフルエンスハブ）</strong>」。<br>
 						広告・マーケティングに必要な影響力を、あなたのビジネスに自由に活用できます。
 					</p>
 
@@ -254,13 +259,13 @@
 					<h3>Influence Hubとは？</h3>
 
 					<p>
-						令和ガールズに所属する<strong>10,000名超のインフルエンサー</strong>と連携し、<br>
-						広告・プロモーション・ブランディングを全面的にサポートするプラットフォームです。
+						<strong>登録インフルエンサー10,000名</strong>を抱える業界最大手の株式会社令和ガールズが、
+						10,000名を超えるインフルエンサーの影響力を活用して自身の好きなビジネスモデルで起業ができるサービス。
 					</p>
 
 					<p>
-						規模、属性、フォロワー数に応じて最適なインフルエンサーをマッチング。<br>
-						<strong>誰でも簡単に、影響力マーケティングを始めることができます。</strong>
+						規模、属性、フォロワー数に応じて最適なインフルエンサー所属しているため、<br>
+						<strong>誰でも簡単に、インフルエンサー事業を立ち上げることができます。</strong>
 					</p>
 
 					<hr>
@@ -275,25 +280,9 @@
 
 					<hr>
 
-					<!--					<h3>実績紹介</h3>-->
-
-					<!--					 実績画像 -->
-					<!--					<img src="img/hub_portfolio.jpg" alt="インフルエンサー実績" class="modal-influencehub-image">-->
-
-					<!--					<p>-->
-					<!--						有名YouTuber、TikTokerが多数在籍。<br>-->
-					<!--						数百万人単位でリーチ可能な案件実績を誇ります。-->
-					<!--					</p>-->
-
-					<!--					<hr>-->
 
 					<h3>提供サービス・料金プラン</h3>
-					<img src="img/hub_planDetail.png" alt="インフルエンサー実績" class="modal-influencehub-image">
-
-					<p>
-						月額基本料金：<strong>200,000円〜300,000円（税抜）</strong><br>
-						案件内容・規模に応じたプランニングも可能です。
-					</p>
+					<img src="img/.png" alt="インフルエンサー実績" class="modal-influencehub-image">
 
 					<ul>
 						<li>インフルエンサーキャスティング</li>
@@ -312,13 +301,6 @@
 					<h3>株式会社令和ガールズ 概要</h3>
 
 					<ul>
-						<li>会社名：株式会社令和ガールズ</li>
-						<li>代表取締役：室井涼介</li>
-						<li>所在地：〒108-0073 東京都港区三田1-11-22 SSTビル1階<br>
-						</li>
-						<li>公式サイト：<a href="https://www.reiwagirls.co.jp/"
-								target="_blank">https://www.reiwagirls.co.jp/</a>
-						</li>
 						<li>公式Instagram：<a
 								href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Freiwa_girls_official%2F&is_from_rle"
 								target="_blank">@reiwa_girls_official</a></li>
@@ -338,8 +320,6 @@
 					<img src="img/NextStars_top.jpg" alt="NextStars概要" class="modal-NextStars-image">
 
 					<h2>ライブ配信で夢を叶える。<br>【NextStars】</h2>
-
-					<p><strong>株式会社令和ガールズ</strong>｜2023年最新版</p>
 
 					<p>
 						NextStarsは、TikTokライブに特化したライバー支援プログラム。<br>
@@ -395,13 +375,6 @@
 
 					<h3>株式会社令和ガールズ 概要</h3>
 					<ul>
-						<li>会社名：株式会社令和ガールズ</li>
-						<li>代表取締役：室井涼介</li>
-						<li>所在地：〒108-0073 東京都港区三田1-11-22 SSTビル1階<br>
-						</li>
-						<li>公式サイト：<a href="https://www.reiwagirls.co.jp/"
-								target="_blank">https://www.reiwagirls.co.jp/</a>
-						</li>
 						<li>公式Instagram：<a
 								href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Freiwa_girls_official%2F&is_from_rle"
 								target="_blank">@reiwa_girls_official</a></li>
@@ -417,14 +390,12 @@
 				<div class="modal-votrebijou-content">
 					<span id="closeVotreBijouModal" class="close-votrebijou-button">&times;</span>
 
-					<img src="img/votrebijou.jpg" alt="Votre Bijou" class="modal-votrebijou-image">
+					<img src="img/.jpg" alt="Votre Bijou" class="modal-votrebijou-image">
 
-					<h2>「Votre Bijou（ボトルビジュー）」リリースのお知らせ</h2>
-
-					<p><strong>株式会社令和ガールズ</strong>｜2022年9月29日</p>
+					<h2>「Votre Bijou（ボトルビジュー）」</h2>
 
 					<p>
-						総フォロワー数1億人超、登録インフルエンサー数7,000名以上を誇るプラットフォーム「令和ガールズ」が、<br>
+						総フォロワー数1億人超、登録インフルエンサー数10,000名以上を誇るプラットフォーム「令和ガールズ」が、
 						誰もが自分自身のアパレルブランドをプロデュースできる新サービス「<strong>Votre Bijou（ボトルビジュー）</strong>」をスタートしました。
 					</p>
 
@@ -433,10 +404,10 @@
 					<h3>Votre Bijou（ボトルビジュー）とは</h3>
 
 					<p>
-						フランス語で「あなたの宝物」を意味するVotre Bijou。<br>
-						理想のファッションブランドを、個人でも手軽に立ち上げられるプロデュース支援サービスです。
+						コンセプト・ロゴ・イメージカラーなど理想を形にするために、弊社の専門スタッフと一緒に制作し、登録する10,000人以上のインフルエンサーにPRを依頼し、ECサイトで販売していくサービスです。
+						ECサイト制作から商品発注、発送など一連の作業のすべてを弊社が請け負うため、経験や知識がない方でも1からアクセサリーブランドを立ち上げることができます。
 					</p>
-					<img src="img/votreBijouFlow.jpg" class="votrebijou-service-flow">
+					<img src="img/.jpg" class="votrebijou-service-flow">
 
 					<p>
 						ブランドコンセプト・ロゴ制作から、ECサイト制作・販売、プロモーションまで<br>
@@ -460,15 +431,15 @@
 
 					<h3>インフルエンサーによるPR支援</h3>
 
-					<img src="img/votreBijouMerit.jpg" class="votrebijou-service-merit">
+					<img src="img/.jpg" class="votrebijou-service-merit">
 
 					<p>
-						立ち上げたブランドは、<strong>約7,000名のインフルエンサーが無償でPRサポート</strong>。<br>
+						立ち上げたブランドは、<strong>約10,000名のインフルエンサーが無償でPRサポート</strong>。<br>
 						あなたのブランドに最適なターゲットへダイレクトにアプローチできます。
 					</p>
 
 					<p>
-						加えて、マーケティング施策のノウハウも共有。<br>
+						加えて、マーケティング施策のノウハウもに加えて、
 						ブランド拡大を多方面からサポートします。
 					</p>
 
@@ -481,29 +452,11 @@
 
 					<hr>
 
-					<h3>今後の展開</h3>
-
-					<ul>
-						<li>2022年12月：東京都内で1,000人規模のPOPUPイベント開催予定</li>
-						<li>2023年夏：札幌・東京・名古屋・大阪・福岡、5大都市で展開予定</li>
-					</ul>
-
-					<p>
-						オンライン＋リアル両軸で、ブランド拡大の場を提供します。
-					</p>
-
 					<hr>
 
 					<h3>株式会社令和ガールズ 概要</h3>
 
 					<ul>
-						<li>会社名：株式会社令和ガールズ</li>
-						<li>代表取締役：室井涼介</li>
-						<li>所在地：〒108-0073 東京都港区三田1-11-22 SSTビル1階<br>
-						</li>
-						<li>公式サイト：<a href="https://www.reiwagirls.co.jp/"
-								target="_blank">https://www.reiwagirls.co.jp/</a>
-						</li>
 						<li>公式Instagram：<a
 								href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Freiwa_girls_official%2F&is_from_rle"
 								target="_blank">@reiwa_girls_official</a></li>
@@ -514,91 +467,74 @@
 
 				</div>
 			</div>
-			<!-- ポップアップ(ボトルビジュー) -->
+			<!-- ポップアップ(モンメゾン) -->
 			<div id="popupModal" class="modal">
 				<div class="modal-content">
 					<span id="closeModal" class="close-button">&times;</span>
 
 					<img src="img/monmaisonTop.jpg" alt="Mon maison" class="modal-image">
 
-					<h2>「Mon maison（モンメゾン）」リリースのお知らせ</h2>
+					<h2>「Mon maison（モンメゾン）」</h2>
 
-					<p><strong>株式会社令和ガールズ</strong>｜2022年9月29日 14時45分</p>
-
-					<p>総フォロワー8,400万人、登録インフルエンサー数7,000名を誇る業界No.1プラットフォーム「令和ガールズ」が、誰でもアパレルブランドをプロデュースし、インフルエンサーマーケティングで販売できる新サービス「<strong>Mon
+					<p>総フォロワー１億2000名超え、登録インフルエンサー数10,000名を誇る業界No.1のプラットフォーム「令和ガールズ」が、誰でもアパレルブランドをプロデュースし、インフルエンサーマーケティングで販売できる新サービス「<strong>Mon
 							maison（モンメゾン）</strong>」をリリースしました。</p>
 
 					<hr>
 
 					<h3>Mon maison（モンメゾン）とは</h3>
 
-					<p>フランス語で「私の店」を意味するMon maison。<br>
-						夢の出発点として、自分だけの理想のファッションブランドを立ち上げるサポートを行います。</p>
-					<img src="img/votreBijouFlow.jpg" class="votrebijou-service-flow">
+					<p>フランス語で「私の店」を意味するMon maisonは、アパレルブランドオーナーの夢の出発点であり、理想のブランドを築き上げるための“ホーム”となることを目指したサービスです。</p>
 
-					<p>ブランドコンセプト・ロゴ・イメージカラーなど、すべて専門スタッフと共に形にしていき、<strong>ECサイト制作から発注・発送まですべて弊社がサポート</strong>。経験ゼロでもブランド立ち上げが可能です。
+					<p>ブランドの立ち上げが決定すると、専門スタッフがマネージャーとして伴走し、コンセプト・ロゴ・イメージカラーなどを理想通りに形にしていきます。</p>
+
+					<img src="img/monmaisonFlow.jpg" class="votrebijou-service-flow">
+
+					<p>さらに、<strong>ECサイト制作・アパレル発注・商品の発送まで</strong>、ブランド運営に必要なすべての工程を令和ガールズが請け負うため、経験や知識がない方でも1からアパレルブランドを立ち上げることが可能です。
 					</p>
+
+					<p>煩雑な作業がないため、副業としてブランド運営を始めたい方にも最適です。</p>
 
 					<hr>
 
-					<h3>いま、アパレルブランド立ち上げに<br>絶好のチャンス</h3>
+					<h3>約10,000名以上のインフルエンサーが無償PR</h3>
 
-					<p>コロナ禍によりネットショッピング市場は48%成長。<br>
-						需要が高まる今だからこそ、<strong>自分のブランドをオンラインで展開することがビジネスチャンス</strong>となります。</p>
+					<p>立ち上げたブランドは、約10,000名以上のインフルエンサーが無償PRサポート。</p>
 
-					<p>さらに、副業としてアパレルオーナーを目指す方にも最適な環境をご用意しています。</p>
+					<p>ブランドイメージに最適なインフルエンサー選定も可能です。</p>
+
+					<p>また、マーケティングノウハウの提供も含まれた、業界屈指のフルサポート体制となっています。</p>
 
 					<hr>
 
 					<h3>提供サービス・料金プラン</h3>
 
-					<img src="img/monmaisonPriceList.jpg" class="monmaisonPriceList">
+					<img src="img/.jpg" class="monmaisonPriceList">
 
-					<p>立ち上げたブランドは、<strong>約7,000名のインフルエンサーが無償PRサポート</strong>。<br>
-						ブランドイメージに最適なインフルエンサー選定も可能です。</p>
-
-					<p>また、<strong>マーケティングノウハウの提供</strong>も含まれた、業界屈指のフルサポート体制となっています。</p>
+					<p>ブランドの企画から構築・販売・物流まで、すべてをワンストップで対応可能。<br>
+						アパレルブランド立ち上げに必要な作業を、完全サポートいたします。</p>
 
 					<hr>
 
 					<h3>詳細・お申し込み</h3>
 
-					<p><a href="https://page.line.me/fhy3551i?openQrModal=true"
-							target="_blank"><strong>株式会社令和ガールズ公式LINE＠はこちら</strong></a></p>
+					<p><a href="https://lin.ee/BNNecfR" target="_blank">
+							<strong>株式会社令和ガールズ公式LINE＠はこちら</strong></a></p>
 
 					<hr>
-
-					<h3>今後の展開</h3>
-
-					<ul>
-						<li>2022年12月：東京都内で1,000人規模のPOP UPイベント開催予定</li>
-						<li>2023年夏：札幌・東京・名古屋・大阪・福岡、5大都市にて大規模POP UP展開予定</li>
-					</ul>
-
-					<p>オンラインだけでなく、<strong>リアルな場でもブランド展開が可能</strong>になります。</p>
 
 					<hr>
 
 					<h3>株式会社令和ガールズ 概要</h3>
 
 					<ul>
-						<li>会社名：株式会社令和ガールズ</li>
-						<li>代表取締役：室井涼介</li>
-						<li>所在地：〒108-0073 東京都港区三田1-11-22 SSTビル1階<br>
-						</li>
-						<li>公式サイト：<a href="https://www.reiwagirls.co.jp/"
-								target="_blank">https://www.reiwagirls.co.jp/</a>
-						</li>
-						<li>公式Instagram：<a
-								href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Freiwa_girls_official%2F&is_from_rle"
+						<li>公式Instagram：<a href="https://www.instagram.com/reiwa_girls_official/"
 								target="_blank">@reiwa_girls_official</a></li>
-						<li>公式LINE＠：<a href="https://page.line.me/fhy3551i?openQrModal=true"
-								target="_blank">https://page.line.me/fhy3551i?openQrModal=true</a>
-						</li>
+						<li>公式LINE＠：<a href="https://lin.ee/BNNecfR" target="_blank">https://lin.ee/BNNecfR</a></li>
 					</ul>
 
 				</div>
 			</div>
+
 
 			<!-- ポップアップ(SNS運用代行) -->
 			<div id="popupSNSModal" class="modal-SNS">
@@ -609,8 +545,6 @@
 					<img src="img/sns_support_top.jpg" alt="SNS運用代行概要" class="modal-SNS-image">
 
 					<h2>戦略から投稿、分析まで。<br>【SNS運用代行サービス】</h2>
-
-					<p><strong>株式会社令和ガールズ</strong>｜2023年最新</p>
 
 					<p>
 						SNS時代に求められる「魅せる力」と「届ける力」。<br>
@@ -640,13 +574,6 @@
 
 					<hr>
 
-					<h3>料金プラン</h3>
-
-					<p>
-						月額基本料金：<strong>150,000円〜（税抜）</strong><br>
-						※投稿本数・SNS種別・戦略設計の有無により変動
-					</p>
-
 					<img src="img/sns_plan.jpg" alt="SNS料金プラン" class="modal-SNS-image">
 
 					<hr>
@@ -659,13 +586,6 @@
 					<h3>株式会社令和ガールズ 概要</h3>
 
 					<ul>
-						<li>会社名：株式会社令和ガールズ</li>
-						<li>代表取締役：室井涼介</li>
-						<li>所在地：〒108-0073 東京都港区三田1-11-22 SSTビル1階<br>
-						</li>
-						<li>公式サイト：<a href="https://www.reiwagirls.co.jp/"
-								target="_blank">https://www.reiwagirls.co.jp/</a>
-						</li>
 						<li>公式Instagram：<a
 								href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Freiwa_girls_official%2F&is_from_rle"
 								target="_blank">@reiwa_girls_official</a></li>
@@ -674,80 +594,73 @@
 					</ul>
 				</div>
 			</div>
-			<!-- モーダル(モデルプロデュース) -->
+			<!-- モーダル(インフルエンサーマーケティング) -->
+			<!-- モーダル(インフルエンサーマーケティング) -->
 			<div id="popupModelProduceModal" class="modal-ModelProduce">
 				<div class="modal-influencehub-content">
 					<span id="closeModelProduceModal" class="close-ModelProduce-button">&times;</span>
 
-					<h2>“なりたい”をプロデュースする。<br>【モデルプロデュース事業】</h2>
-
-					<p><strong>株式会社令和ガールズ</strong>｜2025年スタート</p>
+					<h2>“届けたい”を広げる力。<br>【インフルエンサーマーケティング事業】</h2>
 
 					<p>
-						モデルとして「選ばれる存在」になるために。<br>
-						令和ガールズでは、夢と実績を両立するモデル育成・輩出の仕組みを構築中です。<br>
-						強みは、SNS拡散力、撮影環境、そして実践ベースのブランディング支援。
+						総フォロワー1億人超、約10,000名のインフルエンサーが登録するプラットフォーム「令和ガールズ」が、<br>
+						商材やブランドの魅力を的確にターゲットへ届ける「インフルエンサーマーケティング支援」を提供しています。
 					</p>
 
 					<hr>
 
 					<h3>サービス内容</h3>
 					<ul>
-						<li>個別カウンセリング・方向性設計</li>
-						<li>スタジオ・屋外でのプロフィール撮影</li>
-						<li>ビジュアルブランディング指導</li>
-						<li>ポートフォリオ構築／推薦・案件連携</li>
-						<li>SNSでの戦略的露出支援</li>
+						<li>商材やターゲットに合わせたインフルエンサーの選定・キャスティング</li>
+						<li>投稿内容・構成・ビジュアル監修のディレクション</li>
+						<li>Instagram、TikTok、YouTube等への拡散支援</li>
+						<li>PR投稿レポート提出／効果測定</li>
+						<li>キャンペーン設計・ハッシュタグ展開</li>
 					</ul>
 
 					<p>
-						「ファッション」「美容」「芸能」など、目指す方向性に合わせて専門チームが並走。<br>
-						“憧れ”を実現に変えるサポート体制を構築中です。
+						全国に幅広いジャンルのインフルエンサーを抱える令和ガールズだからこそ、<br>
+						「届けたい層に、届く施策」を実現できます。
 					</p>
 
 					<hr>
 
-					<h3>導入対象</h3>
+					<h3>導入企業様の活用例</h3>
 					<ul>
-						<li>芸能活動にチャレンジしたい10〜30代女性</li>
-						<li>撮影・SNS強化を通じて自分の価値を高めたい方</li>
-						<li>将来モデルやインフルエンサーとして活動したい方</li>
-						<li>自己ブランディングのきっかけが欲しい方</li>
+						<li>新商品の認知拡大や話題化を狙いたいアパレル・美容系ブランド</li>
+						<li>店舗・ECの来店・購入促進をしたい企業</li>
+						<li>ターゲット層が明確なスタートアップやD2C事業者</li>
+						<li>自然な形でSNS上にレビューや口コミを展開したい事業者</li>
 					</ul>
 
 					<hr>
 
-					<h3>参加形式</h3>
+					<h3>展開メディア</h3>
 					<p>
-						週1〜月2回のオフライン・オンライン形式でのプロデュース。<br>
-						選考制（LINE登録後、面談あり）となっております。
+						Instagram / TikTok / X（旧Twitter） / YouTube / LINE VOOM など<br>
+						各SNSのアルゴリズムやトレンドに合わせた展開が可能です。
 					</p>
 
 					<hr>
 
-					<h3>お問い合わせ・詳細</h3>
-					<p><a href="https://page.line.me/fhy3551i?openQrModal=true"
-							target="_blank"><strong>公式LINE＠はこちら</strong></a></p>
+					<h3>お問い合わせ・ご相談</h3>
+					<p>
+						商材や目的に合わせた最適なプロモーションプランをご提案します。<br>
+						<a href="https://page.line.me/fhy3551i?openQrModal=true"
+							target="_blank"><strong>株式会社令和ガールズ公式LINE＠はこちら</strong></a>
+					</p>
+
+					<hr>
 
 					<h3>株式会社令和ガールズ 概要</h3>
 					<ul>
-						<li>会社名：株式会社令和ガールズ</li>
-						<li>代表取締役：室井涼介</li>
-						<li>所在地：〒108-0073 東京都港区三田1-11-22 SSTビル1階<br>
-						</li>
-						<li>公式サイト：<a href="https://www.reiwagirls.co.jp/"
-								target="_blank">https://www.reiwagirls.co.jp/</a>
-						</li>
-						<li>公式Instagram：<a
-								href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Freiwa_girls_official%2F&is_from_rle"
+						<li>公式Instagram：<a href="https://www.instagram.com/reiwa_girls_official/"
 								target="_blank">@reiwa_girls_official</a></li>
 						<li>公式LINE＠：<a href="https://page.line.me/fhy3551i?openQrModal=true"
 								target="_blank">https://page.line.me/fhy3551i?openQrModal=true</a></li>
 					</ul>
 				</div>
 			</div>
-
-
 
 		</div>
 
@@ -801,13 +714,8 @@
 					<a href="https://page.line.me/fhy3551i?openQrModal=true">Line</a>
 					<a href="https://www.instagram.com/reiwa_girls_official_/">Instagram</a>
 				</div>
-
-				<div class="footer-address">
-					<p>REIWAGIRLS Inc.<br>〒108-0073<br>東京都港区三田1-11-22 SSTビル1階</p>
-				</div>
-
 				<div class="footer-bottom">
-					<small>© REIWAGIRLS</small>
+					<small>ReiwaGirls Co., Ltd.｜SNS運用・インフルエンサー支援・アパレル制作</small>
 				</div>
 			</div>
 
