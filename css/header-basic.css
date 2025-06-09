@@ -44,7 +44,9 @@
 	white-space: nowrap;
 }
 
-
+.mobile-break {
+	display: none;
+}
 
 .header-nav {
 	display: flex;
@@ -192,6 +194,11 @@ header:not(.init):not(.moving):not(.shrink) .logo-reiwachan {
 		gap: 24px;
 		height: 50px;
 		margin-right: 5%;
+	}
+	
+
+	.mobile-break {
+		display: block;
 	}
 
 	.mobile-menu-button {

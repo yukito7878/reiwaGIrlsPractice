@@ -27,6 +27,8 @@
 	<meta name="twitter:description" content="多様な業種のプロデュース支援を展開中。REIWAGIRLSのサービス詳細はこちら。">
 	<meta name="twitter:image" content="https://www.reiwagirls.co.jp/img_logo/reiwaGirlsLogo.jpg">
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 	<!-- 構造化データ Organization -->
 	<script type="application/ld+json">
 	  {
@@ -90,15 +92,15 @@
 				<img src="img/reiwachan.png" alt="Logo" class="header-logo">
 			</a>
 			<div class="site-header-msg">
-				<h2>SNSを通じて、人々の便利を作る</h2>
+				<h2>SNSを通じて、<br class="mobile-break">人々の便利を作る</h2>
 			</div>
 		</div>
 		<nav class="header-nav">
-			<a href="service.html">Service</a>
-			<a href="company.html">Company</a>
-			<a href="top.html">Vision</a>
-			<a href="recruit.html">Recruit</a>
-			<a href="contact.html">Contact</a>
+			<a href="service.html" class="transition-link">Service</a>
+			<a href="company.html" class="transition-link">Company</a>
+			<a href="top.html" class="transition-link">Vision</a>
+			<a href="recruit.html" class="transition-link">Recruit</a>
+			<a href="contact.html" class="transition-link">Contact</a>
 		</nav>
 	</header>
 
@@ -112,11 +114,11 @@
 
 	<div class="mobile-menu-overlay" id="mobileMenuOverlay">
 		<nav class="mobile-menu-nav">
-			<a href="service.html">Service</a>
-			<a href="company.html">Company</a>
-			<a href="top.html">Vision</a>
-			<a href="recruit.html">Recruit</a>
-			<a href="contact.html">Contact</a>
+			<a href="service.html" class="transition-link">Service</a>
+			<a href="company.html" class="transition-link">Company</a>
+			<a href="top.html" class="transition-link">Vision</a>
+			<a href="recruit.html" class="transition-link">Recruit</a>
+			<a href="contact.html" class="transition-link">Contact</a>
 		</nav>
 	</div>
 
@@ -213,7 +215,7 @@
 				<div class="card">
 					<h3>SNS運用代行</h3>
 					<img src="img/sns_support_top.jpg" alt="SNS Support">
-					<p class="card-grid__catchcopy">共感と数値を両立する<br>オリジナルのSNS戦略</p>
+					<p class="card-grid__catchcopy">1万人のインフルエンサー<br>と作る「バズるTikTok運用」</p>
 					<p class="card-grid__text">クリエイティブ投稿、設計から運用改善まで、<br>全て一括代行するSNSマーケティング。</p>
 					<div class="detail-button__container">
 						<a id="openSNSModal" class="service-detail__button">詳細はこちら</a>
@@ -221,7 +223,7 @@
 				</div>
 				<!-- サービスカード(モデルプロデュース) -->
 				<div class="card">
-					<h3>インフルエンサーマーケティング</h3>
+					<h3>インフルエンサー<br>マーケティング</h3>
 					<img src="img_backTalent/influencer-marketing.png" alt="Influencer Marketing">
 					<p class="card-grid__catchcopy">“届けたい”を届ける<br>最強SNSプロモーション</p>
 					<p class="card-grid__text">
@@ -312,6 +314,7 @@
 				</div>
 			</div>
 
+			<!-- ポップアップ(NextStars)  -->
 			<div id="popupNextStarsModal" class="modal-NextStars">
 				<div class="modal-NextStars-content">
 					<span id="closeNextStarsModal" class="close-NextStars-button">&times;</span>
@@ -378,8 +381,10 @@
 						<li>公式Instagram：<a
 								href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Freiwa_girls_official%2F&is_from_rle"
 								target="_blank">@reiwa_girls_official</a></li>
-						<li>公式LINE＠：<a href="https://page.line.me/fhy3551i?openQrModal=true"
-								target="_blank">https://page.line.me/fhy3551i?openQrModal=true</a></li>
+						<li>公式LINE＠：<a href="https://lin.ee/XHRyXHM"
+								target="_blank">@reiwa_girls_Line</a></li>
+						<li>ライバータレント：<a href="https://nextstars-tiktok.github.io/ReiwaGirls/"
+								target="_blank">@reiwa_girls_talents</a></li>
 					</ul>
 				</div>
 			</div>
@@ -390,7 +395,7 @@
 				<div class="modal-votrebijou-content">
 					<span id="closeVotreBijouModal" class="close-votrebijou-button">&times;</span>
 
-					<img src="img/.jpg" alt="Votre Bijou" class="modal-votrebijou-image">
+					<img src="img/votrebijou.jpg" alt="Votre Bijou" class="modal-votrebijou-image">
 
 					<h2>「Votre Bijou（ボトルビジュー）」</h2>
 
@@ -449,8 +454,6 @@
 
 					<p><a href="https://page.line.me/fhy3551i?openQrModal=true"
 							target="_blank"><strong>株式会社令和ガールズ公式LINE＠はこちら</strong></a></p>
-
-					<hr>
 
 					<hr>
 
@@ -544,56 +547,68 @@
 					<!-- トップ画像 -->
 					<img src="img/sns_support_top.jpg" alt="SNS運用代行概要" class="modal-SNS-image">
 
-					<h2>戦略から投稿、分析まで。<br>【SNS運用代行サービス】</h2>
+					<h2>1万人のインフルエンサーと作る<br>【バズるTikTok運用】</h2>
 
 					<p>
-						SNS時代に求められる「魅せる力」と「届ける力」。<br>
-						令和ガールズの<strong>SNS運用代行</strong>は、
-						企画・投稿制作・数値分析・改善提案まで、<br>
-						ワンストップで実現するプロフェッショナルサービスです。
+						<strong>SNSを使いたいけど、何から手をつけていいかわからない。</strong><br>
+						そんな企業様のために、<strong>令和ガールズがまるっとTikTok運用を代行</strong>します。
 					</p>
+
+					<hr>
+
+					<h3>こんなお悩みありませんか？</h3>
+					<ul>
+						<li>SNSを始めたいけど何から手をつけたらいいか分からない</li>
+						<li>演者が辞めて動画が使えなくなった</li>
+						<li>動画が全然バズらない</li>
+						<li>社内で時間も人も足りない</li>
+						<li>誰にお願いしていいか分からない</li>
+					</ul>
+					<p><strong>▶ 令和ガールズがまるっと解決します！</strong></p>
 
 					<hr>
 
 					<h3>サービス内容</h3>
-
-					<ul>
-						<li>アカウント設計・世界観構築</li>
-						<li>投稿スケジュール作成・運用代行</li>
-						<li>画像・動画コンテンツ制作</li>
-						<li>ハッシュタグ・アルゴリズム最適化</li>
-						<li>インサイト分析・レポーティング</li>
-					</ul>
+					<p>TikTok運用のすべてをお任せください！</p>
 
 					<img src="img/sns_support_flow.jpg" alt="SNS運用の流れ" class="modal-SNS-image">
 
-					<p>
-						多様な業種・ブランドに対応し、<br>
-						Instagram／TikTok／Twitter（X）／YouTubeなど各SNSに最適化した投稿設計が可能です。
-					</p>
+					<ul>
+						<li>キャスティング（1万人以上のインフルエンサーからマッチング）</li>
+						<li>コンテンツ企画・台本制作</li>
+						<li>撮影・編集（映える×バズる演出）</li>
+						<li>アカウント運用・投稿管理</li>
+						<li>データ分析・レポート作成</li>
+						<li>インフルエンサー個人アカウントでのPR（プランによる）</li>
+					</ul>
 
 					<hr>
 
-					<img src="img/sns_plan.jpg" alt="SNS料金プラン" class="modal-SNS-image">
+					<h3>実績紹介</h3>
+					<ul>
+						<li>飲食店（代々木）：導入6ヶ月で見込み顧客数5倍</li>
+						<li>美容クリニック（表参道）：TikTok経由でTV出演</li>
+						<li>整体院（六本木・乃木坂）：売上3.2倍</li>
+						<li>美容サロン（池袋）：初月でTikTok集客のみで売上80万円</li>
+						<li>エンタメ系インフルエンサー：フォロワー3,000人 → 25万人、再生回数4,000万回突破</li>
+					</ul>
 
 					<hr>
 
 					<h3>お問い合わせ・詳細</h3>
-
 					<p><a href="https://page.line.me/fhy3551i?openQrModal=true"
 							target="_blank"><strong>公式LINE＠はこちら</strong></a></p>
 
 					<h3>株式会社令和ガールズ 概要</h3>
-
 					<ul>
-						<li>公式Instagram：<a
-								href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Freiwa_girls_official%2F&is_from_rle"
+						<li>公式Instagram：<a href="https://www.instagram.com/reiwa_girls_official/"
 								target="_blank">@reiwa_girls_official</a></li>
 						<li>公式LINE＠：<a href="https://page.line.me/fhy3551i?openQrModal=true"
 								target="_blank">https://page.line.me/fhy3551i?openQrModal=true</a></li>
 					</ul>
 				</div>
 			</div>
+
 			<!-- モーダル(インフルエンサーマーケティング) -->
 			<!-- モーダル(インフルエンサーマーケティング) -->
 			<div id="popupModelProduceModal" class="modal-ModelProduce">
@@ -672,13 +687,13 @@
 
 			<div class="footer-top-row">
 				<div class="footer-tags">
-					<a href="company.html">COMPANY</a>
-					<a href="service.html">SERVICE</a>
-					<a href="top.html">VISION</a>
-					<a href="recruit.html">RECRUIT</a>
+					<a href="company.html" class="transition-link">COMPANY</a>
+					<a href="service.html" class="transition-link">SERVICE</a>
+					<a href="top.html" class="transition-link">VISION</a>
+					<a href="recruit.html" class="transition-link">RECRUIT</a>
 				</div>
 				<div class="footer-contact">
-					<a href="contact.html" class="footer-contact-button">CONTACT</a>
+					<a href="contact.html" class="footer-contact-button transition-link">CONTACT</a>
 				</div>
 			</div>
 
@@ -709,8 +724,8 @@
 
 			<div class="footer-bottom-area theme-dark">
 				<div class="footer-nav">
-					<a href="index.html">Top</a>
-					<a href="contact.html">Contact</a>
+					<a href="index.html" class="transition-link">Top</a>
+					<a href="contact.html" class="transition-link">Contact</a>
 					<a href="https://page.line.me/fhy3551i?openQrModal=true">Line</a>
 					<a href="https://www.instagram.com/reiwa_girls_official_/">Instagram</a>
 				</div>
@@ -722,13 +737,21 @@
 		</div>
 	</footer>
 
-	<!--	<div class="logo-transition-overlay" id="logoTransition">-->
-	<!--		<img src="img/reiwachan.jpg" alt="Logo" class="logo-transition-logo">-->
-	<!--	</div>-->
+	<!-- 画面トランジション背景（10分割） -->
+	<div class="page-transition-bg">
+		<div class="bg-content"></div>
+		<div class="bg-content"></div>
+		<div class="bg-content"></div>
+		<div class="bg-content"></div>
+		<div class="bg-content"></div>
+		<div class="bg-content"></div>
+		<div class="bg-content"></div>
+		<div class="bg-content"></div>
+		<div class="bg-content"></div>
+		<div class="bg-content"></div>
+	</div>
 
-	<!-- ページの最後、</body>の直前に入れるのがベスト -->
-	<div class="page-entry-mask" id="pageEntryMask"></div>
-	<div class="page-exit-mask" id="pageExitMask"></div>
+
 	<!-- JSの読み込み（bodyの閉じタグ直前）-->
 	<script src="js/page-transition.js"></script>
 	<script src="js/header-basic.js"></script>

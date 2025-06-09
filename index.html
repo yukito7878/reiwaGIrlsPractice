@@ -27,6 +27,8 @@
 	<meta name="twitter:description" content="SNSマーケティングとブランディングを一貫してサポートする企業です。">
 	<meta name="twitter:image" content="https://reiwagirls.co.jp/img_logo/reiwaGirlsLogo.jpg">
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 	<!-- Google構造化データ Organization -->
 	<script type="application/ld+json">
 	  {
@@ -153,15 +155,15 @@
 		<div class="header-logo-container">
 			<img id="main-logo" class="logo-reiwachan" src="img/reiwachan.png" alt="Logo" />
 			<div class="site-header-msg">
-				<h2>SNSを通じて、人々の便利を作る</h2>
+				<h2>SNSを通じて、<br class="mobile-break">人々の便利を作る</h2>
 			</div>
 		</div>
 		<nav class="nav-links">
-			<a href="service.html">Service</a>
-			<a href="company.html">Company</a>
-			<a href="top.html">Vision</a>
-			<a href="recruit.html">Recruit</a>
-			<a href="contact.html">Contact</a>
+			<a href="service.html" class="transition-link">Service</a>
+			<a href="company.html" class="transition-link">Company</a>
+			<a href="top.html" class="transition-link">Vision</a>
+			<a href="recruit.html" class="transition-link">Recruit</a>
+			<a href="contact.html" class="transition-link">Contact</a>
 		</nav>
 		<div class="scroll-indicator">
 			<span class="arrow">&#x2193;</span>
@@ -475,14 +477,14 @@
 			<h2 class="footer-logo">REIWAGIRLS</h2>
 
 			<div class="footer-top-row">
-				<div class="footer-tags">
-					<a href="company.html">COMPANY</a>
-					<a href="service.html">SERVICE</a>
-					<a href="top.html">VISION</a>
-					<a href="recruit.html">RECRUIT</a>
+				<div class="footer-tags" class="transition-link">
+					<a href="company.html" class="transition-link">COMPANY</a>
+					<a href="service.html" class="transition-link">SERVICE</a>
+					<a href="top.html" class="transition-link">VISION</a>
+					<a href="recruit.html" class="transition-link">RECRUIT</a>
 				</div>
 				<div class="footer-contact">
-					<a href="contact.html" class="footer-contact-button">CONTACT</a>
+					<a href="contact.html" class="footer-contact-button transition-link">CONTACT</a>
 				</div>
 			</div>
 
@@ -513,8 +515,8 @@
 
 			<div class="footer-bottom-area theme-dark">
 				<div class="footer-nav">
-					<a href="index.html">Top</a>
-					<a href="contact.html">Contact</a>
+					<a href="index.html" class="transition-link">Top</a>
+					<a href="contact.html" class="transition-link">Contact</a>
 					<a href="https://page.line.me/fhy3551i?openQrModal=true">Line</a>
 					<a href="https://www.instagram.com/reiwa_girls_official_/">Instagram</a>
 				</div>
@@ -524,9 +526,6 @@
 			</div>
 		</div>
 	</footer>
-	<!-- ページの最後、</body>の直前に入れるのがベスト -->
-	<div class="page-entry-mask" id="pageEntryMask"></div>
-	<div class="page-exit-mask" id="pageExitMask"></div>
 
 	<!-- JSの読み込み（bodyの閉じタグ直前）-->
 	<script src="js/page-transition.js"></script>

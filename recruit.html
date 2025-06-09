@@ -26,6 +26,8 @@
 	<meta name="twitter:title" content="採用情報｜株式会社令和ガールズ">
 	<meta name="twitter:description" content="多様な働き方と夢を支援。REIWAGIRLSの採用情報はこちら。">
 	<meta name="twitter:image" content="https://reiwagirls.co.jp/img_logo/reiwaGirlsLogo.jpg">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 	<!-- 構造化データ Organization -->
 	<script type="application/ld+json">
@@ -91,15 +93,15 @@
 				<img src="img/reiwachan.png" alt="Logo" class="header-logo">
 			</a>
 			<div class="site-header-msg">
-				<h2>SNSを通じて、人々の便利を作る</h2>
+				<h2>SNSを通じて、<br class="mobile-break">人々の便利を作る</h2>
 			</div>
 		</div>
 		<nav class="header-nav">
-			<a href="service.html">Service</a>
-			<a href="company.html">Company</a>
-			<a href="top.html">Vision</a>
-			<a href="recruit.html">Recruit</a>
-			<a href="contact.html">Contact</a>
+			<a href="service.html" class="transition-link">Service</a>
+			<a href="company.html" class="transition-link">Company</a>
+			<a href="top.html" class="transition-link">Vision</a>
+			<a href="recruit.html" class="transition-link">Recruit</a>
+			<a href="contact.html" class="transition-link">Contact</a>
 		</nav>
 	</header>
 
@@ -113,11 +115,11 @@
 
 	<div class="mobile-menu-overlay" id="mobileMenuOverlay">
 		<nav class="mobile-menu-nav">
-			<a href="service.html">Service</a>
-			<a href="company.html">Company</a>
-			<a href="top.html">Vision</a>
-			<a href="recruit.html">Recruit</a>
-			<a href="contact.html">Contact</a>
+			<a href="service.html" class="transition-link">Service</a>
+			<a href="company.html" class="transition-link">Company</a>
+			<a href="top.html" class="transition-link">Vision</a>
+			<a href="recruit.html" class="transition-link">Recruit</a>
+			<a href="contact.html" class="transition-link">Contact</a>
 		</nav>
 	</div>
 
@@ -249,13 +251,13 @@
 			<h2 class="footer-logo">REIWAGIRLS</h2>
 			<div class="footer-top-row">
 				<div class="footer-tags">
-					<a href="company.html">COMPANY</a>
-					<a href="service.html">SERVICE</a>
-					<a href="top.html">VISION</a>
-					<a href="recruit.html">RECRUIT</a>
+					<a href="company.html" class="transition-link">COMPANY</a>
+					<a href="service.html" class="transition-link">SERVICE</a>
+					<a href="top.html" class="transition-link">VISION</a>
+					<a href="recruit.html" class="transition-link">RECRUIT</a>
 				</div>
 				<div class="footer-contact">
-					<a href="contact.html" class="footer-contact-button">CONTACT</a>
+					<a href="contact.html" class="footer-contact-button transition-link">CONTACT</a>
 				</div>
 			</div>
 
@@ -298,6 +300,21 @@
 
 		</div>
 	</footer>
+	
+	<!-- 画面トランジション背景（10分割） -->
+	<div class="page-transition-bg">
+	  <div class="bg-content"></div>
+	  <div class="bg-content"></div>
+	  <div class="bg-content"></div>
+	  <div class="bg-content"></div>
+	  <div class="bg-content"></div>
+	  <div class="bg-content"></div>
+	  <div class="bg-content"></div>
+	  <div class="bg-content"></div>
+	  <div class="bg-content"></div>
+	  <div class="bg-content"></div>
+	</div>
+
 
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
@@ -323,10 +340,6 @@
 			});
 		});
 	</script>
-
-	<!-- ページの最後、</body>の直前に入れるのがベスト -->
-	<div class="page-entry-mask" id="pageEntryMask"></div>
-	<div class="page-exit-mask" id="pageExitMask"></div>
 
 	<!-- JSの読み込み（bodyの閉じタグ直前）-->
 	<script src="js/page-transition.js"></script>

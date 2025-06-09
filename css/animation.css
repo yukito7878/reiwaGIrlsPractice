@@ -470,7 +470,7 @@ text {
 
 	.scroll-indicator {
 		position: absolute;
-		top: calc(50% + 80px);
+		top: calc(50% + 145px);
 		left: 33%;
 		transform: translateX(-50%);
 		font-size: 50px;

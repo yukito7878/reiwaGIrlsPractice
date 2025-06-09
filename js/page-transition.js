@@ -1,24 +1,31 @@
-window.addEventListener('DOMContentLoaded', () => {
-	const mask = document.getElementById('pageEntryMask');
-	if (mask) {
-		mask.addEventListener('animationend', () => {
-			mask.remove(); // アニメーション後にDOMから削除して軽くする
-		});
-	}
-});
+$(function() {
+	const transitionBg = $('.page-transition-bg');
+	const bgContents = $('.page-transition-bg .bg-content');
+	const isFromTransition = sessionStorage.getItem('fromTransition') === 'true';
 
-
-const exitMask = document.getElementById('pageExitMask');
-
-document.querySelectorAll('a[href]:not([href^="#"]):not([target])').forEach(link => {
-	link.addEventListener('click', function(e) {
-		e.preventDefault();
-		const url = this.href;
-
-		exitMask.classList.add('active');
+	if (isFromTransition) {
+		sessionStorage.setItem('fromTransition', 'false');
+		transitionBg.addClass('animate-open');
 
 		setTimeout(() => {
-			window.location.href = url;
-		}, 600); // CSSと同じ0.6秒後に遷移
+			transitionBg.removeClass('animate-open').hide();
+			bgContents.css('transform', 'translateY(0)');
+		}, 1600);
+	} else {
+		// 🔧 リロードなどで誤って表示されっぱなしになったら強制非表示にする
+		transitionBg.hide();
+	}
+
+	$('a.transition-link').on('click', function(e) {
+		const url = $(this).attr('href');
+		if (url && url.indexOf('#') !== 0 && !$(this).attr('target')) {
+			e.preventDefault();
+			sessionStorage.setItem('fromTransition', 'true');
+			transitionBg.show().addClass('animate-out');
+
+			setTimeout(() => {
+				window.location.href = url;
+			}, 1000);
+		}
 	});
 });

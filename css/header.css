@@ -115,6 +115,10 @@ header.shrink .logo-reiwachan {
 	font-family: 'Noto Sans JP', sans-serif;
 }
 
+.mobile-break {
+	display: none;
+}
+
 header.moving .site-header-msg h2 {
 	transition: none;
 	opacity: 0;
@@ -333,6 +337,9 @@ main {
 		height: 100vh;
 	}
 
+	.mobile-break {
+		display: block;
+	}
 
 	header.shrink .logo-reiwachan {
 		left: 10px;
@@ -351,5 +358,9 @@ main {
 
 	.mobile-menu-overlay.show {
 		display: flex;
+	}
+
+	header.shrink .site-header-msg h2 {
+		font-size: 1rem;
 	}
 }
