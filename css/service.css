@@ -231,9 +231,10 @@ body {
 }
 
 .card h3 {
-	font-size: 2rem;
+	font-size: 1.7rem;
 	margin-bottom: 10px;
 }
+
 
 .card p {
 	font-size: 0.95rem;
@@ -325,6 +326,73 @@ body {
 	color: #00c300;
 }
 
+/* SNSリンクのベース */
+.service__sns-list {
+	list-style: none;
+	padding: 0;
+	margin: 10px 0 30px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+
+.service__sns-item {
+	margin: 0;
+}
+
+.service__sns-link {
+	display: inline-block;
+	padding: 6px 12px;
+	border-radius: 4px;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	transition: background-color 0.3s ease;
+}
+
+/* 各SNSごとの色 */
+.service__sns-link--youtube {
+	background-color: #FF0000;
+}
+
+.service__sns-link--youtube:hover {
+	background-color: #cc0000;
+}
+
+.service__sns-link--insta {
+	background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.service__sns-link--insta:hover {
+	filter: brightness(1.1);
+}
+
+.service__sns-link--lp {
+	background-color: #666;
+}
+
+.service__sns-link--lp:hover {
+	background-color: #444;
+}
+
+/* ✅ リストマーカー（・）を確実に消す */
+.service__link-list,
+.service__sns-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.service__link-item,
+.service__sns-item {
+	list-style: none;
+	/* ← 念のためli自体にも指定 */
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
 
 /****************************************/
 /****インフルエンスハブ用ポップアップ****/
@@ -396,7 +464,6 @@ body {
 }
 
 .modal-influencehub-content ul {
-	padding-left: 20px;
 	margin-bottom: 20px;
 }
 
