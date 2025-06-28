@@ -358,11 +358,9 @@ main {
 	background-color: #111;
 	z-index: 0;
 	padding-top: 0 !important;
+	height: 100vh;
 }
 
-.footer-inner {
-	height: 100%;
-}
 
 .purpose-parent {
 	margin: auto;
