@@ -60,6 +60,11 @@
 	object-fit: cover;
 }
 
+.video-background video::-webkit-media-controls {
+	display: none !important;
+}
+
+
 .main-content {
 	position: relative;
 	z-index: 1;
