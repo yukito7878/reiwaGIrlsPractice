@@ -536,6 +536,9 @@ a.theme-gold-text:hover {
 	.reiwaGirls-serviceContent-title{
 		font-size: 2rem;
 	}
+	.floating-gallery li:nth-child(25) img {
+		width: 250px !important;
+	}
 	.floating-gallery li:nth-child(15) img {
 		width: 400px;
 	}
