@@ -147,7 +147,7 @@ body {
 
 .recruit-step {
 	text-align: center;
-	max-width: 160px;
+	width: 180px;
 }
 
 .recruit-step-icon {
@@ -207,6 +207,35 @@ body {
 	object-fit: cover;
 	border-radius: 8px;
 }
+
+/*採用エントリーボタン*/
+.entry-cta {
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+.entry-big-button {
+	display: inline-block;
+	padding: 22px 90px;
+	font-size: 24px;
+	font-weight: bold;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 60px;
+	background: linear-gradient(135deg, #ff9ac9, #ff4e8d);
+	/* やさしいピンクグラデ */
+	box-shadow: 0 10px 24px rgba(255, 78, 141, 0.25);
+	transition: all 0.35s ease;
+}
+
+.entry-big-button:hover {
+	background: linear-gradient(135deg, #ff7ba5, #e64584);
+	/* 少し濃いピンク */
+	transform: translateY(-2px);
+	box-shadow: 0 12px 28px rgba(255, 78, 141, 0.3);
+	/* 影も少し強めに */
+}
+
 
 @keyframes infinity-scroll-right {
 	from {
