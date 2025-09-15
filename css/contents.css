@@ -534,7 +534,7 @@ a.theme-gold-text:hover {
 
 @media (max-width: 768px) {
 	.reiwaGirls-serviceContent-title{
-		font-size: 2rem;
+		font-size: 1.7rem;
 	}
 	.floating-gallery li:nth-child(25) img {
 		width: 250px !important;
